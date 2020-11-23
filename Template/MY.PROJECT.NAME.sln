@@ -7,6 +7,8 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "App.Domain", "App.Domain\Ap
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "App.UI", "App.UI\App.UI.shproj", "{CD40D45A-CFFE-46FC-8A9D-055EF9FF9440}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Run", "Run", "{60D86195-4298-4CA8-B3FC-46CE566E6B1D}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "~UWP", "Run\UWP\~UWP.csproj", "{51AEAFB7-E02B-4F51-8AB0-AA90E034E684}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "~Android", "Run\Android\~Android.csproj", "{573F454C-6003-40C8-A09D-3304F28D5F10}"
@@ -206,6 +208,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection		EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution	
+		{51AEAFB7-E02B-4F51-8AB0-AA90E034E684} = {60D86195-4298-4CA8-B3FC-46CE566E6B1D}	
+		{573F454C-6003-40C8-A09D-3304F28D5F10} = {60D86195-4298-4CA8-B3FC-46CE566E6B1D}	
+		{3B21A769-F17C-4219-A595-27A34955228F} = {60D86195-4298-4CA8-B3FC-46CE566E6B1D}	
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9D8FE7BA-078E-430D-89B9-5CC8D384E7F9}
