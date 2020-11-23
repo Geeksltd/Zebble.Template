@@ -31,7 +31,7 @@ We'll review your code ASAP and we will do the merge if everything was just fine
 
 This project is maintained and supported by the GeeksLTD.
 
-See also the list of [contributors](https://github.com/Geeksltd/Zebble.emplate/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/Geeksltd/Zebble.Template/contributors) who participated in this project.
 
 ## License
 
