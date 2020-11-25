@@ -75,9 +75,16 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\values\Styles.xml" />
+    <AndroidResource Include="Resources\drawable\Featured_Graphic.png" />
     <AndroidResource Include="Resources\drawable\splash_screen.xml" />
     <AndroidResource Include="Resources\drawable\Icon.webp" />
     <AndroidResource Include="Resources\drawable\Splash.webp" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Splash.webp" />
+    <AndroidResource Include="Resources\drawable-hdpi\Splash.webp" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Splash.webp" />
+    <AndroidResource Include="Resources\drawable-ldpi\Splash.webp" />
+    <AndroidResource Include="Resources\drawable-mdpi\Splash.webp" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Splash.webp" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="System.Net.Http">
