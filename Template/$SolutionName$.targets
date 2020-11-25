@@ -1,19 +1,22 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Target Name="ZebbleGenerateZebbleGenerateCs" BeforeTargets="PrepareForBuild">
+  <Target Name="ZebbleGenerateZebbleGenerateCs" BeforeTargets="CompileDesignTime;PrepareForBuild">
     <Exec WorkingDirectory="$(SolutionDir)" Command="zebble-compile-zbl" />
     <ItemGroup>
       <Compile Include="$(SolutionDir)\App.UI\.zebble-generated.cs" Exclude="@(Compile)" />
     </ItemGroup>
   </Target>
-  <Target Name="ZebbleGenerateZebbleGeneratedCssCs" BeforeTargets="PrepareForBuild">
+  <Target Name="ZebbleGenerateZebbleGeneratedCssCs" BeforeTargets="CompileDesignTime;PrepareForBuild">
     <Exec WorkingDirectory="$(SolutionDir)" Command="zebble-css generate" />
     <ItemGroup>
       <Compile Include="$(SolutionDir)\App.UI\.zebble-generated-css.cs" Exclude="@(Compile)" />
     </ItemGroup>
   </Target>
-  <Target Name="ZebbleGenerateImagesAndUpdateSizes" BeforeTargets="PrepareForBuild">
+  <Target Name="ZebbleGenerateImagesAndUpdateSizes" BeforeTargets="CompileDesignTime;PrepareForBuild">
     <Exec WorkingDirectory="$(SolutionDir)" Command="zebble-image splash" />
     <Exec WorkingDirectory="$(SolutionDir)" Command="zebble-image update-sizes" />
+  </Target>
+  <Target Name="GenerateZebbleSchema" AfterTargets="CompileDesignTime">
+    <Exec WorkingDirectory="$(SolutionDir)" Command="start zebble-schema" />
   </Target>
   <Target Name="UpdateZebbleSchemaAndWatchForCssChanges" AfterTargets="AfterBuild">
     <Exec WorkingDirectory="$(SolutionDir)" Command="start zebble-schema" />
