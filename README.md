@@ -16,6 +16,9 @@ Zebble is a framework for developing natives apps for iOS, Android, and Windows 
 ### Build and running the code
 Please use `zebble-build` CLI tool. It will streamline a new Zebble project creation to a single line of command. Read more about it [here](https://github.com/Geeksltd/zebble-build).
 
+### Adapting existing projects
+If you've created your project based on previous template, it should be configured to utilize `Zebble.exe` tool. If so, you have to follow our Changelog steps to update your Zebble project. Read more about it [here](https://github.com/GeeksLtd/Zebble.Template/CHANGELOG.md).
+
 ### Troubleshooting
 If you experienced any problem try the following:
 1. Open a cmd and run Build.bat file and watch for errors. You might have missing components.
