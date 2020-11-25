@@ -174,14 +174,24 @@
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
-  <Target Name="Generate CSS, ZBL and assets" BeforeTargets="BeforeBuild">
-    <Exec WorkingDirectory="$(SolutionDir)" Command="zebble-css generate" />
+  <Target Name="ZebbleGenerateZebbleGenerateCs" BeforeTargets="BeforeBuild">
     <Exec WorkingDirectory="$(SolutionDir)" Command="zebble-compile-zbl" />
+    <ItemGroup>
+      <Compile Include=".zebble-generated.cs" Exclude="@(Compile)" />
+    </ItemGroup>
+  </Target>
+  <Target Name="ZebbleGenerateZebbleGeneratedCssCs" BeforeTargets="BeforeBuild">
+    <Exec WorkingDirectory="$(SolutionDir)" Command="zebble-css generate" />
+    <ItemGroup>
+      <Compile Include=".zebble-generated-css.cs" Exclude="@(Compile)" />
+    </ItemGroup>
+  </Target>
+  <!-- <Target Name="Generate CSS, ZBL and assets" BeforeTargets="BeforeBuild">
     <Exec WorkingDirectory="$(SolutionDir)" Command="zebble-image update-sizes" />
     <Exec WorkingDirectory="$(SolutionDir)" Command="zebble-image generate" />
   </Target>
   <Target Name="Update Schema, Watch for CSS changes" AfterTargets="AfterBuild">
     <Exec WorkingDirectory="$(SolutionDir)" Command="start zebble-schema" />
     <Exec WorkingDirectory="$(SolutionDir)" Command="start zebble-css watch" />
-  </Target>
+  </Target> -->
 </Project>
