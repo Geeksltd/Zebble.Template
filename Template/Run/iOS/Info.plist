@@ -5,7 +5,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>MyProjectName</string>
 	<key>CFBundleIdentifier</key>
-	<string>$solutionname$</string>
+	<string>myprojectname</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
