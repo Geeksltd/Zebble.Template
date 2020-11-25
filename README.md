@@ -17,7 +17,7 @@ Zebble is a framework for developing natives apps for iOS, Android, and Windows 
 Please use `zebble-build` CLI tool. It will streamline a new Zebble project creation to a single line of command. Read more about it [here](https://github.com/Geeksltd/zebble-build).
 
 ### Adapting existing projects
-If you've created your project based on the previous template, it is configured to utilize the `Zebble.exe` tool. If so, you have to follow our migration document to update your Zebble project. Read more about it [here](https://github.com/GeeksLtd/Zebble.Template/blog/main/CHANGELOG.md).
+If you've created your project based on the previous template, it is configured to utilize the `Zebble.exe` tool. If so, you have to follow our migration document to update your Zebble project. Read more about it [here](https://github.com/Geeksltd/Zebble.Template/blog/main/CHANGELOG.md).
 
 ### Troubleshooting
 If you experienced any problem try the following:
@@ -28,7 +28,7 @@ If you experienced any problem try the following:
 ## Contributing
 
 As this solution is an opensource project, so contributions are welcome! Just fork the repo, do your changes then make a merge request. 
-We'll review your code ASAP and we will do the merge if everything was just fine. If there was any kind of issues, please post it in the [issues](https://github.com/GeeksLtd/Zebble.Template/issues) section.
+We'll review your code ASAP and we will do the merge if everything was just fine. If there was any kind of issues, please post it in the [issues](https://github.com/Geeksltd/Zebble.Template/issues) section.
 
 ## Authors
 
