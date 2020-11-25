@@ -1,14 +1,14 @@
-using System;
-using System.Threading.Tasks;
-using Zebble;
-
 namespace UI
 {
+    using System;
+    using System.Threading.Tasks;
+    using Zebble;
+
     public partial class StartUp : Zebble.StartUp
     {
         public override async Task Run()
         {
-            ApplicationName = "$SolutionName$";
+            ApplicationName = "MyProjectName";
 
             await InstallIfNeeded();
 

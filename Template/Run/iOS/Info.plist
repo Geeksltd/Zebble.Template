@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDisplayName</key>
-	<string>$SolutionName$</string>
+	<string>MyProjectName</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.companyname.$solutionname$</string>
+	<string>$solutionname$</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>

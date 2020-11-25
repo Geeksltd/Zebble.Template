@@ -6,11 +6,11 @@ As you might know, we've broken the `Zebble.exe` into a set of tiny dotnet globa
 
 If we use `zebble-build` CLI to create a new project, it will automatically take care of everything. But for now, we imagine that we want to upgrade an existing project. So, here are the steps we need to follow:
 
-1- Download `$SolutionName$.targets` file from [here](https://github.com/Geeksltd/Zebble.Template/blob/main/Template/%24SolutionName%24.targets) and add it to the root of your solution, besides your project's `.sln` file. Use should rename the file name to something meaningful.
+1- Download `MyProjectName.targets` file from [here](https://github.com/Geeksltd/Zebble.Template/blob/main/Template/%24SolutionName%24.targets) and add it to the root of your solution, besides your project's `.sln` file. Use should rename the file name to something meaningful.
 
 2- In Visual Studio, unload the UWP project, right-click on it, then select `Edit Project File`. If scroll down to the end of the file, you'll see several `Target` tags similiar to the below:
 
-```
+```xml
 <Target Name="zebbleExe generate" BeforeTargets="BeforeBuild">
    <Exec Command="&quot;$(ProjectDir)..\Android\Zebble.exe&quot; generate auto"/> 
 </Target>
@@ -24,10 +24,10 @@ If we use `zebble-build` CLI to create a new project, it will automatically take
 
 Please remove all three `Target` tags, and then paste the following `Import` tag:
 
-```
-<Import Project="$(SolutionDir)\$SolutionName$.targets"/>
+```xml
+<Import Project="$(SolutionDir)\MyProjectName.targets"/>
 ```
 
-Please note that you should replace `$SolutionName$` with the name you've chosen for the `.targets` file in the first step.
+Please note that you should replace `MyProjectName` with the name you've chosen for the `.targets` file in the first step.
 
 3- You need to repeat step 2 for the remaining platforms, Android and iOS if you have any of them.
