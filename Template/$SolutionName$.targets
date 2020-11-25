@@ -1,0 +1,22 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Target Name="ZebbleGenerateZebbleGenerateCs" BeforeTargets="PrepareForBuild">
+    <Exec WorkingDirectory="$(SolutionDir)" Command="zebble-compile-zbl" />
+    <ItemGroup>
+      <Compile Include="$(SolutionDir)\App.UI\.zebble-generated.cs" Exclude="@(Compile)" />
+    </ItemGroup>
+  </Target>
+  <Target Name="ZebbleGenerateZebbleGeneratedCssCs" BeforeTargets="PrepareForBuild">
+    <Exec WorkingDirectory="$(SolutionDir)" Command="zebble-css generate" />
+    <ItemGroup>
+      <Compile Include="$(SolutionDir)\App.UI\.zebble-generated-css.cs" Exclude="@(Compile)" />
+    </ItemGroup>
+  </Target>
+  <!-- <Target Name="Generate CSS, ZBL and assets" BeforeTargets="BeforeBuild">
+    <Exec WorkingDirectory="$(SolutionDir)" Command="zebble-image update-sizes" />
+    <Exec WorkingDirectory="$(SolutionDir)" Command="zebble-image generate" />
+  </Target>
+  <Target Name="Update Schema, Watch for CSS changes" AfterTargets="AfterBuild">
+    <Exec WorkingDirectory="$(SolutionDir)" Command="start zebble-schema" />
+    <Exec WorkingDirectory="$(SolutionDir)" Command="start zebble-css watch" />
+  </Target> -->
+</Project>

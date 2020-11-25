@@ -263,14 +263,5 @@
   <Import Project="..\..\App.Domain\Domain.projitems" Label="Shared" Condition="Exists('..\..\App.Domain\Domain.projitems')" />
   <Import Project="..\..\App.UI\UI.projitems" Label="Shared" Condition="Exists('..\..\App.UI\UI.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
-  <!-- <Target Name="Generate CSS, ZBL and assets" BeforeTargets="BeforeBuild">
-    <Exec WorkingDirectory="$(SolutionDir)" Command="zebble-css generate" />
-    <Exec WorkingDirectory="$(SolutionDir)" Command="zebble-compile-zbl" />
-    <Exec WorkingDirectory="$(SolutionDir)" Command="zebble-image update-sizes" />
-    <Exec WorkingDirectory="$(SolutionDir)" Command="zebble-image generate" />
-  </Target>
-  <Target Name="Update Schema, Watch for CSS changes" AfterTargets="AfterBuild">
-    <Exec WorkingDirectory="$(SolutionDir)" Command="start zebble-schema" />
-    <Exec WorkingDirectory="$(SolutionDir)" Command="start zebble-css watch" />
-  </Target> -->
+  <!-- <Import Project="$(SolutionDir)\$SolutionName$.targets"/> -->
 </Project>
