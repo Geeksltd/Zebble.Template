@@ -17,7 +17,7 @@ namespace ViewModel
 
         public void SignUpTapped()
         {
-            // Go<RegisterPage>();
+            // Go<SignUpPage>();
         }
     }
 }
