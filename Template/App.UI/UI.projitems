@@ -21,10 +21,15 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Config.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Page1.zbl" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\Page1.zbl.cs" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Login.zbl" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Welcome.zbl" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Styles\Android.css" />
+    <Content Include="$(MSBuildThisFileDirectory)Styles\Common.css" />
+    <Content Include="$(MSBuildThisFileDirectory)Styles\iOS.css" />
+    <Content Include="$(MSBuildThisFileDirectory)Styles\Windows.css" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)StartUp.cs" />
   </ItemGroup>

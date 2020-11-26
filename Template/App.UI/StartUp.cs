@@ -1,6 +1,7 @@
 namespace UI
 {
     using System;
+    using System.Reflection;
     using System.Threading.Tasks;
     using Zebble;
 
@@ -30,6 +31,10 @@ namespace UI
             // Tip: You can detect potential memory leaks by using a tool such as DotMemory from Jet Brains.
         }
 
-        public static Task LoadFirstPage() => Nav.Go(new Pages.Page1());
+        public static Task LoadFirstPage()
+        {
+            Zebble.Mvvm.Templates.Register(Assembly.GetExecutingAssembly());
+            return ViewModel.StartUp.Run();
+        }
     }
 }
