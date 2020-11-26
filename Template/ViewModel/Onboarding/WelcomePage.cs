@@ -17,7 +17,10 @@ namespace ViewModel
 
         public void SignUpTapped()
         {
-            // Go<SignUpPage>();
+            Dialog.Alert("It's not implemented yet!");
+
+            if (Dialog.Confirm("Would you like to log in instead?"))
+                LoginTapped();
         }
     }
 }

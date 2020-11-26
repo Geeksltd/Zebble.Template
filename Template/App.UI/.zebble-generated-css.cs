@@ -110,6 +110,8 @@ namespace UI
             CssEngine.Add(new File_App.UI.Styles.Common.PickerLabelCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.PickerCaretCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.PickerPlaceholderLabelCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.TextViewTitleCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.Button_1CssRule());
 
             // ======================================================================
             // App.UI\Styles\iOS.css-------------------------------------------------
@@ -2418,6 +2420,60 @@ namespace File_App.UI.Styles.Common
         {
             view.Css.Height = 100.Percent();
             view.Css.TextColor = "#ddd";
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", "TextView.title")]
+    [CssBody("font-weight: bold; font-size: 28px; text-align: center; margin-bottom: 20px;")]
+    class TextViewTitleCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            if (!(view is TextView && HasClass(view, "title"))) return false;
+
+            return true;
+        }
+
+        public override Task Apply(View untypedView)
+        {
+            var view = (TextView)untypedView;
+            view.Css.Font.Bold = true;
+            view.Css.Font.Size = 28;
+            view.Css.Margin.Bottom = 20;
+            view.Css.TextAlignment = Alignment.Middle;
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", "Button")]
+    [CssBody("border-radius: 10px; background: #f0f0f0; margin: 10px; padding: 10px;")]
+    class Button_1CssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            // CssEngine will only call me if a view matches: Button
+
+            return true;
+        }
+
+        public override Task Apply(View untypedView)
+        {
+            var view = (Button)untypedView;
+            view.Css.Padding(10);
+            view.Css.Margin(10);
+            view.Css.Border.Radius = 10;
+            view.Css.BackgroundColor = "#f0f0f0";
 
             return Task.CompletedTask;
         }

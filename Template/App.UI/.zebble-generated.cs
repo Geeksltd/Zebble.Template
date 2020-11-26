@@ -15,7 +15,7 @@ namespace UI.Pages
     using Zebble.Plugin;
 
     [EscapeGCop("Auto-generated")]
-    public partial class Login : Zebble.Page, ITemplate<ViewModel.LoginPage>
+    public partial class Login : NavBarPage, ITemplate<ViewModel.LoginPage>
     {
         public ViewModel.LoginPage Model => Zebble.Mvvm.ViewModel.The<ViewModel.LoginPage>();
 
@@ -36,7 +36,7 @@ namespace UI.Pages
             var __button1 = new Button { Text = "Login" }
             .On(v => v.Tapped, Model.LoginTapped);
 
-            await AddRange(new View[] { __imageView1, __textView1, __textInput1, __textInput2, __button1 });
+            await Body.AddRange(new View[] { __imageView1, __textView1, __textInput1, __textInput2, __button1 });
         }
     }
 }
@@ -55,7 +55,7 @@ namespace UI.Pages
     using Zebble.Plugin;
 
     [EscapeGCop("Auto-generated")]
-    public partial class Welcome : Zebble.Page, ITemplate<ViewModel.WelcomePage>
+    public partial class Welcome : NavBarPage, ITemplate<ViewModel.WelcomePage>
     {
         public ViewModel.WelcomePage Model => Zebble.Mvvm.ViewModel.The<ViewModel.WelcomePage>();
 
@@ -73,7 +73,7 @@ namespace UI.Pages
             var __button2 = new Button { Text = "Sign up" }
             .On(v => v.Tapped, Model.SignUpTapped);
 
-            await AddRange(new View[] { __imageView1, __textView1, __button1, __button2 });
+            await Body.AddRange(new View[] { __imageView1, __textView1, __button1, __button2 });
         }
     }
 }

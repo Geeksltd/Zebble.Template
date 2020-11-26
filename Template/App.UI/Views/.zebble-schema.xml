@@ -107,6 +107,7 @@
       <xs:enumeration value="android-only" />
       <xs:enumeration value="module-header-title" />
       <xs:enumeration value="view-row" />
+      <xs:enumeration value="title" />
       <xs:enumeration value="ios-only" />
       <xs:enumeration value="module-header-title" />
       <xs:enumeration value="primary-button" />
@@ -128,7 +129,7 @@
   <xs:element name="Pages.Login" nillable="true" type="Pages__LoginType" />
   <xs:complexType name="Pages__WelcomeType">
     <xs:complexContent mixed="false">
-      <xs:extension base="Page-AbstractType">
+      <xs:extension base="NavBarPage-AbstractType">
         <xs:anyAttribute processContents="skip" />
       </xs:extension>
     </xs:complexContent>

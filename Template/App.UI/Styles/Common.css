@@ -120,3 +120,7 @@ Picker #Label { height: 100%; }
 Picker #Caret { background: url(Images/Icons/Caret.png); width: 20px; }
 
 Picker #PlaceholderLabel { color: #ddd; height: 100%; }
+
+TextView.title { font-weight: bold; font-size: 28px; text-align: center; margin-bottom: 20px; }
+
+Button { border-radius: 10px; background: #f0f0f0; margin: 10px; padding: 10px; }
