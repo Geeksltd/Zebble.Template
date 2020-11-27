@@ -259,6 +259,9 @@
     <PackageReference Include="Zebble.WebApi">
       <Version>4.5.289</Version>
     </PackageReference>
+    <PackageReference Include="Zebble.Testing">
+      <Version>1.2.101</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="..\..\App.Domain\Domain.projitems" Label="Shared" Condition="Exists('..\..\App.Domain\Domain.projitems')" />
   <Import Project="..\..\App.UI\UI.projitems" Label="Shared" Condition="Exists('..\..\App.UI\UI.projitems')" />
