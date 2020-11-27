@@ -4,6 +4,7 @@ namespace UI
     using System.Reflection;
     using System.Threading.Tasks;
     using Zebble;
+    using Zebble.Testing;
 
     public partial class StartUp : Zebble.StartUp
     {

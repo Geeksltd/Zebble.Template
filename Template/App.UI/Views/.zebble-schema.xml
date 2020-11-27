@@ -816,6 +816,54 @@
   <xs:simpleType name="ConcurrentEventRaisePolicy">
     <xs:union memberTypes="ConcurrentEventRaisePolicyEnum StringPattern" />
   </xs:simpleType>
+  <xs:simpleType name="OnErrorEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Throw" />
+      <xs:enumeration value="Toast" />
+      <xs:enumeration value="Alert" />
+      <xs:enumeration value="Ignore" />
+      <xs:enumeration value="@....." />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="OnError">
+    <xs:union memberTypes="OnErrorEnum StringPattern" />
+  </xs:simpleType>
+  <xs:simpleType name="ApiResponseCacheEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Prefer" />
+      <xs:enumeration value="PreferThenUpdate" />
+      <xs:enumeration value="Accept" />
+      <xs:enumeration value="AcceptButWarn" />
+      <xs:enumeration value="Refuse" />
+      <xs:enumeration value="CacheOrNull" />
+      <xs:enumeration value="@....." />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ApiResponseCache">
+    <xs:union memberTypes="ApiResponseCacheEnum StringPattern" />
+  </xs:simpleType>
+  <xs:simpleType name="TimeFormatEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AMPM" />
+      <xs:enumeration value="Twentyfour" />
+      <xs:enumeration value="@....." />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TimeFormat">
+    <xs:union memberTypes="TimeFormatEnum StringPattern" />
+  </xs:simpleType>
+  <xs:simpleType name="DeviceConnectionTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Cellular" />
+      <xs:enumeration value="WiFi" />
+      <xs:enumeration value="Ethernet" />
+      <xs:enumeration value="Other" />
+      <xs:enumeration value="@....." />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DeviceConnectionType">
+    <xs:union memberTypes="DeviceConnectionTypeEnum StringPattern" />
+  </xs:simpleType>
   <xs:simpleType name="DependencyFetchTargetEnum">
     <xs:restriction base="xs:string">
       <xs:enumeration value="GlobalInstance" />
@@ -903,18 +951,6 @@
   <xs:simpleType name="TextTransform">
     <xs:union memberTypes="TextTransformEnum StringPattern" />
   </xs:simpleType>
-  <xs:simpleType name="OnErrorEnum">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="Throw" />
-      <xs:enumeration value="Toast" />
-      <xs:enumeration value="Alert" />
-      <xs:enumeration value="Ignore" />
-      <xs:enumeration value="@....." />
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="OnError">
-    <xs:union memberTypes="OnErrorEnum StringPattern" />
-  </xs:simpleType>
   <xs:simpleType name="DeviceSharingOptionEnum">
     <xs:restriction base="xs:string">
       <xs:enumeration value="AssignToContact" />
@@ -937,20 +973,6 @@
   </xs:simpleType>
   <xs:simpleType name="DeviceSharingOption">
     <xs:union memberTypes="DeviceSharingOptionEnum StringPattern" />
-  </xs:simpleType>
-  <xs:simpleType name="ApiResponseCacheEnum">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="Prefer" />
-      <xs:enumeration value="PreferThenUpdate" />
-      <xs:enumeration value="Accept" />
-      <xs:enumeration value="AcceptButWarn" />
-      <xs:enumeration value="Refuse" />
-      <xs:enumeration value="CacheOrNull" />
-      <xs:enumeration value="@....." />
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="ApiResponseCache">
-    <xs:union memberTypes="ApiResponseCacheEnum StringPattern" />
   </xs:simpleType>
   <xs:simpleType name="HorizontalAlignmentEnum">
     <xs:restriction base="xs:string">
@@ -1106,16 +1128,6 @@
   <xs:simpleType name="ShareType">
     <xs:union memberTypes="ShareTypeEnum StringPattern" />
   </xs:simpleType>
-  <xs:simpleType name="TimeFormatEnum">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="AMPM" />
-      <xs:enumeration value="Twentyfour" />
-      <xs:enumeration value="@....." />
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="TimeFormat">
-    <xs:union memberTypes="TimeFormatEnum StringPattern" />
-  </xs:simpleType>
   <xs:simpleType name="IconLocationEnum">
     <xs:restriction base="xs:string">
       <xs:enumeration value="Left" />
@@ -1146,18 +1158,6 @@
   </xs:simpleType>
   <xs:simpleType name="CameraOption">
     <xs:union memberTypes="CameraOptionEnum StringPattern" />
-  </xs:simpleType>
-  <xs:simpleType name="DeviceConnectionTypeEnum">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="Cellular" />
-      <xs:enumeration value="WiFi" />
-      <xs:enumeration value="Ethernet" />
-      <xs:enumeration value="Other" />
-      <xs:enumeration value="@....." />
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="DeviceConnectionType">
-    <xs:union memberTypes="DeviceConnectionTypeEnum StringPattern" />
   </xs:simpleType>
   <xs:simpleType name="RevisitModeEnum">
     <xs:restriction base="xs:string">
