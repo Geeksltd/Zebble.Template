@@ -11,6 +11,6 @@
 		<TextView Text="Hello there" CssClass="title" />
 		<TextInput Text="@{Model.Email}"/>
 		<TextInput Text="@{Model.Password}"/>
-		<Button Text="Login" on-Tapped="@{Model.LoginTapped}" />
+		<Button Text="Login" on-Tapped="@{Model.TapLogin}" />
 	</z-place>
 </z-Component>

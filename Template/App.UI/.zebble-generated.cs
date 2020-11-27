@@ -17,7 +17,7 @@ namespace UI.Pages
     [EscapeGCop("Auto-generated")]
     public partial class Login : NavBarPage, ITemplate<ViewModel.LoginPage>
     {
-        public ViewModel.LoginPage Model => Zebble.Mvvm.ViewModel.The<ViewModel.LoginPage>();
+        internal ViewModel.LoginPage Model => Zebble.Mvvm.ViewModel.The<ViewModel.LoginPage>();
 
         protected override async Task InitializeFromMarkup()
         {
@@ -34,7 +34,7 @@ namespace UI.Pages
             .Bind("Text", Model.Password);
 
             var __button1 = new Button { Text = "Login" }
-            .On(v => v.Tapped, Model.LoginTapped);
+            .On(v => v.Tapped, Model.TapLogin);
 
             await Body.AddRange(new View[] { __imageView1, __textView1, __textInput1, __textInput2, __button1 });
         }
@@ -57,7 +57,7 @@ namespace UI.Pages
     [EscapeGCop("Auto-generated")]
     public partial class Welcome : NavBarPage, ITemplate<ViewModel.WelcomePage>
     {
-        public ViewModel.WelcomePage Model => Zebble.Mvvm.ViewModel.The<ViewModel.WelcomePage>();
+        internal ViewModel.WelcomePage Model => Zebble.Mvvm.ViewModel.The<ViewModel.WelcomePage>();
 
         protected override async Task InitializeFromMarkup()
         {
@@ -68,10 +68,10 @@ namespace UI.Pages
             var __textView1 = new TextView { Text = "Hello there", CssClass = "title" };
 
             var __button1 = new Button { Text = "Login" }
-            .On(v => v.Tapped, Model.LoginTapped);
+            .On(v => v.Tapped, Model.TapLogin);
 
             var __button2 = new Button { Text = "Sign up" }
-            .On(v => v.Tapped, Model.SignUpTapped);
+            .On(v => v.Tapped, Model.TapSignUp);
 
             await Body.AddRange(new View[] { __imageView1, __textView1, __button1, __button2 });
         }
