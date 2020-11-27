@@ -4,6 +4,6 @@
     // Remove for your real project.
     class Shoe
     {
-        public string Brand, Name, ImageUrl;
+        public string Brand, ImageUrl;
     }
 }

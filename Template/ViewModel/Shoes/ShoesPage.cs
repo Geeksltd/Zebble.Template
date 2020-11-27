@@ -1,16 +1,23 @@
-﻿using Zebble;
+﻿using System.Threading.Tasks;
+using Zebble;
 using Zebble.Mvvm;
 
 namespace ViewModel
 {
     class ShoesPage : FullScreen
     {
-        public readonly Bindable<Item[]> Items = new Bindable<Item[]>();
+        public readonly CollectionViewModel<Item> Items = new CollectionViewModel<Item>();
+
+        protected override void NavigationStarted()
+        {
+            Items.Add(new Domain.Shoe { Brand = "Nike" });
+            Items.Add(new Domain.Shoe { Brand = "Adidas" });
+        }
     }
 
     class Item : ViewModel<Domain.Shoe>
     {
-        public Bindable<string> Name => Source.Get(x => x.Name);
+        public Bindable<string> Brand => Source.Get(x => x.Brand);
 
         public void Tap()
         {
