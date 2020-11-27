@@ -1,5 +1,4 @@
-﻿using System;
-using Zebble;
+﻿using Zebble;
 using Zebble.Mvvm;
 
 namespace ViewModel
@@ -9,9 +8,8 @@ namespace ViewModel
         public readonly Bindable<Item[]> Items = new Bindable<Item[]>();
     }
 
-    public class Item : Zebble.Mvvm.ViewModel
+    class Item : ViewModel<Domain.Shoe>
     {
-        readonly Bindable<Domain.Shoe> Source = new Bindable<Domain.Shoe>();
         public Bindable<string> Name => Source.Get(x => x.Name);
 
         public void Tap()

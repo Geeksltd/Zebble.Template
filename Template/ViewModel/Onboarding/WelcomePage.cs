@@ -3,7 +3,7 @@ using Zebble.Mvvm;
 
 namespace ViewModel
 {
-    public class WelcomePage : FullScreen
+    class WelcomePage : FullScreen
     {
         public readonly Bindable<string> SampleProperty = new Bindable<string>("Hellow world!");
 
