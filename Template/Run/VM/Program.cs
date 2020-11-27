@@ -1,8 +1,8 @@
-﻿using System;
-using System.Threading.Tasks;
-
-namespace VM
+﻿namespace VM
 {
+    using System;
+    using System.Threading.Tasks;
+
     class Program
     {
         public static async Task Main(string[] args)

@@ -1,13 +1,13 @@
-﻿using Android.App;
-using Android.OS;
-using Android.Widget;
-using Content.PM;
-using System;
-using Zebble;
-using Zebble.AndroidOS;
-
-namespace Android
+﻿namespace Android
 {
+    using Android.App;
+    using Android.OS;
+    using Android.Widget;
+    using Content.PM;
+    using System;
+    using Zebble;
+    using Zebble.AndroidOS;
+
     [Activity(Label = "Android", Icon = "@drawable/icon",
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,
         ScreenOrientation = ScreenOrientation.Portrait,

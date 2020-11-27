@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-using Zebble;
-
-namespace ViewModel
+﻿namespace ViewModel
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    using System.Threading.Tasks;
+    using Zebble;
+
     public class LoginPage : Zebble.Mvvm.FullScreen
     {
         public readonly Bindable<string> Email = new Bindable<string>();
