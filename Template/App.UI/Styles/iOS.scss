@@ -5,10 +5,22 @@
 @import "_Settings";
 
 .ios-only {
-    TextInput, TextView { font-family: Arial; }
-    .module-header-title { font-size: 24px; font-weight: bold; }
 
-    Dialog { border-radius: 15px; }
+    TextInput,
+    TextView {
+        font-family: Arial;
+    }
 
-    .primary-button { border-radius: 5px; }
+    .module-header-title {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    Dialog {
+        border-radius: 15px;
+    }
+
+    .primary-button {
+        border-radius: 5px;
+    }
 }

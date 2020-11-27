@@ -157,7 +157,8 @@ PopUp {
   padding: 0 20px;
 }
 
-#PopupOverlay, #WaitingOverlay {
+#PopupOverlay,
+#WaitingOverlay {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -185,7 +186,8 @@ Toast #Label {
   color: #fff;
 }
 
-Grid > #EmptyTextLabel, ListView > #EmptyTextLabel {
+Grid > #EmptyTextLabel,
+ListView > #EmptyTextLabel {
   text-align: center;
 }
 
@@ -268,19 +270,22 @@ Tabs Tabs-Tab #Label {
   text-align: center;
 }
 
-DatePicker-Cell, TimePicker-Cell {
+DatePicker-Cell,
+TimePicker-Cell {
   height: 50px;
   width: 100%;
 }
 
-DatePicker-Cell #Label, TimePicker-Cell #Label {
+DatePicker-Cell #Label,
+TimePicker-Cell #Label {
   height: 100%;
   width: 100%;
   text-align: center;
   font-size: 16px;
 }
 
-DatePicker-Dialog #RotatorsRow, TimePicker-Dialog #RotatorsRow {
+DatePicker-Dialog #RotatorsRow,
+TimePicker-Dialog #RotatorsRow {
   margin-top: 15px;
 }
 
@@ -301,18 +306,4 @@ Picker #Caret {
 Picker #PlaceholderLabel {
   color: #ddd;
   height: 100%;
-}
-
-TextView.title {
-  font-weight: bold;
-  font-size: 28px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-Button {
-  border-radius: 10px;
-  background: #f0f0f0;
-  margin: 10px;
-  padding: 10px;
 }
