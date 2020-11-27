@@ -17,7 +17,7 @@ namespace UI.Pages
     [EscapeGCop("Auto-generated")]
     public partial class Login : NavBarPage, ITemplate<ViewModel.LoginPage>
     {
-        internal ViewModel.LoginPage Model => Zebble.Mvvm.ViewModel.The<ViewModel.LoginPage>();
+        public ViewModel.LoginPage Model => Zebble.Mvvm.ViewModel.The<ViewModel.LoginPage>();
 
         protected override async Task InitializeFromMarkup()
         {
@@ -57,7 +57,7 @@ namespace UI.Pages
     [EscapeGCop("Auto-generated")]
     public partial class Welcome : NavBarPage, ITemplate<ViewModel.WelcomePage>
     {
-        internal ViewModel.WelcomePage Model => Zebble.Mvvm.ViewModel.The<ViewModel.WelcomePage>();
+        public ViewModel.WelcomePage Model => Zebble.Mvvm.ViewModel.The<ViewModel.WelcomePage>();
 
         protected override async Task InitializeFromMarkup()
         {

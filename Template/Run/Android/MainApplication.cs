@@ -1,11 +1,11 @@
-using App;
-using OS;
-using Runtime;
-using System;
-using Zebble;
-
 namespace Android
 {
+    using App;
+    using OS;
+    using Runtime;
+    using System;
+    using Zebble;
+
     //You can specify additional application information in this attribute
     [Application]
     public class MainApplication : Application, Application.IActivityLifecycleCallbacks

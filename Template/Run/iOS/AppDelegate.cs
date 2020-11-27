@@ -1,9 +1,9 @@
-﻿using Foundation;
-using System.Threading.Tasks;
-using Zebble;
-
-namespace IOS
+﻿namespace IOS
 {
+    using Foundation;
+    using System.Threading.Tasks;
+    using Zebble;
+
     // The UIApplicationDelegate for the application. This class is responsible for launching the
     // User Interface of the application, as well as listening (and optionally responding) to application events from iOS.
     [Register("AppDelegate")]

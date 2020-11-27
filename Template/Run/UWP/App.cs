@@ -1,7 +1,7 @@
-﻿using Zebble;
-
-namespace UWP
+﻿namespace UWP
 {
+    using Zebble;
+
     partial class App : Zebble.UWP.BaseApplication
     {
         public App()

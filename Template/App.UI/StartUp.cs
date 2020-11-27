@@ -17,7 +17,7 @@ namespace UI
 
             // Device.App.ReceivedMemoryWarning += CleanUpMemory;
 
-            LoadFirstPage().RunInParallel();
+            Launch().RunInParallel();
         }
 
         void CleanUpMemory()
@@ -29,6 +29,15 @@ namespace UI
 
             // TODO: If applicable, you can also remove any custom data that you have cached in memory.
             // Tip: You can detect potential memory leaks by using a tool such as DotMemory from Jet Brains.
+        }
+
+        protected override bool IsTestMode() => false;
+
+        public async Task Launch()
+        {
+            await LoadFirstPage();
+
+            if (IsTestMode()) TestEngine.Run();
         }
 
         public static Task LoadFirstPage()

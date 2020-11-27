@@ -1,7 +1,7 @@
-﻿using System;
-
-public class Application
+﻿public class Application
 {
+    using System;
+
     // This is the main entry point of the application.
     static void Main(string[] args)
     {

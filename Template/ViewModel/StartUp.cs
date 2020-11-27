@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ViewModel
+﻿namespace ViewModel
 {
-    // TODO: Learn: https://zebble.net/docs/introduction
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    using System.Threading.Tasks;
 
+    // TODO: Learn: https://zebble.net/docs/introduction
     class StartUp
     {
         public static Task Run()
