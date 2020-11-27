@@ -3,7 +3,6 @@ namespace UI
     using System;
     using System.Reflection;
     using System.Threading.Tasks;
-    using Zebble;
 
     public partial class StartUp : Zebble.StartUp
     {
@@ -15,7 +14,7 @@ namespace UI
 
             CssStyles.LoadAll();
 
-            // Device.App.ReceivedMemoryWarning += CleanUpMemory;
+            Zebble.Device.App.ReceivedMemoryWarning += CleanUpMemory;
 
             LoadFirstPage().RunInParallel();
         }
