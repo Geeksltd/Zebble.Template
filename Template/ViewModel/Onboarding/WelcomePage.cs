@@ -1,20 +1,31 @@
-﻿using Zebble;
-using Zebble.Mvvm;
-
-namespace ViewModel
+﻿namespace ViewModel
 {
-    class WelcomePage : FullScreen
+    using Domain.Services;
+    using Domain.Services.Firebase;
+    using System.Threading.Tasks;
+    using Zebble;
+
+    public class WelcomePage : Zebble.Mvvm.FullScreen
     {
-        public readonly Bindable<string> SampleProperty = new Bindable<string>("Hellow world!");
+        readonly IAuthService AuthService;
 
-        public void TapLogin() => Forward<LoginPage>();
-
-        public void TapSignUp()
+        public WelcomePage()
         {
-            Dialog.Alert("It's not implemented yet!");
-
-            if (Dialog.Confirm("Would you like to log in instead?"))
-                TapLogin();
+            AuthService = new FirebaseAuthService();
         }
+
+        protected async override Task NavigationStartedAsync()
+        {
+            var isAuthenticated = await AuthService.IsAuthenticated();
+
+            if (isAuthenticated)
+                Go<HomePage>();
+
+            await base.NavigationStartedAsync();
+        }
+
+        public void LoginTapped() => Forward<LoginPage>();
+
+        public void RegisterTapped() => Forward<RegisterPage>();
     }
 }

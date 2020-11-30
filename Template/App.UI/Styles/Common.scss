@@ -7,6 +7,15 @@ TextView.title {
     margin-bottom: 20px;
 }
 
+TextView.sub-title {
+    color: grey;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: solid 1px #f0f0f0;
+}
+
 Button {
     border-radius: 10px;
     background: #f0f0f0;

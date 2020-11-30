@@ -25,12 +25,9 @@
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\Welcome.zbl" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="$(MSBuildThisFileDirectory)Styles\Android.css" />
-    <Content Include="$(MSBuildThisFileDirectory)Styles\Common.css" />
-    <Content Include="$(MSBuildThisFileDirectory)Styles\iOS.css" />
-    <Content Include="$(MSBuildThisFileDirectory)Styles\Windows.css" />
+    <Compile Include="$(MSBuildThisFileDirectory)StartUp.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)StartUp.cs" />
+    <Content Include="$(MSBuildThisFileDirectory)Styles\Common.css" />
   </ItemGroup>
 </Project>

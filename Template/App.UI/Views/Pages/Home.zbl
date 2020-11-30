@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<z-Component z-type="Home" 
+			 z-base="NavBarPage" 
+			 z-namespace="UI.Pages" 
+			 z-viewmodel="ViewModel.HomePage"
+			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+			 xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
+	<z-place inside="Body">
+		<ImageView Path="Images/Logo.png" />
+		<TextView Text="Welcome back" CssClass="title" />
+		<TextView Text="@{Model.LoggedInUserEmail}" CssClass="title" />
+		<Button Text="Logout" on-Tapped="@{Model.LogoutTapped}" />
+	</z-place>
+</z-Component>

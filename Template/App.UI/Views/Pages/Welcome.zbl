@@ -6,12 +6,10 @@
 			 z-viewmodel="ViewModel.WelcomePage"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:noNamespaceSchemaLocation="./../.zebble-schema.xml">
-
 	<z-place inside="Body">
 		<ImageView Path="Images/Logo.png" />
-		<TextView Text="Hello there" CssClass="title"/>
-
-		<Button Text="Login" on-Tapped="@{Model.TapLogin}"/>
-		<Button Text="Sign up" on-Tapped="@{Model.TapSignUp}"/>
+		<TextView Text="Welcome to our App" CssClass="title" />
+		<Button Text="Login" on-Tapped="@{Model.LoginTapped}" />
+		<Button Text="Register" on-Tapped="@{Model.RegisterTapped}" />
 	</z-place>
 </z-Component>
