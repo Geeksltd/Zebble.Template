@@ -18,7 +18,7 @@
 
         protected override async Task NavigationStartedAsync()
         {
-            var loggedInUser = await AuthService.GetLoggedInUser();
+            var loggedInUser = await AuthService.GetUser();
 
             LoggedInUserEmail.Value = loggedInUser.Email;
 

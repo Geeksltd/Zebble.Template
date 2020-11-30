@@ -5,6 +5,7 @@
     using System.Net.Http;
     using System.Text;
     using System.Threading.Tasks;
+    using Zebble.Device;
 
     static class FirebaseAuthApis
     {
@@ -51,7 +52,7 @@
             }
         }
 
-        static HttpClient CreateClient() => new() { BaseAddress = new Uri(BASE_ADDRESS) };
+        static HttpClient CreateClient() => Network.HttpClient(BASE_ADDRESS, TimeSpan.FromSeconds(30));
 
         static string CreateRequestUri(string path) => REQUEST_PATH.FormatWith(path, WEB_API_TOKEN);
     }

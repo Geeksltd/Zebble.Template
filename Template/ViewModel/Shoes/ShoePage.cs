@@ -1,10 +1,9 @@
-﻿using System;
-using Zebble;
-using Zebble.Mvvm;
-
-namespace ViewModel
+﻿namespace ViewModel
 {
-    class ShoePage : FullScreen<Domain.Shoe>
+    using Zebble;
+    using Zebble.Mvvm;
+
+    class ShoePage : FullScreen<Domain.Entities.Shoe>
     {
         public Bindable<string> Name => Source.Get(x => x.Brand);
 
@@ -17,7 +16,7 @@ namespace ViewModel
         }
     }
 
-    class ShoeHeader : ViewModel<Domain.Shoe>
+    class ShoeHeader : ViewModel<Domain.Entities.Shoe>
     {
         public Bindable<string> Image => Source.Get(x => x.ImageUrl);
     }

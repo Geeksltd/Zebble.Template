@@ -22,7 +22,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\IAuthService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\LoginResult.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\RegisterResult.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\UserSession.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Shoe.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\User.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Shoe.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Entities\" />
   </ItemGroup>
 </Project>

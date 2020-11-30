@@ -1,5 +1,6 @@
 ﻿namespace Domain.Services.Firebase
 {
+    using Domain.Entities;
     using Domain.Extensions;
     using System;
     using System.IO;
@@ -8,7 +9,7 @@
 
     class FirebaseAuthService : IAuthService
     {
-        public async Task<bool> IsAuthenticated() => await GetLoggedInUser() != null;
+        public async Task<bool> IsAuthenticated() => await GetUser() != null;
 
         public async Task<bool> IsAnonymous() => !await IsAuthenticated();
 
@@ -23,7 +24,7 @@
 
             var result = RegisterResult.Success(response.IdToken, response.Email, response.ExpiresIn.ToUnixOffset());
 
-            await PersistUserSession(result.Session);
+            await PersistUser(result.User);
 
             return result;
         }
@@ -39,31 +40,31 @@
 
             var result = LoginResult.Success(response.IdToken, response.Email, response.ExpiresIn.ToUnixOffset());
 
-            await PersistUserSession(result.Session);
+            await PersistUser(result.User);
 
             return result;
         }
 
-        public async Task<UserSession> GetLoggedInUser()
+        public async Task<User> GetUser()
         {
-            return await LoadUserSession();
+            return await LoadUser();
         }
 
         public async Task Logout()
         {
-            await PersistUserSession(null);
+            await PersistUser(null);
         }
 
-        private async Task PersistUserSession(UserSession result)
+        private async Task PersistUser(User result)
         {
-            await GetUserSessionFile().WriteAllTextAsync(result.ToJson());
+            await GetUserFile().WriteAllTextAsync(result.ToJson());
         }
 
-        private async Task<UserSession> LoadUserSession()
+        private async Task<User> LoadUser()
         {
-            return (await GetUserSessionFile().ReadAllTextAsync()).FromJson<UserSession>();
+            return (await GetUserFile().ReadAllTextAsync()).FromJson<User>();
         }
 
-        private FileInfo GetUserSessionFile() => IO.File("UserSession.json");
+        private FileInfo GetUserFile() => IO.File("User.json");
     }
 }

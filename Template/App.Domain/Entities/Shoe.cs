@@ -1,4 +1,4 @@
-﻿namespace Domain
+﻿namespace Domain.Entities
 {
     // Note: Sample entity.
     // Remove for your real project.

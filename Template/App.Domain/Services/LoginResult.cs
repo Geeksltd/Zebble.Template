@@ -1,5 +1,6 @@
 ﻿namespace Domain.Services
 {
+    using Domain.Entities;
     using System;
 
     public class LoginResult
@@ -8,12 +9,12 @@
         public int Code { get; set; }
         public string Message { get; set; }
 
-        public UserSession Session { get; set; }
+        public User User { get; set; }
 
         public static LoginResult Success(string authToken, string email, DateTimeOffset expiresAt) => new()
         {
             Succeeded = true,
-            Session = new UserSession
+            User = new User
             {
                 AuthToken = authToken,
                 Email = email,
