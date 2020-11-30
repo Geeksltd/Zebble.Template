@@ -10,6 +10,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Onboarding\LoginPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Shoes\ShoePage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Shoes\ShoesPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StartUp.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Onboarding\WelcomePage.cs" />
   </ItemGroup>

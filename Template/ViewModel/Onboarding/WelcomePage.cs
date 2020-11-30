@@ -1,26 +1,20 @@
-﻿namespace ViewModel
+﻿using Zebble;
+using Zebble.Mvvm;
+
+namespace ViewModel
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Text;
-    using System.Threading.Tasks;
-    using Zebble;
-
-    public class WelcomePage : Zebble.Mvvm.FullScreen
+    class WelcomePage : FullScreen
     {
-        public readonly Bindable<string> SampleProperty = new Bindable<string>("Hello world!");
+        public readonly Bindable<string> SampleProperty = new Bindable<string>("Hellow world!");
 
-        public void LoginTapped()
-        {
-            Forward<LoginPage>();
-        }
+        public void TapLogin() => Forward<LoginPage>();
 
-        public void SignUpTapped()
+        public void TapSignUp()
         {
             Dialog.Alert("It's not implemented yet!");
 
             if (Dialog.Confirm("Would you like to log in instead?"))
-                LoginTapped();
+                TapLogin();
         }
     }
 }

@@ -133,7 +133,7 @@
       <Version>9.0.1</Version>
     </PackageReference>
     <PackageReference Include="Zebble">
-      <Version>4.5.373</Version>
+      <Version>4.5.383</Version>
     </PackageReference>
     <PackageReference Include="Zebble.CheckBox">
       <Version>1.22.116</Version>
@@ -170,6 +170,9 @@
     </PackageReference>
     <PackageReference Include="Zebble.WebApi">
       <Version>4.5.289</Version>
+    </PackageReference>
+    <PackageReference Include="Zebble.Testing">
+      <Version>1.2.101</Version>
     </PackageReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

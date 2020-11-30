@@ -14,3 +14,5 @@ Template/Website/package-lock.json
 *.map
 Template/DB/Tables
 Template/Website/yarn.lock
+Template/App.UI/.zebble-generated.cs
+Template/App.UI/Views/.zebble-schema.xml
