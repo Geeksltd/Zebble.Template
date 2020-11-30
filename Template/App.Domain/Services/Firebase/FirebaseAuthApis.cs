@@ -35,13 +35,13 @@
         {
             encoding ??= Encoding.UTF8;
 
-            using var client = CreateClient();
-
-            var uri = CreateRequestUri(path);
-            var payload = new StringContent(request.ToJson(), encoding, "text/json");
-
             try
             {
+                var client = CreateClient();
+
+                var uri = CreateRequestUri(path);
+                var payload = new StringContent(request.ToJson(), encoding, "text/json");
+
                 var message = await client.PostAsync(uri, payload);
 
                 return encoding.GetString(await message.Content.ReadAsByteArrayAsync());
