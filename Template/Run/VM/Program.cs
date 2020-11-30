@@ -9,6 +9,9 @@
         {
             Zebble.Console.Configure();
             await ViewModel.StartUp.Run();
+
+            Script.Run();
+
             if (args.None()) Zebble.Console.AwaitNextCommand();
         }
     }

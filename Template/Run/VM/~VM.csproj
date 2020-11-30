@@ -10,7 +10,8 @@
   <Import Project="..\..\ViewModel\ViewModel.projitems" Label="Shared" />
 
   <ItemGroup>
-    <PackageReference Include="Zebble" Version="4.5.383" />
+    <PackageReference Include="Zebble" Version="4.5.386" />
+    <PackageReference Include="Zebble.WebApi" Version="4.5.385" />
   </ItemGroup>
 
 </Project>

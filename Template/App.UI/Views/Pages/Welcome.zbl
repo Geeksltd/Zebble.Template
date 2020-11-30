@@ -11,7 +11,7 @@
 		<ImageView Path="Images/Logo.png" />
 		<TextView Text="Hello there" CssClass="title"/>
 
-		<Button Text="Login" on-Tapped="@{Model.TapLogin}"/>
-		<Button Text="Sign up" on-Tapped="@{Model.TapSignUp}"/>
+		<Button Text="Login" on-Tapped="@{Model.TapLogin()}"/>
+		<Button Text="Sign up" on-Tapped="@{Model.TapSignUp()}"/>
 	</z-place>
 </z-Component>

@@ -14,7 +14,7 @@
     <FileAlignment>512</FileAlignment>
     <AndroidApplication>true</AndroidApplication>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
-    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <NuGetPackageImportStamp>
@@ -93,7 +93,7 @@
       <Version>28.0.0.3</Version>
     </PackageReference>
     <PackageReference Include="Zebble">
-      <Version>4.5.383</Version>
+      <Version>4.5.386</Version>
     </PackageReference>
     <PackageReference Include="Zebble.CheckBox">
       <Version>1.22.116</Version>
@@ -111,7 +111,7 @@
       <Version>3.12.164</Version>
     </PackageReference>
     <PackageReference Include="Zebble.ListView">
-      <Version>4.10.169</Version>
+      <Version>4.10.171</Version>
     </PackageReference>
     <PackageReference Include="Zebble.NavBarTabs">
       <Version>2.6.355</Version>
@@ -126,7 +126,7 @@
       <Version>1.31.239</Version>
     </PackageReference>
     <PackageReference Include="Zebble.WebApi">
-      <Version>4.5.289</Version>
+      <Version>4.5.385</Version>
     </PackageReference>
     <PackageReference Include="Zebble.Testing">
       <Version>1.2.101</Version>
