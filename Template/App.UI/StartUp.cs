@@ -1,8 +1,5 @@
 namespace UI
 {
-    using System;
-    using System.Reflection;
-    using System.Threading.Tasks;
     using Zebble;
     using Zebble.Testing;
 
@@ -16,7 +13,7 @@ namespace UI
 
             CssStyles.LoadAll();
 
-            // Device.App.ReceivedMemoryWarning += CleanUpMemory;
+            Zebble.Device.App.ReceivedMemoryWarning += CleanUpMemory;
 
             Launch().RunInParallel();
         }
