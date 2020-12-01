@@ -29,8 +29,14 @@
     <Content Include="$(MSBuildThisFileDirectory)Styles\Common.css" />
     <Content Include="$(MSBuildThisFileDirectory)Styles\iOS.css" />
     <Content Include="$(MSBuildThisFileDirectory)Styles\Windows.css" />
+    <Content Include="$(MSBuildThisFileDirectory)Styles\_Core.css" />
+    <Content Include="$(MSBuildThisFileDirectory)Styles\_Settings.css" />
+    <Content Include="$(MSBuildThisFileDirectory)Views\.zebble-schema.xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory).zebble-generated-css.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory).zebble-generated.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StartUp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tests\TestCases\SampleTest.cs" />
   </ItemGroup>
 </Project>

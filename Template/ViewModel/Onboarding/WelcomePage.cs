@@ -1,9 +1,9 @@
-﻿using Zebble;
-using Zebble.Mvvm;
-
-namespace ViewModel
+﻿namespace ViewModel
 {
-    class WelcomePage : FullScreen
+    using Zebble;
+    using Zebble.Mvvm;
+
+    public class WelcomePage : FullScreen
     {
         public readonly Bindable<string> SampleProperty = new Bindable<string>("Hellow world!");
 
