@@ -3,6 +3,7 @@ namespace UI
     using System;
     using System.Reflection;
     using System.Threading.Tasks;
+    using Zebble;
     using Zebble.Testing;
 
     public partial class StartUp : Zebble.StartUp

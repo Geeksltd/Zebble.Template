@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Linq;
+using System.Threading.Tasks;
 using Zebble;
 using Zebble.Mvvm;
 
@@ -10,19 +11,20 @@ namespace ViewModel
 
         protected override void NavigationStarted()
         {
-            Items.Add(new Domain.Shoe { Brand = "Nike" });
-            Items.Add(new Domain.Shoe { Brand = "Adidas" });
+            var shoes = Enumerable.Range(1, 100).Select(v => new Domain.Shoe { Brand = "Shoe " + v }).ToArray();
+            Items.Add(shoes);
         }
-    }
 
-    class Item : ViewModel<Domain.Shoe>
-    {
-        public Bindable<string> Brand => Source.Get(x => x.Brand);
-
-        public void Tap()
+        public class Item : ViewModel<Domain.Shoe>
         {
-            The<ShoePage>().Source.Set(Source);
-            Forward<ShoePage>();
+            public Bindable<string> ImageUrl => Source.Get(x => x.ImageUrl);
+            public Bindable<string> Brand => Source.Get(x => x.Brand);
+
+            public void Tap() 
+            {
+                The<ShoePage>().Source.Set(Source);
+                Forward<ShoePage>();
+            }
         }
     }
 }

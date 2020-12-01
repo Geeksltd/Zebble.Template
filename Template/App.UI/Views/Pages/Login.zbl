@@ -2,7 +2,7 @@
 
 <z-Component z-type="Login" 
 			 z-base="NavBarPage" 
-			 z-namespace="UI.Pages" 
+			 z-namespace="UI.Pages" 			 
 			 z-viewmodel="ViewModel.LoginPage"
 			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 			 xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
@@ -11,6 +11,6 @@
 		<TextView Text="Hello there" CssClass="title" />
 		<TextInput Text="@{Model.Email}"/>
 		<TextInput Text="@{Model.Password}"/>
-		<Button Text="Login" on-Tapped="@{Model.TapLogin}" />
+		<Button Text="Login" on-Tapped="@{Model.TapLogin()}" />
 	</z-place>
 </z-Component>
