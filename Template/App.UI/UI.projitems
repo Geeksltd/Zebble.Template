@@ -40,5 +40,6 @@
     <Compile Include="$(MSBuildThisFileDirectory).zebble-generated.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StartUp.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Widgets\Row.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tests\TestCases\SampleTest.cs" />
   </ItemGroup>
 </Project>
