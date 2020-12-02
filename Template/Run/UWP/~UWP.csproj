@@ -127,10 +127,10 @@
   <Import Project="..\..\ViewModel\ViewModel.projitems" Label="Shared" />
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>6.2.10</Version>
+      <Version>6.2.11</Version>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
-      <Version>9.0.1</Version>
+      <Version>12.0.3</Version>
     </PackageReference>
     <PackageReference Include="Zebble">
       <Version>4.5.387</Version>
@@ -172,7 +172,7 @@
       <Version>4.5.385</Version>
     </PackageReference>
     <PackageReference Include="Zebble.Testing">
-      <Version>1.2.101</Version>
+      <Version>1.2.102</Version>
     </PackageReference>
     <PackageReference Include="Zebble.BoxShadow">
       <Version>1.2.140</Version>

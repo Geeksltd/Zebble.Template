@@ -1,10 +1,9 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
-using Zebble;
-using Zebble.Mvvm;
-
-namespace ViewModel
+﻿namespace ViewModel
 {
+    using System.Linq;
+    using Zebble;
+    using Zebble.Mvvm;
+
     class ShoesPage : FullScreen
     {
         public readonly CollectionViewModel<Item> Items = new CollectionViewModel<Item>();
@@ -20,7 +19,7 @@ namespace ViewModel
             public Bindable<string> ImageUrl => Source.Get(x => x.ImageUrl);
             public Bindable<string> Brand => Source.Get(x => x.Brand);
 
-            public void Tap() 
+            public void Tap()
             {
                 The<ShoePage>().Source.Set(Source);
                 Forward<ShoePage>();

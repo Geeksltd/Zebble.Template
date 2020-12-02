@@ -1,9 +1,8 @@
-﻿using System;
-using Zebble;
-using Zebble.Mvvm;
-
-namespace ViewModel
+﻿namespace ViewModel
 {
+    using Zebble;
+    using Zebble.Mvvm;
+
     class ShoePage : FullScreen<Domain.Shoe>
     {
         public Bindable<string> Name => Source.Get(x => x.Brand);

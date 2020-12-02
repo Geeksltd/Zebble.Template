@@ -130,7 +130,7 @@
       <Version>4.5.385</Version>
     </PackageReference>
     <PackageReference Include="Zebble.Testing">
-      <Version>1.2.101</Version>
+      <Version>1.2.102</Version>
     </PackageReference>
     <PackageReference Include="Zebble.BoxShadow">
       <Version>1.2.140</Version>
