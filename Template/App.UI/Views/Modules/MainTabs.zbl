@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<z-Component z-type="MainTabs"
+			 z-base="Zebble.Tabs"
+			 z-namespace="UI.Modules"
+			 z-viewmodel="ViewModel.MainTabs"
+			 on-Tapped="@Model.Tap"
+			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			 xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
+	<Tab z-of="Modules.ProfileTab" Label.Text="Profile" Icon.Path="Images/Tabs.Profile.png" />
+	<Tab z-of="Modules.PopularShoesTab" Label.Text="Popular" Icon.Path="Images/Tabs.Popular-Shoes.png" />
+	<Tab z-of="Modules.LatestShoesTab" Label.Text="Latest" Icon.Path="Images/Tabs.Latest-Shoes.png" />
+</z-Component>

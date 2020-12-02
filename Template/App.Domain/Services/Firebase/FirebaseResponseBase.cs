@@ -1,6 +1,6 @@
-﻿namespace Domain.Services.Firebase
+﻿namespace Domain
 {
-    public abstract class FirebaseResponseBase
+    abstract class FirebaseResponseBase
     {
         public FirebaseError Error { get; set; }
     }

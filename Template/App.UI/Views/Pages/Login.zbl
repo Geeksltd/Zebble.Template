@@ -1,18 +1,17 @@
 <?xml version="1.0"?>
-
-<z-Component z-type="Login" 
-			 z-base="NavBarPage" 
-			 z-namespace="UI.Pages" 
+<z-Component z-type="Login"
+			 z-base="NavBarPage"
+			 z-namespace="UI.Pages"
 			 z-viewmodel="ViewModel.LoginPage"
-			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 			 xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
 	<z-place inside="Body">
 		<ImageView Path="Images/Logo.png" />
 		<TextView Text="Login to your account" CssClass="title" />
 		<TextInput Text="@{Model.Email}" Placeholder="Email" KeyboardActionType="Next" TextMode="Email" />
 		<TextInput Text="@{Model.Password}" Placeholder="Password" KeyboardActionType="Done" TextMode="Password" />
-		<Button Text="Login" on-Tapped="@{Model.LoginTapped}" />
+		<Button Text="Login" on-Tapped="@{Model.TapLogin()}" />
 		<TextView Text="Don't have an account?" CssClass="sub-title" />
-		<Button Text="Register" on-Tapped="@{Model.RegisterTapped}" />
+		<Button Text="Register" on-Tapped="@{Model.TapRegister()}" />
 	</z-place>
 </z-Component>

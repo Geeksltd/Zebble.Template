@@ -1,5 +1,4 @@
 <?xml version="1.0"?>
-
 <z-Component z-type="Welcome"
 			 z-base="NavBarPage"
 			 z-namespace="UI.Pages"
@@ -9,7 +8,7 @@
 	<z-place inside="Body">
 		<ImageView Path="Images/Logo.png" />
 		<TextView Text="Welcome to our App" CssClass="title" />
-		<Button Text="Login" on-Tapped="@{Model.LoginTapped}" />
-		<Button Text="Register" on-Tapped="@{Model.RegisterTapped}" />
+		<Button Text="Login" on-Tapped="@{Model.TapLogin()}" />
+		<Button Text="Register" on-Tapped="@{Model.TapRegister()}" />
 	</z-place>
 </z-Component>

@@ -1,8 +1,8 @@
-﻿namespace Domain.Entities
+﻿namespace Domain
 {
     using System;
 
-    public class User
+    class User
     {
         public string AuthToken { get; set; }
         public string Email { get; set; }

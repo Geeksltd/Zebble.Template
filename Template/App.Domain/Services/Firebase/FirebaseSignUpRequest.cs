@@ -1,4 +1,4 @@
-﻿namespace Domain.Services.Firebase
+﻿namespace Domain
 {
     class FirebaseSignUpRequest
     {

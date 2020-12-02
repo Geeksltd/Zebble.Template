@@ -11,15 +11,17 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\DateTimeExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\JsonExtensions.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\Firebase\FirebaseAuthApis.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\ListExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Firebase\FirebaseAuthService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Firebase\FirebaseError.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Firebase\FirebaseResponseBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Firebase\FirebaseShoeService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Firebase\FirebaseSignInRequest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Firebase\FirebaseSignInResponse.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Firebase\FirebaseSignUpRequest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Firebase\FirebaseSignUpResponse.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\IAuthService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IShoeService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\LoginResult.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\RegisterResult.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\User.cs" />

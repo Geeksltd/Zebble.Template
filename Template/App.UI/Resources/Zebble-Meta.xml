@@ -1,2 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<data />
+<data>
+  <image path="Images/Logo.png" width="192" height="156" />
+  <image path="Images/Tabs.Latest-Shoes.png" width="60" height="60" />
+  <image path="Images/Tabs.Popular-Shoes.png" width="60" height="60" />
+  <image path="Images/Tabs.Profile.png" width="60" height="60" />
+</data>

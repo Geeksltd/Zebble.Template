@@ -1,11 +1,10 @@
 ﻿namespace ViewModel
 {
-    using Domain.Services;
-    using Domain.Services.Firebase;
+    using Domain;
     using System.Threading.Tasks;
-    using Zebble;
+    using Zebble.Mvvm;
 
-    public class WelcomePage : Zebble.Mvvm.FullScreen
+    class WelcomePage : FullScreen
     {
         readonly IAuthService AuthService;
 
@@ -24,8 +23,8 @@
             await base.NavigationStartedAsync();
         }
 
-        public void LoginTapped() => Forward<LoginPage>();
+        public void TapLogin() => Forward<LoginPage>();
 
-        public void RegisterTapped() => Forward<RegisterPage>();
+        public void TapRegister() => Forward<RegisterPage>();
     }
 }

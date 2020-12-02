@@ -9,12 +9,16 @@
     <Import_RootNamespace>ViewModel</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Onboarding\HomePage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Onboarding\LoginPage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Onboarding\RegisterPage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Shoes\ShoePage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Shoes\ShoesPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modules\ProfileTab.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modules\LatestShoesTab.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modules\MainTabs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modules\PopularShoesTab.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modules\ShoeList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\HomePage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\LoginPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\RegisterPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\ShoeDetailsPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\WelcomePage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StartUp.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Onboarding\WelcomePage.cs" />
   </ItemGroup>
 </Project>

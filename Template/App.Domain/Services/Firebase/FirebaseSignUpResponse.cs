@@ -1,6 +1,6 @@
-﻿namespace Domain.Services.Firebase
+﻿namespace Domain
 {
-    public class FirebaseSignUpResponse : FirebaseResponseBase
+    class FirebaseSignUpResponse : FirebaseResponseBase
     {
         public string IdToken { get; set; }
         public string Email { get; set; }

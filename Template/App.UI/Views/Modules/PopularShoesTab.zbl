@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<z-Component z-type="PopularShoesTab"
+			 z-base="Templates.MainTabsPage"
+			 z-namespace="UI.Modules"
+			 z-viewmodel="ViewModel.PopularShoesTab"
+			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			 xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
+	<Stack>
+		<ImageView Path="Images/Logo.png" />
+		<TextView Text="Popular Shoes" CssClass="title" />
+		<Modules.ShoeList Model.Items="@Model.Items" />
+	</Stack>
+</z-Component>

@@ -1,8 +1,8 @@
-using System.Threading.Tasks;
-using Zebble.Testing;
-
 namespace UI.Tests
 {
+    using System.Threading.Tasks;
+    using Zebble.Testing;
+
     //[UnderDevelopment]
     public class SampleTest : UITest
     {

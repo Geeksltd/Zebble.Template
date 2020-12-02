@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<z-Component z-type="ProfileTab"
+			 z-base="Templates.MainTabsPage"
+			 z-namespace="UI.Modules"
+			 z-viewmodel="ViewModel.ProfileTab"
+			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			 xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
+	<Stack>
+		<ImageView Path="Images/Logo.png" />
+		<TextView Text="Welcome back" CssClass="title" />
+		<TextView Text="@{Model.LoggedInUserEmail}" CssClass="title" />
+		<Button Text="Logout" on-Tapped="@{Model.TapLogout()}" />
+	</Stack>
+</z-Component>

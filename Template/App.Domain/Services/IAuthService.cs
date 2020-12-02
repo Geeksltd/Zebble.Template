@@ -1,9 +1,8 @@
-﻿namespace Domain.Services
+﻿namespace Domain
 {
-    using Domain.Entities;
     using System.Threading.Tasks;
 
-    public interface IAuthService
+    interface IAuthService
     {
         Task<bool> IsAuthenticated();
         Task<bool> IsAnonymous();

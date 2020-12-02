@@ -21,13 +21,33 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Config.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <None Include="$(MSBuildThisFileDirectory)Views\Modules\LatestShoesTab.zbl" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Modules\MainTabs.zbl" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Modules\PopularShoesTab.zbl" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Modules\ProfileTab.zbl" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Modules\ShoeList.zbl" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Home.zbl" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\Login.zbl" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Register.zbl" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Pages\ShoeDetails.zbl" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\Welcome.zbl" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory).zebble-generated-css.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory).zebble-generated.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StartUp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Templates\MainTabsPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tests\TestCases\SampleTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Modules\MainTabsMenuLauncher.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Widgets\Row.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Styles\Android.css" />
     <Content Include="$(MSBuildThisFileDirectory)Styles\Common.css" />
+    <Content Include="$(MSBuildThisFileDirectory)Styles\iOS.css" />
+    <Content Include="$(MSBuildThisFileDirectory)Styles\Windows.css" />
+    <Content Include="$(MSBuildThisFileDirectory)Styles\_Core.css" />
+    <Content Include="$(MSBuildThisFileDirectory)Styles\_Settings.css" />
+    <Content Include="$(MSBuildThisFileDirectory)Views\.zebble-schema.xml" />
   </ItemGroup>
 </Project>

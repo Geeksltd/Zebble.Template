@@ -1,9 +1,8 @@
-﻿namespace Domain.Services
+﻿namespace Domain
 {
-    using Domain.Entities;
     using System;
 
-    public class LoginResult
+    class LoginResult
     {
         public bool Succeeded { get; set; }
         public int Code { get; set; }

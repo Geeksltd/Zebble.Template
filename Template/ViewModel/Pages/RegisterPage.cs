@@ -2,31 +2,31 @@
 {
     using System.Threading.Tasks;
     using Zebble;
-    using Domain.Services;
-    using Domain.Services.Firebase;
+    using Domain;
+    using Zebble.Mvvm;
 
-    public class LoginPage : Zebble.Mvvm.FullScreen
+    class RegisterPage : FullScreen
     {
         readonly IAuthService AuthService;
 
         public readonly Bindable<string> Email = new("");
         public readonly Bindable<string> Password = new("");
 
-        public LoginPage()
+        public RegisterPage()
         {
             AuthService = new FirebaseAuthService();
         }
 
-        public async Task LoginTapped()
+        public async Task TapRegister()
         {
-            var result = await AuthService.Login(Email.Value, Password.Value);
+            var result = await AuthService.Register(Email.Value, Password.Value);
 
             if (result.Succeeded)
                 Go<HomePage>();
             else
-                Dialog.Alert($"Login failed: {result.Message} ({result.Code})");
+                Dialog.Alert($"Register failed: {result.Message} ({result.Code})");
         }
 
-        public void RegisterTapped() => Forward<RegisterPage>();
+        public void TapLogin() => Forward<LoginPage>();
     }
 }
