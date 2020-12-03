@@ -1,0 +1,25 @@
+﻿@import "_Settings";
+
+.primary-bg {
+    background-color: $primary-bg-color;
+}
+
+.m-big {
+    margin: 50px;
+}
+
+.m-b-normal {
+    margin-bottom: 15px;
+}
+
+.m-b-big {
+    margin-bottom: 25px;
+}
+
+.parent-center {
+    margin-left: calc("view.Width, view.Parent.Width, (vw, pw) => (pw - vw) / 2");
+}
+
+.muted {
+    color: $muted-text-color;
+}

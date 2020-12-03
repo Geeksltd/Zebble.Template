@@ -2,11 +2,15 @@
 {
     using Domain;
     using System.Threading.Tasks;
+    using Zebble;
     using Zebble.Mvvm;
 
     class WelcomePage : FullScreen
     {
         readonly IAuthService AuthService;
+
+        public Bindable<bool> IsIniting = new(true);
+        public Bindable<bool> IsAnonymous = new(false);
 
         public WelcomePage()
         {
@@ -15,10 +19,14 @@
 
         protected async override Task NavigationStartedAsync()
         {
-            var isAuthenticated = await AuthService.IsAuthenticated();
+            var isValid = await AuthService.ValidateUserValidity();
 
-            if (isAuthenticated)
+            IsIniting.Set(false);
+
+            if (isValid)
                 Go<HomePage>();
+            else
+                IsAnonymous.Set(true);
 
             await base.NavigationStartedAsync();
         }

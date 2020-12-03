@@ -1,24 +1,62 @@
 ﻿@import "_Core";
+@import "_Utilities";
+
+Spinner {
+    margin-left: calc("view.Width, view.Parent.Width, (vw, pw) => (pw - vw) / 2");
+
+    > ImageView {
+        margin: 0;
+    }
+
+    &.small {
+        background-color: #fff;
+        width: 60px;
+        height: 60px;
+        border-radius: 50px;
+    }
+}
+
+ImageView.logo {
+    width: 150px;
+    height: 150px;
+}
 
 TextView.title {
+    color: $heading-text-color;
     font-weight: bold;
-    font-size: 28px;
+    font-size: 22px;
     text-align: center;
-    margin-bottom: 20px;
 }
 
 TextView.sub-title {
-    color: grey;
     font-size: 18px;
-    text-align: center;
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: solid 1px #f0f0f0;
+}
+
+TextView.separator {
+    margin-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: solid 1px #f0f0f0;
 }
 
 Button {
     border-radius: 10px;
     background: #f0f0f0;
-    margin: 10px;
     padding: 10px;
+}
+
+ActionButton {
+    height: 56px;
+
+    Column {
+        padding: 10px;
+    }
+
+    TextView.primary {
+        font-size: 16px;
+        color: $heading-text-color;
+    }
+
+    TextView.secondary {
+        font-size: 14px;
+    }
 }

@@ -10,6 +10,33 @@
 
     class FirebaseAuthService : IAuthService
     {
+        public async Task<bool> ValidateUserValidity()
+        {
+            await Task.Delay(2000);
+
+            var user = await GetUser();
+
+            if (user != null)
+            {
+                if (user.ExpiresAt > LocalTime.Now)
+                {
+                    await Logout();
+                    return false;
+                }
+
+                var request = FirebaseValidateAuthTokenRequest.Create(user.AuthToken);
+
+                var response = await FirebaseAuthApis.ValidateAuthToken(request);
+
+                if (response.Error != null)
+                    return false;
+
+                return response.IsValid;
+            }
+
+            return false;
+        }
+
         public async Task<bool> IsAuthenticated() => await GetUser() != null;
 
         public async Task<bool> IsAnonymous() => !await IsAuthenticated();
@@ -63,7 +90,12 @@
 
         private async Task<User> LoadUser()
         {
-            return (await GetUserFile().ReadAllTextAsync()).FromJson<User>();
+            var userFile = GetUserFile();
+
+            if (userFile.Exists())
+                return (await userFile.ReadAllTextAsync()).FromJson<User>();
+
+            return null;
         }
 
         private FileInfo GetUserFile() => IO.File("User.json");
@@ -91,6 +123,14 @@
             var response = await Post(path, request);
 
             return response.FromJson<FirebaseSignInResponse>();
+        }
+
+        public static async Task<FirebaseValidateAuthTokenResponse> ValidateAuthToken(FirebaseValidateAuthTokenRequest request)
+        {
+            return new FirebaseValidateAuthTokenResponse
+            {
+                IsValid = request.AuthToken.HasValue()
+            };
         }
 
         static async Task<string> Post(string path, object request, Encoding encoding = null)

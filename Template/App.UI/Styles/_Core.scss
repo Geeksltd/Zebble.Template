@@ -21,7 +21,7 @@ CheckBox {
     background: transparent;
 
     &:checked {
-        background-color: $primary-color;
+        background-color: $primary-bg-color;
     }
 
     &>#CheckedImage {

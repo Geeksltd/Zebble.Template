@@ -1,12 +1,12 @@
 ﻿TextInput { padding: 7px; border: 1px solid #eee; }
 
-TextInput:skeleton { color: #C8C8C8; }
+TextInput:skeleton { color: #6d6d6d; }
 
 Button { padding: 5px; }
 
 CheckBox { width: 24px; height: 24px; border: 1px solid #aaaaaa; border-radius: 12px; background: transparent; }
 
-CheckBox:checked { background-color: #43aaa9; }
+CheckBox:checked { background-color: #958cff; }
 
 CheckBox > #CheckedImage { width: 100%; height: 100%; background-image: url(Images/Icons/Check.png); background-size: contain; padding: 2px; }
 
@@ -121,8 +121,38 @@ Picker #Caret { background: url(Images/Icons/Caret.png); width: 20px; }
 
 Picker #PlaceholderLabel { color: #ddd; height: 100%; }
 
-TextView.title { font-weight: bold; font-size: 28px; text-align: center; margin-bottom: 20px; }
+.primary-bg { background-color: #958cff; }
 
-TextView.sub-title { color: grey; font-size: 18px; text-align: center; margin-top: 20px; padding-top: 20px; border-top: solid 1px #f0f0f0; }
+.m-big { margin: 50px; }
 
-Button { border-radius: 10px; background: #f0f0f0; margin: 10px; padding: 10px; }
+.m-b-normal { margin-bottom: 15px; }
+
+.m-b-big { margin-bottom: 25px; }
+
+.parent-center { margin-left: calc("view.Width, view.Parent.Width, (vw, pw) => (pw - vw) / 2"); }
+
+.muted { color: #6d6d6d; }
+
+Spinner { margin-left: calc("view.Width, view.Parent.Width, (vw, pw) => (pw - vw) / 2"); }
+
+Spinner > ImageView { margin: 0; }
+
+Spinner.small { background-color: #fff; width: 60px; height: 60px; border-radius: 50px; }
+
+ImageView.logo { width: 150px; height: 150px; }
+
+TextView.title { color: black; font-weight: bold; font-size: 22px; text-align: center; }
+
+TextView.sub-title { font-size: 18px; }
+
+TextView.separator { margin-bottom: 20px; margin-bottom: 20px; border-bottom: solid 1px #f0f0f0; }
+
+Button { border-radius: 10px; background: #f0f0f0; padding: 10px; }
+
+ActionButton { height: 56px; }
+
+ActionButton Column { padding: 10px; }
+
+ActionButton TextView.primary { font-size: 16px; color: black; }
+
+ActionButton TextView.secondary { font-size: 14px; }

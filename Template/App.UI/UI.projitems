@@ -12,6 +12,7 @@
     <None Include="$(MSBuildThisFileDirectory)compilerconfig.json" />
     <None Include="$(MSBuildThisFileDirectory)Splash.png" />
     <None Include="$(MSBuildThisFileDirectory)Icon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Styles\_Utilities.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\Windows.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\_Core.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\Common.scss" />
@@ -33,21 +34,39 @@
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\Welcome.zbl" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory).zebble-generated-css.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory).zebble-generated.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StartUp.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Templates\MainTabsPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tests\TestCases\SampleTest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Modules\MainTabsMenuLauncher.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Widgets\ActionButton.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Widgets\Center.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Widgets\FillParent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Widgets\SafeArea.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Widgets\Column.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Widgets\Row.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Widgets\Spinner.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Tabs.Latest-Shoes.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Tabs.Popular-Shoes.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Tabs.Profile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Spinner-Primary.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <Content Include="$(MSBuildThisFileDirectory)Styles\Android.css" />
     <Content Include="$(MSBuildThisFileDirectory)Styles\Common.css" />
     <Content Include="$(MSBuildThisFileDirectory)Styles\iOS.css" />
     <Content Include="$(MSBuildThisFileDirectory)Styles\Windows.css" />
-    <Content Include="$(MSBuildThisFileDirectory)Styles\_Core.css" />
-    <Content Include="$(MSBuildThisFileDirectory)Styles\_Settings.css" />
-    <Content Include="$(MSBuildThisFileDirectory)Views\.zebble-schema.xml" />
   </ItemGroup>
 </Project>

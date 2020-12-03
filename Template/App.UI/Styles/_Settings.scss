@@ -1,6 +1,12 @@
-﻿$text-color: black;
-$input-padding: 7px;
-$grey: #C8C8C8;
-$primary-color: #43aaa9;
+﻿$grey: #6d6d6d;
 $very-light-grey: #e6e6e6;
 $dark-grey: #505050;
+
+$text-color: black;
+$heading-text-color: $text-color;
+$muted-text-color: $grey;
+
+$primary-bg-color: #958cff;
+$primary-border-color: lighten($primary-bg-color, 10%);
+
+$input-padding: 7px;

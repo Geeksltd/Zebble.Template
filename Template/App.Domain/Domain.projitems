@@ -20,6 +20,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\Firebase\FirebaseSignInResponse.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Firebase\FirebaseSignUpRequest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Firebase\FirebaseSignUpResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Firebase\FirebaseValidateAuthTokenRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Firebase\FirebaseValidateAuthTokenResponse.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\IAuthService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\IShoeService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\LoginResult.cs" />

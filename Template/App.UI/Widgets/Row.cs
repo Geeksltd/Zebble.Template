@@ -1,9 +1,10 @@
-﻿namespace UI.Widgets
-{
-    using Zebble;
+﻿using Zebble;
 
-    class Row : Stack
+class Row : Stack
+{
+    public Row()
     {
-        public Row() => Direction = RepeatDirection.Horizontal;
+        Direction = RepeatDirection.Horizontal;
+        ClipChildren = false;
     }
 }

@@ -4,6 +4,7 @@
 
     interface IAuthService
     {
+        Task<bool> ValidateUserValidity();
         Task<bool> IsAuthenticated();
         Task<bool> IsAnonymous();
         Task<RegisterResult> Register(string email, string password);

@@ -1,14 +1,20 @@
 <?xml version="1.0"?>
 <z-Component z-type="Welcome"
-			 z-base="NavBarPage"
+			 z-base="Page"
 			 z-namespace="UI.Pages"
 			 z-viewmodel="ViewModel.WelcomePage"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:noNamespaceSchemaLocation="./../.zebble-schema.xml">
-	<z-place inside="Body">
-		<ImageView Path="Images/Logo.png" />
-		<TextView Text="Welcome to our App" CssClass="title" />
-		<Button Text="Login" on-Tapped="@{Model.TapLogin()}" />
-		<Button Text="Register" on-Tapped="@{Model.TapRegister()}" />
-	</z-place>
+             xsi:noNamespaceSchemaLocation="./../.zebble-schema.xml"
+			 CssClass="primary-bg">
+	<FillParent CssClass="m-big">
+		<ImageView Path="Images/Logo.png" CssClass="parent-center m-b-big logo" />
+		<TextView Text="Geeky Shoes Store" CssClass="m-b-normal title" />
+		<Column Visible="@{Model.IsIniting}">
+			<Spinner Image.Path="Images/Spinner-Primary.png" CssClass="small" />
+		</Column>
+		<Column Visible="@{Model.IsAnonymous}">
+			<ActionButton Primary.Text="Log me in" Secondary.Text="Login to your existing account..." CssClass="m-b-normal" on-Tapped="@{Model.TapLogin()}" />
+			<ActionButton Primary.Text="I'm new here" Secondary.Text="Create your account with ease..." on-Tapped="@{Model.TapRegister()}" />
+		</Column>
+	</FillParent>
 </z-Component>
