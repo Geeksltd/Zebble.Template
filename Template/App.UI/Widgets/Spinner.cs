@@ -2,8 +2,14 @@
 using System.Threading.Tasks;
 using Zebble;
 
-class Spinner : Center
+class Spinner : CenterVertically
 {
+    public static Spinner WaitingIndicator => new()
+    {
+        CssClass = "small",
+        Image = { Path = "Images/Spinner-Primary.png" }
+    };
+
     public ImageView Image { get; }
 
     public Spinner()

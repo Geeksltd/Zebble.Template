@@ -2,6 +2,7 @@
 {
     using Domain;
     using System.Threading.Tasks;
+    using UI.Utils;
     using Zebble;
     using Zebble.Mvvm;
 
@@ -9,7 +10,7 @@
     {
         readonly IAuthService AuthService;
 
-        public Bindable<bool> IsBusy = new(false);
+        public WaitingAwareBindable IsBusy = new(false);
         public Bindable<bool> IsAnonymous = new(false);
 
         public WelcomePage()
@@ -19,16 +20,17 @@
 
         protected async override Task NavigationStartedAsync()
         {
-            IsBusy.Set(true);
+            await Task.Delay(50);
 
-            var isValid = await AuthService.ValidateUserValidity();
+            using (await IsBusy.SetAsync(true))
+            {
+                var isValid = await AuthService.ValidateUserValidity();
 
-            if (isValid)
-                Go<HomePage>();
-            else
-                IsAnonymous.Set(true);
-
-            IsBusy.Set(false);
+                if (isValid)
+                    Go<HomePage>();
+                else
+                    IsAnonymous.Set(true);
+            }
 
             await base.NavigationStartedAsync();
         }

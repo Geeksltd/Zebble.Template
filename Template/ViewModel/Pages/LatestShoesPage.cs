@@ -4,13 +4,13 @@
     using Domain;
     using Zebble.Mvvm;
     using System.Threading.Tasks;
-    using Zebble;
+    using UI.Utils;
 
     class LatestShoesPage : FullScreen
     {
         readonly IShoeService ShoeService;
 
-        public readonly Bindable<bool> IsBusy = new(false);
+        public readonly WaitingAwareBindable IsBusy = new(false);
         public readonly CollectionViewModel<ShoeList.Item> Items = new();
 
         public LatestShoesPage()
@@ -20,13 +20,12 @@
 
         protected override async Task NavigationStartedAsync()
         {
-            IsBusy.Set(true);
+            using (await IsBusy.SetAsync(true))
+            {
+                var shoes = await ShoeService.GetLatestShoes();
 
-            var shoes = await ShoeService.GetLatestShoes();
-
-            shoes.ForEach(Items.Add);
-
-            IsBusy.Set(false);
+                shoes.ForEach(Items.Add);
+            }
 
             await base.NavigationStartedAsync();
         }

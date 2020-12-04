@@ -85,11 +85,15 @@
 
         private async Task PersistUser(User result)
         {
+            await Task.Delay(2000);
+
             await GetUserFile().WriteAllTextAsync(result.ToJson());
         }
 
         private async Task<User> LoadUser()
         {
+            await Task.Delay(1000);
+
             var userFile = GetUserFile();
 
             if (userFile.Exists())

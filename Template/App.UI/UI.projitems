@@ -36,8 +36,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)StartUp.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Templates\MainTabsPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tests\TestCases\SampleTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\AuthRevertBindable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\WaitingAwareBindable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Widgets\ActionButton.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Widgets\Center.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Widgets\CenterVertically.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Widgets\FillParent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Widgets\SafeArea.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Widgets\Column.cs" />

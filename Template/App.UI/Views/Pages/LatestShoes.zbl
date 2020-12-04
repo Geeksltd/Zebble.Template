@@ -7,8 +7,6 @@
 			 xsi:noNamespaceSchemaLocation="../.zebble-schema.xml"
 			 CssClass="primary-bg">
 	<FillParent CssClass="m-big">
-		<ImageView Path="Images/Logo.png" />
-		<TextView Text="Latest Shoes" CssClass="title" />
 		<Modules.ShoeList Model.Items="@Model.Items" />
 	</FillParent>
 </z-Component>

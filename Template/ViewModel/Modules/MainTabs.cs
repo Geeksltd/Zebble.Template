@@ -4,8 +4,10 @@
 
     class MainTabs : ViewModel
     {
-        public void Tap()
-        {
-        }
+        public void TapHome() => Go<HomePage>();
+
+        public void TapPopularShoes() => Go<PopularShoesPage>();
+
+        public void TapLatestShoes() => Go<LatestShoesPage>();
     }
 }

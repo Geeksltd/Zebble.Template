@@ -10,9 +10,6 @@
 		<ImageView Path="Images/Logo.png" CssClass="parent-center m-b-big logo" />
 		<TextView Text="Login to your account" CssClass="title" />
 		<Column CssClass="m-t-big">
-			<Column Ignored="@{Model.IsBusy, x => !x}">
-				<Spinner Image.Path="Images/Spinner-Primary.png" CssClass="small" />
-			</Column>
 			<Stack CssClass="m-b-normal input-wrapper">
 				<TextInput Text="@{Model.Email}" Placeholder="Email" KeyboardActionType="Next" Enabled="false" TextMode="Email" />
 			</Stack>

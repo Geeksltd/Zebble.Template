@@ -2,6 +2,7 @@
 {
     using Domain;
     using System.Threading.Tasks;
+    using UI.Utils;
     using Zebble;
     using Zebble.Mvvm;
 
@@ -9,8 +10,9 @@
     {
         readonly IAuthService AuthService;
 
-        public readonly Bindable<bool> IsBusy = new(false);
-        public readonly Bindable<string> LoggedInUserEmail = new("joe@doe.com");
+        public readonly WaitingAwareBindable IsBusy = new(false);
+        public readonly Bindable<string> LoggedInUserEmail = new("...");
+        public Bindable<string> WelcomeMessage => LoggedInUserEmail.Get(x => $"Welcome back {x}");
 
         public HomePage()
         {
@@ -19,22 +21,25 @@
 
         protected override async Task NavigationStartedAsync()
         {
-            IsBusy.Set(true);
+            using (await IsBusy.SetAsync(true))
+            {
+                var user = await AuthService.GetUser();
 
-            var user = await AuthService.GetUser();
-
-            LoggedInUserEmail.Set(user.Email);
-
-            IsBusy.Set(false);
+                LoggedInUserEmail.Set(user.Email);
+            }
 
             await base.NavigationStartedAsync();
         }
 
         public async Task TapLogout()
         {
+            IsBusy.Set(true);
+
             await AuthService.Logout();
 
             Go<WelcomePage>(PageTransition.SlideBack);
+
+            IsBusy.Set(false);
         }
     }
 }
