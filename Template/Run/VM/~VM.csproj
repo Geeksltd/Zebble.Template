@@ -15,4 +15,8 @@
     <PackageReference Include="Zebble.WebApi" Version="4.5.385" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Tests\" />
+  </ItemGroup>
+
 </Project>

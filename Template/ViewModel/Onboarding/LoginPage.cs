@@ -10,7 +10,7 @@ namespace ViewModel
 
         public void TapLogin()
         {
-            Go<ShoesPage>();
+            Forward<ShoesPage>();
             // Services.Auth.Login(Email.Value, Password.Value);
         }
     }

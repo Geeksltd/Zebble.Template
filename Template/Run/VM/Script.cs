@@ -13,9 +13,9 @@ namespace VM
         public static void Run()
         {
             // Run quick steps to get you to the context you're developing.
-            On<WelcomePage>().TapLogin();
-            On<LoginPage>().TapLogin();
-            On<ShoesPage>().Items[0].Tap();
+            //On<WelcomePage>().TapLogin();
+            //On<LoginPage>().TapLogin();
+            //On<ShoesPage>().Items[0].Tap();
         }
     }
 }

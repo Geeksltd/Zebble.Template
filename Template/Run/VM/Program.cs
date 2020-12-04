@@ -12,7 +12,7 @@
 
             Script.Run();
 
-            if (args.None()) Zebble.Console.AwaitNextCommand();
+            if (args.None()) Zebble.Console.Start(args);
         }
     }
 }

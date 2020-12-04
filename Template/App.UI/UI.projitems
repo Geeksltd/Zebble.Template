@@ -25,9 +25,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <None Include="$(MSBuildThisFileDirectory)Views\.zebble-schema.xml" />
-    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Login.zbl" />
-    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Shoes.zbl" />
-    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Welcome.zbl" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)Styles\Android.css" />
@@ -40,5 +37,8 @@
     <Compile Include="$(MSBuildThisFileDirectory).zebble-generated.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StartUp.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Widgets\Row.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Views\Pages\" />
   </ItemGroup>
 </Project>
