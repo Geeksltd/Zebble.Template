@@ -1,16 +1,23 @@
 ﻿@import "_Settings";
 
 TextInput {
-    padding: 7px;
-    border: 1px solid #eee;
+    padding: $input-padding;
+    border-radius: $input-border-radius;
 
     &:skeleton {
         color: $grey;
     }
+
+    :active {
+        background-color: red;
+    }
 }
 
 Button {
-    padding: 5px;
+    padding: $button-padding;
+    border-radius: $button-border-radius;
+    background: $button-bg-color;
+    color: $button-text-color;
 }
 
 CheckBox {
@@ -24,7 +31,7 @@ CheckBox {
         background-color: $primary-bg-color;
     }
 
-    &>#CheckedImage {
+    & > #CheckedImage {
         width: 100%;
         height: 100%;
         background-image: url(Images/Icons/Check.png);
@@ -38,12 +45,12 @@ IconButton {
     height: 40px;
     padding: 5px;
 
-    &>#TextView {
+    & > #TextView {
         text-align: center;
         height: 100%;
     }
 
-    &>#Icon {
+    & > #Icon {
         height: 20px;
         background-position: left;
         background-size: contain;
@@ -53,17 +60,17 @@ IconButton {
 }
 
 SearchInput {
-    &>#Icon {
+    & > #Icon {
         background-image: url(Images/Icons/Search.png);
         opacity: 0.3;
         padding: 8px;
     }
 
-    &>#TextBox {
+    & > #TextBox {
         text-align: center;
     }
 
-    &>#CancelButton {
+    & > #CancelButton {
         border: 0;
         height: 100%;
         left: 100%;
@@ -73,12 +80,12 @@ SearchInput {
     }
 
     &:focus {
-        &>#TextBox {
+        & > #TextBox {
             text-align: left;
             padding-left: 30px;
         }
 
-        &>#CancelButton {
+        & > #CancelButton {
             opacity: 1;
         }
     }
@@ -118,12 +125,12 @@ Switch {
 FormField {
     margin-top: 5px;
 
-    &>#Label {
+    & > #Label {
         width: 30%;
         height: 100%;
     }
 
-    &>#Icon {
+    & > #Icon {
         width: 30%;
         width: 25px;
         height: 25px;
@@ -135,14 +142,14 @@ Dialog {
     background: white;
     padding: 15px;
 
-    &>#Title {
+    & > #Title {
         text-align: center;
         font-size: 16px;
         margin-bottom: 10px;
         font-weight: bold;
     }
 
-    &>#ButtonsRow {
+    & > #ButtonsRow {
         margin-top: 30px;
     }
 }
@@ -202,7 +209,7 @@ Toast {
 
 Grid,
 ListView {
-    &>#EmptyTextLabel {
+    & > #EmptyTextLabel {
         text-align: center;
     }
 }
@@ -230,7 +237,7 @@ NavBarPage {
         height: 100%;
         width: 100%;
 
-        &>#Body {
+        & > #Body {
             padding: 10px;
         }
     }
@@ -240,7 +247,7 @@ NavigationBar {
     height: 64px;
     padding: 10px;
 
-    &>#Title {
+    & > #Title {
         font-size: 18px;
         font-weight: bold;
         text-align: center;
@@ -323,5 +330,37 @@ Picker {
     #PlaceholderLabel {
         color: #ddd;
         height: 100%;
+    }
+}
+
+Spinner {
+    margin-left: calc("view.Width, view.Parent.Width, (vw, pw) => (pw - vw) / 2");
+
+    > ImageView {
+        margin: 0;
+    }
+
+    &.small {
+        background-color: #fff;
+        width: 60px;
+        height: 60px;
+        border-radius: 50px;
+    }
+}
+
+ActionButton {
+    height: 56px;
+
+    Column {
+        padding: 10px;
+    }
+
+    TextView.primary {
+        font-size: 18px;
+        color: $heading-text-color;
+    }
+
+    TextView.secondary {
+        font-size: 14px;
     }
 }

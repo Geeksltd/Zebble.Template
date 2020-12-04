@@ -8,13 +8,13 @@
 			 CssClass="primary-bg">
 	<FillParent CssClass="m-big">
 		<ImageView Path="Images/Logo.png" CssClass="parent-center m-b-big logo" />
-		<TextView Text="Geeky Shoes Store" CssClass="m-b-normal title" />
-		<Column Visible="@{Model.IsIniting}">
+		<TextView Text="Geeky Shoes Store" CssClass="title" />
+		<Column Ignored="@{Model.IsBusy, x => !x}" CssClass="m-t-big">
 			<Spinner Image.Path="Images/Spinner-Primary.png" CssClass="small" />
 		</Column>
-		<Column Visible="@{Model.IsAnonymous}">
-			<ActionButton Primary.Text="Log me in" Secondary.Text="Login to your existing account..." CssClass="m-b-normal" on-Tapped="@{Model.TapLogin()}" />
-			<ActionButton Primary.Text="I'm new here" Secondary.Text="Create your account with ease..." on-Tapped="@{Model.TapRegister()}" />
+		<Column Ignored="@{Model.IsAnonymous, x => !x}" CssClass="m-t-big">
+			<ActionButton Primary.Text="Existing user..." Secondary.Text="Let's log in to your account." CssClass="m-b-normal primary" on-Tapped="@{Model.TapLogin()}" />
+			<ActionButton Primary.Text="I'm new here..." Secondary.Text="Create your account with ease." on-Tapped="@{Model.TapRegister()}" />
 		</Column>
 	</FillParent>
 </z-Component>

@@ -8,11 +8,9 @@ class Spinner : Center
 
     public Spinner()
     {
-        Image = new ImageView
-        {
-            Alignment = Alignment.Middle,
-            ZIndex = 1000
-        }.Width(100.Percent()).Height(100.Percent());
+        Image = new ImageView()
+            .Width(100.Percent())
+            .Height(100.Percent());
     }
 
     public override async Task OnInitializing()

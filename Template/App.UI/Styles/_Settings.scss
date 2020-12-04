@@ -1,12 +1,23 @@
-﻿$grey: #6d6d6d;
+﻿$white: #fff;
+$grey: #7d7d7d;
 $very-light-grey: #e6e6e6;
 $dark-grey: #505050;
 
 $text-color: black;
-$heading-text-color: $text-color;
+$heading-text-color: #6358db;
 $muted-text-color: $grey;
 
-$primary-bg-color: #958cff;
+$primary-bg-color: #b8b3fb;
 $primary-border-color: lighten($primary-bg-color, 10%);
 
-$input-padding: 7px;
+$base-padding: 10px;
+$base-border-radius: 20px;
+
+$input-padding: $base-padding;
+$input-border-radius: $base-border-radius;
+
+$button-padding: $base-padding;
+$button-border-radius: $base-border-radius;
+$button-bg-color: #f0f0f0;
+$button-text-color: $heading-text-color;
+$button-light-text-color: lighten($heading-text-color, 20%);

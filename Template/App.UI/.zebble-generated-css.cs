@@ -53,6 +53,7 @@ namespace UI
             // App.UI\Styles\Common.css----------------------------------------------
             CssEngine.Add(new File_App.UI.Styles.Common.TextInputCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.TextInputSkeletonCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.TextInputActiveCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.ButtonCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.CheckBoxCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.CheckBoxCheckedCssRule());
@@ -110,24 +111,30 @@ namespace UI
             CssEngine.Add(new File_App.UI.Styles.Common.PickerLabelCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.PickerCaretCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.PickerPlaceholderLabelCssRule());
-            CssEngine.Add(new File_App.UI.Styles.Common.PrimaryBgCssRule());
-            CssEngine.Add(new File_App.UI.Styles.Common.MBigCssRule());
-            CssEngine.Add(new File_App.UI.Styles.Common.MBNormalCssRule());
-            CssEngine.Add(new File_App.UI.Styles.Common.MBBigCssRule());
-            CssEngine.Add(new File_App.UI.Styles.Common.ParentCenterCssRule());
-            CssEngine.Add(new File_App.UI.Styles.Common.MutedCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.SpinnerCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.SpinnerImageViewCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.SpinnerSmallCssRule());
-            CssEngine.Add(new File_App.UI.Styles.Common.ImageViewLogoCssRule());
-            CssEngine.Add(new File_App.UI.Styles.Common.TextViewTitleCssRule());
-            CssEngine.Add(new File_App.UI.Styles.Common.TextViewSubTitleCssRule());
-            CssEngine.Add(new File_App.UI.Styles.Common.TextViewSeparatorCssRule());
-            CssEngine.Add(new File_App.UI.Styles.Common.Button_1CssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.ActionButtonCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.ActionButtonColumnCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.ActionButtonTextViewPrimaryCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.ActionButtonTextViewSecondaryCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.PrimaryBgCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.MBigCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.MTBigCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.MBNormalCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.MBBigCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.ParentCenterCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.MutedCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.ImageViewLogoCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.TextViewTitleCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.TextViewSubTitleCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.TextViewSeparatorCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.StackInputWrapperCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.ButtonLgCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.ButtonPrimaryCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.ActionButtonPrimaryCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.ActionButtonPrimaryTextViewPrimaryCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.ActionButtonPrimaryTextViewSecondaryCssRule());
 
             // ======================================================================
             // App.UI\Styles\iOS.css-------------------------------------------------
@@ -685,7 +692,7 @@ namespace File_App.UI.Styles.Android
 {
     [EscapeGCop("Auto-generated")]
     [CssSelector(DevicePlatform.Android, "Styles\\Android.css", "Switch #Bar")]
-    [CssBody("background: #6d6d6d; height: 14px; border-radius: 7px; margin-top: 6px; opacity: 1;")]
+    [CssBody("background: #7d7d7d; height: 14px; border-radius: 7px; margin-top: 6px; opacity: 1;")]
     class SwitchBarCssRule : CssRule
     {
         public override bool Matches(View view)
@@ -703,7 +710,7 @@ namespace File_App.UI.Styles.Android
         {
             view.Css.Height = 14;
             view.Css.Margin.Top = 6;
-            view.Css.BackgroundColor = "#6d6d6d";
+            view.Css.BackgroundColor = "#7d7d7d";
             view.Css.Border.Radius = 7;
             view.Css.Opacity = 1f;
 
@@ -716,7 +723,7 @@ namespace File_App.UI.Styles.Android
 {
     [EscapeGCop("Auto-generated")]
     [CssSelector(DevicePlatform.Android, "Styles\\Android.css", "Switch #Toggle")]
-    [CssBody("background: white; border-width: 1px; border-color: #6d6d6d; margin: 0;")]
+    [CssBody("background: white; border-width: 1px; border-color: #7d7d7d; margin: 0;")]
     class SwitchToggleCssRule : CssRule
     {
         public override bool Matches(View view)
@@ -735,7 +742,7 @@ namespace File_App.UI.Styles.Android
             view.Css.Margin(0);
             view.Css.BackgroundColor = Colors.White;
             view.Css.Border.Width = 1;
-            view.Css.Border.Color = "#6d6d6d";
+            view.Css.Border.Color = "#7d7d7d";
 
             return Task.CompletedTask;
         }
@@ -810,7 +817,7 @@ namespace File_App.UI.Styles.Common
 {
     [EscapeGCop("Auto-generated")]
     [CssSelector("Styles\\Common.css", "TextInput")]
-    [CssBody("padding: 7px; border: 1px solid #eee;")]
+    [CssBody("padding: 10px; border-radius: 20px;")]
     class TextInputCssRule : CssRule
     {
         public override bool Matches(View view)
@@ -823,8 +830,8 @@ namespace File_App.UI.Styles.Common
         public override Task Apply(View untypedView)
         {
             var view = (TextInput)untypedView;
-            view.Css.Padding(7);
-            view.Css.Border = new Border(1, "#eee");
+            view.Css.Padding(10);
+            view.Css.Border.Radius = 20;
 
             return Task.CompletedTask;
         }
@@ -835,7 +842,7 @@ namespace File_App.UI.Styles.Common
 {
     [EscapeGCop("Auto-generated")]
     [CssSelector("Styles\\Common.css", "TextInput:skeleton")]
-    [CssBody("color: #6d6d6d;")]
+    [CssBody("color: #7d7d7d;")]
     class TextInputSkeletonCssRule : CssRule
     {
         public override bool Matches(View view)
@@ -848,7 +855,34 @@ namespace File_App.UI.Styles.Common
         public override Task Apply(View untypedView)
         {
             var view = (TextInput)untypedView;
-            view.Css.TextColor = "#6d6d6d";
+            view.Css.TextColor = "#7d7d7d";
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", "TextInput :active")]
+    [CssBody("background-color: red;")]
+    class TextInputActiveCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            // CssEngine will only call me if a view matches: :active
+
+            view = CssEngine.FindParentByType<TextInput>(view);
+
+            if (view == null) return false;
+
+            return true;
+        }
+
+        public override Task Apply(View view)
+        {
+            view.Css.BackgroundColor = Colors.Red;
 
             return Task.CompletedTask;
         }
@@ -859,7 +893,7 @@ namespace File_App.UI.Styles.Common
 {
     [EscapeGCop("Auto-generated")]
     [CssSelector("Styles\\Common.css", "Button")]
-    [CssBody("padding: 5px;")]
+    [CssBody("padding: 10px; border-radius: 20px; background: #f0f0f0; color: #6358db;")]
     class ButtonCssRule : CssRule
     {
         public override bool Matches(View view)
@@ -872,7 +906,10 @@ namespace File_App.UI.Styles.Common
         public override Task Apply(View untypedView)
         {
             var view = (Button)untypedView;
-            view.Css.Padding(5);
+            view.Css.Padding(10);
+            view.Css.Border.Radius = 20;
+            view.Css.BackgroundColor = "#f0f0f0";
+            view.Css.TextColor = "#6358db";
 
             return Task.CompletedTask;
         }
@@ -911,7 +948,7 @@ namespace File_App.UI.Styles.Common
 {
     [EscapeGCop("Auto-generated")]
     [CssSelector("Styles\\Common.css", "CheckBox:checked")]
-    [CssBody("background-color: #958cff;")]
+    [CssBody("background-color: #b8b3fb;")]
     class CheckBoxCheckedCssRule : CssRule
     {
         public override bool Matches(View view)
@@ -924,7 +961,7 @@ namespace File_App.UI.Styles.Common
         public override Task Apply(View untypedView)
         {
             var view = (CheckBox)untypedView;
-            view.Css.BackgroundColor = "#958cff";
+            view.Css.BackgroundColor = "#b8b3fb";
 
             return Task.CompletedTask;
         }
@@ -2445,144 +2482,6 @@ namespace File_App.UI.Styles.Common
 namespace File_App.UI.Styles.Common
 {
     [EscapeGCop("Auto-generated")]
-    [CssSelector("Styles\\Common.css", ".primary-bg")]
-    [CssBody("background-color: #958cff;")]
-    class PrimaryBgCssRule : CssRule
-    {
-        public override bool Matches(View view)
-        {
-            // CssEngine will only call me if a view matches: .primary-bg
-
-            return true;
-        }
-
-        public override Task Apply(View view)
-        {
-            view.Css.BackgroundColor = "#958cff";
-
-            return Task.CompletedTask;
-        }
-    }
-}
-
-namespace File_App.UI.Styles.Common
-{
-    [EscapeGCop("Auto-generated")]
-    [CssSelector("Styles\\Common.css", ".m-big")]
-    [CssBody("margin: 50px;")]
-    class MBigCssRule : CssRule
-    {
-        public override bool Matches(View view)
-        {
-            // CssEngine will only call me if a view matches: .m-big
-
-            return true;
-        }
-
-        public override Task Apply(View view)
-        {
-            view.Css.Margin(50);
-
-            return Task.CompletedTask;
-        }
-    }
-}
-
-namespace File_App.UI.Styles.Common
-{
-    [EscapeGCop("Auto-generated")]
-    [CssSelector("Styles\\Common.css", ".m-b-normal")]
-    [CssBody("margin-bottom: 15px;")]
-    class MBNormalCssRule : CssRule
-    {
-        public override bool Matches(View view)
-        {
-            // CssEngine will only call me if a view matches: .m-b-normal
-
-            return true;
-        }
-
-        public override Task Apply(View view)
-        {
-            view.Css.Margin.Bottom = 15;
-
-            return Task.CompletedTask;
-        }
-    }
-}
-
-namespace File_App.UI.Styles.Common
-{
-    [EscapeGCop("Auto-generated")]
-    [CssSelector("Styles\\Common.css", ".m-b-big")]
-    [CssBody("margin-bottom: 25px;")]
-    class MBBigCssRule : CssRule
-    {
-        public override bool Matches(View view)
-        {
-            // CssEngine will only call me if a view matches: .m-b-big
-
-            return true;
-        }
-
-        public override Task Apply(View view)
-        {
-            view.Css.Margin.Bottom = 25;
-
-            return Task.CompletedTask;
-        }
-    }
-}
-
-namespace File_App.UI.Styles.Common
-{
-    [EscapeGCop("Auto-generated")]
-    [CssSelector("Styles\\Common.css", ".parent-center")]
-    [CssBody("margin-left: calc(\"view.Width, view.Parent.Width, (vw, pw) => (pw - vw) / 2\");")]
-    class ParentCenterCssRule : CssRule
-    {
-        public override bool Matches(View view)
-        {
-            // CssEngine will only call me if a view matches: .parent-center
-
-            return true;
-        }
-
-        public override Task Apply(View view)
-        {
-            view.Css.Margin.Left = new Length.BindingLengthRequest(view.Width, view.Parent.Width, (vw, pw) => (pw - vw) / 2);
-
-            return Task.CompletedTask;
-        }
-    }
-}
-
-namespace File_App.UI.Styles.Common
-{
-    [EscapeGCop("Auto-generated")]
-    [CssSelector("Styles\\Common.css", ".muted")]
-    [CssBody("color: #6d6d6d;")]
-    class MutedCssRule : CssRule
-    {
-        public override bool Matches(View view)
-        {
-            // CssEngine will only call me if a view matches: .muted
-
-            return true;
-        }
-
-        public override Task Apply(View view)
-        {
-            view.Css.TextColor = "#6d6d6d";
-
-            return Task.CompletedTask;
-        }
-    }
-}
-
-namespace File_App.UI.Styles.Common
-{
-    [EscapeGCop("Auto-generated")]
     [CssSelector("Styles\\Common.css", "Spinner")]
     [CssBody("margin-left: calc(\"view.Width, view.Parent.Width, (vw, pw) => (pw - vw) / 2\");")]
     class SpinnerCssRule : CssRule
@@ -2663,6 +2562,276 @@ namespace File_App.UI.Styles.Common
 namespace File_App.UI.Styles.Common
 {
     [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", "ActionButton")]
+    [CssBody("height: 56px;")]
+    class ActionButtonCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            // CssEngine will only call me if a view matches: ActionButton
+
+            return true;
+        }
+
+        public override Task Apply(View untypedView)
+        {
+            var view = (ActionButton)untypedView;
+            view.Css.Height = 56;
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", "ActionButton Column")]
+    [CssBody("padding: 10px;")]
+    class ActionButtonColumnCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            // CssEngine will only call me if a view matches: Column
+
+            view = CssEngine.FindParentByType<ActionButton>(view);
+
+            if (view == null) return false;
+
+            return true;
+        }
+
+        public override Task Apply(View untypedView)
+        {
+            var view = (Column)untypedView;
+            view.Css.Padding(10);
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", "ActionButton TextView.primary")]
+    [CssBody("font-size: 18px; color: #6358db;")]
+    class ActionButtonTextViewPrimaryCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            if (!(view is TextView && HasClass(view, "primary"))) return false;
+
+            view = CssEngine.FindParentByType<ActionButton>(view);
+
+            if (view == null) return false;
+
+            return true;
+        }
+
+        public override Task Apply(View untypedView)
+        {
+            var view = (TextView)untypedView;
+            view.Css.Font.Size = 18;
+            view.Css.TextColor = "#6358db";
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", "ActionButton TextView.secondary")]
+    [CssBody("font-size: 14px;")]
+    class ActionButtonTextViewSecondaryCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            if (!(view is TextView && HasClass(view, "secondary"))) return false;
+
+            view = CssEngine.FindParentByType<ActionButton>(view);
+
+            if (view == null) return false;
+
+            return true;
+        }
+
+        public override Task Apply(View untypedView)
+        {
+            var view = (TextView)untypedView;
+            view.Css.Font.Size = 14;
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", ".primary-bg")]
+    [CssBody("background-color: #b8b3fb;")]
+    class PrimaryBgCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            // CssEngine will only call me if a view matches: .primary-bg
+
+            return true;
+        }
+
+        public override Task Apply(View view)
+        {
+            view.Css.BackgroundColor = "#b8b3fb";
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", ".m-big")]
+    [CssBody("margin: 50px;")]
+    class MBigCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            // CssEngine will only call me if a view matches: .m-big
+
+            return true;
+        }
+
+        public override Task Apply(View view)
+        {
+            view.Css.Margin(50);
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", ".m-t-big")]
+    [CssBody("margin-top: 50px;")]
+    class MTBigCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            // CssEngine will only call me if a view matches: .m-t-big
+
+            return true;
+        }
+
+        public override Task Apply(View view)
+        {
+            view.Css.Margin.Top = 50;
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", ".m-b-normal")]
+    [CssBody("margin-bottom: 15px;")]
+    class MBNormalCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            // CssEngine will only call me if a view matches: .m-b-normal
+
+            return true;
+        }
+
+        public override Task Apply(View view)
+        {
+            view.Css.Margin.Bottom = 15;
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", ".m-b-big")]
+    [CssBody("margin-bottom: 25px;")]
+    class MBBigCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            // CssEngine will only call me if a view matches: .m-b-big
+
+            return true;
+        }
+
+        public override Task Apply(View view)
+        {
+            view.Css.Margin.Bottom = 25;
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", ".parent-center")]
+    [CssBody("margin-left: calc(\"view.Width, view.Parent.Width, (vw, pw) => (pw - vw) / 2\");")]
+    class ParentCenterCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            // CssEngine will only call me if a view matches: .parent-center
+
+            return true;
+        }
+
+        public override Task Apply(View view)
+        {
+            view.Css.Margin.Left = new Length.BindingLengthRequest(view.Width, view.Parent.Width, (vw, pw) => (pw - vw) / 2);
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", ".muted")]
+    [CssBody("color: #7d7d7d;")]
+    class MutedCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            // CssEngine will only call me if a view matches: .muted
+
+            return true;
+        }
+
+        public override Task Apply(View view)
+        {
+            view.Css.TextColor = "#7d7d7d";
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
     [CssSelector("Styles\\Common.css", "ImageView.logo")]
     [CssBody("width: 150px; height: 150px;")]
     class ImageViewLogoCssRule : CssRule
@@ -2689,7 +2858,7 @@ namespace File_App.UI.Styles.Common
 {
     [EscapeGCop("Auto-generated")]
     [CssSelector("Styles\\Common.css", "TextView.title")]
-    [CssBody("color: black; font-weight: bold; font-size: 22px; text-align: center;")]
+    [CssBody("color: #6358db; font-weight: bold; font-size: 22px; text-align: center;")]
     class TextViewTitleCssRule : CssRule
     {
         public override bool Matches(View view)
@@ -2704,7 +2873,7 @@ namespace File_App.UI.Styles.Common
             var view = (TextView)untypedView;
             view.Css.Font.Bold = true;
             view.Css.Font.Size = 22;
-            view.Css.TextColor = Colors.Black;
+            view.Css.TextColor = "#6358db";
             view.Css.TextAlignment = Alignment.Middle;
 
             return Task.CompletedTask;
@@ -2765,13 +2934,40 @@ namespace File_App.UI.Styles.Common
 namespace File_App.UI.Styles.Common
 {
     [EscapeGCop("Auto-generated")]
-    [CssSelector("Styles\\Common.css", "Button")]
-    [CssBody("border-radius: 10px; background: #f0f0f0; padding: 10px;")]
-    class Button_1CssRule : CssRule
+    [CssSelector("Styles\\Common.css", "Stack.input-wrapper")]
+    [CssBody("padding: 2px; padding-bottom: 1px; background-color: #fff; border-radius: 20px;")]
+    class StackInputWrapperCssRule : CssRule
     {
         public override bool Matches(View view)
         {
-            // CssEngine will only call me if a view matches: Button
+            if (!(view is Stack && HasClass(view, "input-wrapper"))) return false;
+
+            return true;
+        }
+
+        public override Task Apply(View untypedView)
+        {
+            var view = (Stack)untypedView;
+            view.Css.Padding(2);
+            view.Css.Padding.Bottom = 1;
+            view.Css.BackgroundColor = "#fff";
+            view.Css.Border.Radius = 20;
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", "Button.lg")]
+    [CssBody("padding: 20px; font-size: 18px; font-weight: bold;")]
+    class ButtonLgCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            if (!(view is Button && HasClass(view, "lg"))) return false;
 
             return true;
         }
@@ -2779,9 +2975,9 @@ namespace File_App.UI.Styles.Common
         public override Task Apply(View untypedView)
         {
             var view = (Button)untypedView;
-            view.Css.Padding(10);
-            view.Css.Border.Radius = 10;
-            view.Css.BackgroundColor = "#f0f0f0";
+            view.Css.Font.Size = 18;
+            view.Css.Font.Bold = true;
+            view.Css.Padding(20);
 
             return Task.CompletedTask;
         }
@@ -2791,13 +2987,38 @@ namespace File_App.UI.Styles.Common
 namespace File_App.UI.Styles.Common
 {
     [EscapeGCop("Auto-generated")]
-    [CssSelector("Styles\\Common.css", "ActionButton")]
-    [CssBody("height: 56px;")]
-    class ActionButtonCssRule : CssRule
+    [CssSelector("Styles\\Common.css", "Button.primary")]
+    [CssBody("background-color: #6358db; color: #f0f0f0;")]
+    class ButtonPrimaryCssRule : CssRule
     {
         public override bool Matches(View view)
         {
-            // CssEngine will only call me if a view matches: ActionButton
+            if (!(view is Button && HasClass(view, "primary"))) return false;
+
+            return true;
+        }
+
+        public override Task Apply(View untypedView)
+        {
+            var view = (Button)untypedView;
+            view.Css.BackgroundColor = "#6358db";
+            view.Css.TextColor = "#f0f0f0";
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", "ActionButton.primary")]
+    [CssBody("background-color: #6358db;")]
+    class ActionButtonPrimaryCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            if (!(view is ActionButton && HasClass(view, "primary"))) return false;
 
             return true;
         }
@@ -2805,7 +3026,7 @@ namespace File_App.UI.Styles.Common
         public override Task Apply(View untypedView)
         {
             var view = (ActionButton)untypedView;
-            view.Css.Height = 56;
+            view.Css.BackgroundColor = "#6358db";
 
             return Task.CompletedTask;
         }
@@ -2815,45 +3036,21 @@ namespace File_App.UI.Styles.Common
 namespace File_App.UI.Styles.Common
 {
     [EscapeGCop("Auto-generated")]
-    [CssSelector("Styles\\Common.css", "ActionButton Column")]
-    [CssBody("padding: 10px;")]
-    class ActionButtonColumnCssRule : CssRule
-    {
-        public override bool Matches(View view)
-        {
-            // CssEngine will only call me if a view matches: Column
-
-            view = CssEngine.FindParentByType<ActionButton>(view);
-
-            if (view == null) return false;
-
-            return true;
-        }
-
-        public override Task Apply(View untypedView)
-        {
-            var view = (Column)untypedView;
-            view.Css.Padding(10);
-
-            return Task.CompletedTask;
-        }
-    }
-}
-
-namespace File_App.UI.Styles.Common
-{
-    [EscapeGCop("Auto-generated")]
-    [CssSelector("Styles\\Common.css", "ActionButton TextView.primary")]
-    [CssBody("font-size: 16px; color: black;")]
-    class ActionButtonTextViewPrimaryCssRule : CssRule
+    [CssSelector("Styles\\Common.css", "ActionButton.primary TextView.primary")]
+    [CssBody("color: #f0f0f0;")]
+    class ActionButtonPrimaryTextViewPrimaryCssRule : CssRule
     {
         public override bool Matches(View view)
         {
             if (!(view is TextView && HasClass(view, "primary"))) return false;
 
-            view = CssEngine.FindParentByType<ActionButton>(view);
-
-            if (view == null) return false;
+            view = view.parent;
+            while (true)
+            {
+                if (view == null) return false;
+                else if (view is ActionButton && HasClass(view, "primary")) break;
+                view = view.parent;
+            }
 
             return true;
         }
@@ -2861,8 +3058,7 @@ namespace File_App.UI.Styles.Common
         public override Task Apply(View untypedView)
         {
             var view = (TextView)untypedView;
-            view.Css.Font.Size = 16;
-            view.Css.TextColor = Colors.Black;
+            view.Css.TextColor = "#f0f0f0";
 
             return Task.CompletedTask;
         }
@@ -2872,17 +3068,21 @@ namespace File_App.UI.Styles.Common
 namespace File_App.UI.Styles.Common
 {
     [EscapeGCop("Auto-generated")]
-    [CssSelector("Styles\\Common.css", "ActionButton TextView.secondary")]
-    [CssBody("font-size: 14px;")]
-    class ActionButtonTextViewSecondaryCssRule : CssRule
+    [CssSelector("Styles\\Common.css", "ActionButton.primary TextView.secondary")]
+    [CssBody("color: #b1aced;")]
+    class ActionButtonPrimaryTextViewSecondaryCssRule : CssRule
     {
         public override bool Matches(View view)
         {
             if (!(view is TextView && HasClass(view, "secondary"))) return false;
 
-            view = CssEngine.FindParentByType<ActionButton>(view);
-
-            if (view == null) return false;
+            view = view.parent;
+            while (true)
+            {
+                if (view == null) return false;
+                else if (view is ActionButton && HasClass(view, "primary")) break;
+                view = view.parent;
+            }
 
             return true;
         }
@@ -2890,7 +3090,7 @@ namespace File_App.UI.Styles.Common
         public override Task Apply(View untypedView)
         {
             var view = (TextView)untypedView;
-            view.Css.Font.Size = 14;
+            view.Css.TextColor = "#b1aced";
 
             return Task.CompletedTask;
         }

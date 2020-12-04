@@ -1,21 +1,6 @@
 ﻿@import "_Core";
 @import "_Utilities";
 
-Spinner {
-    margin-left: calc("view.Width, view.Parent.Width, (vw, pw) => (pw - vw) / 2");
-
-    > ImageView {
-        margin: 0;
-    }
-
-    &.small {
-        background-color: #fff;
-        width: 60px;
-        height: 60px;
-        border-radius: 50px;
-    }
-}
-
 ImageView.logo {
     width: 150px;
     height: 150px;
@@ -38,25 +23,32 @@ TextView.separator {
     border-bottom: solid 1px #f0f0f0;
 }
 
-Button {
-    border-radius: 10px;
-    background: #f0f0f0;
-    padding: 10px;
+Stack.input-wrapper {
+    padding: 2px;
+    padding-bottom: 1px;
+    background-color: #fff;
+    border-radius: $input-border-radius;
 }
 
-ActionButton {
-    height: 56px;
+Button.lg {
+    padding: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
 
-    Column {
-        padding: 10px;
-    }
+Button.primary {
+    background-color: $button-text-color;
+    color: $button-bg-color;
+}
+
+ActionButton.primary {
+    background-color: $button-text-color;
 
     TextView.primary {
-        font-size: 16px;
-        color: $heading-text-color;
+        color: $button-bg-color;
     }
 
     TextView.secondary {
-        font-size: 14px;
+        color: $button-light-text-color;
     }
 }

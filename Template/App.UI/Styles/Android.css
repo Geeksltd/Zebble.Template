@@ -35,9 +35,9 @@
 
 .android-only Switch { width: 50px; }
 
-.android-only Switch #Bar { background: #6d6d6d; height: 14px; border-radius: 7px; margin-top: 6px; opacity: 1; }
+.android-only Switch #Bar { background: #7d7d7d; height: 14px; border-radius: 7px; margin-top: 6px; opacity: 1; }
 
-.android-only Switch #Toggle { background: white; border-width: 1px; border-color: #6d6d6d; margin: 0; }
+.android-only Switch #Toggle { background: white; border-width: 1px; border-color: #7d7d7d; margin: 0; }
 
 .android-only Switch:checked #Toggle { background: black; border-color: transparent; }
 

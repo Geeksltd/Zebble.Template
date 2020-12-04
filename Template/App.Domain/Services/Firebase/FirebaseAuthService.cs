@@ -111,18 +111,14 @@
         {
             var path = "accounts:signUp";
 
-            var response = await Post(path, request);
-
-            return response.FromJson<FirebaseSignUpResponse>();
+            return await Post<FirebaseSignUpResponse>(path, request);
         }
 
         public static async Task<FirebaseSignInResponse> SignIn(FirebaseSignInRequest request)
         {
             var path = "accounts:signInWithPassword";
 
-            var response = await Post(path, request);
-
-            return response.FromJson<FirebaseSignInResponse>();
+            return await Post<FirebaseSignInResponse>(path, request);
         }
 
         public static async Task<FirebaseValidateAuthTokenResponse> ValidateAuthToken(FirebaseValidateAuthTokenRequest request)
@@ -133,7 +129,7 @@
             };
         }
 
-        static async Task<string> Post(string path, object request, Encoding encoding = null)
+        static async Task<T> Post<T>(string path, object request, Encoding encoding = null) where T : FirebaseResponseBase, new()
         {
             encoding ??= Encoding.UTF8;
 
@@ -146,12 +142,24 @@
 
                 var message = await client.PostAsync(uri, payload);
 
-                return encoding.GetString(await message.Content.ReadAsByteArrayAsync());
+                return encoding.GetString(await message.Content.ReadAsByteArrayAsync()).FromJson<T>();
             }
             catch (Exception)
             {
-                throw;
+                return CreateDefault<T>();
             }
+        }
+
+        private static T CreateDefault<T>() where T : FirebaseResponseBase, new()
+        {
+            return new T
+            {
+                Error = new FirebaseError
+                {
+                    Code = -1,
+                    Message = "Can't connect to Firebase Auth APIS"
+                }
+            };
         }
 
         //static HttpClient CreateClient() => Network.HttpClient(BASE_ADDRESS, TimeSpan.FromSeconds(30));

@@ -9,7 +9,7 @@
     {
         readonly IAuthService AuthService;
 
-        public Bindable<bool> IsIniting = new(true);
+        public Bindable<bool> IsBusy = new(false);
         public Bindable<bool> IsAnonymous = new(false);
 
         public WelcomePage()
@@ -19,14 +19,16 @@
 
         protected async override Task NavigationStartedAsync()
         {
-            var isValid = await AuthService.ValidateUserValidity();
+            IsBusy.Set(true);
 
-            IsIniting.Set(false);
+            var isValid = await AuthService.ValidateUserValidity();
 
             if (isValid)
                 Go<HomePage>();
             else
                 IsAnonymous.Set(true);
+
+            IsBusy.Set(false);
 
             await base.NavigationStartedAsync();
         }
