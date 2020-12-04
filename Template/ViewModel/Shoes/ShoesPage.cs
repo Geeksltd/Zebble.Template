@@ -1,20 +1,11 @@
-﻿using System;
-using System.Linq;
-using Zebble;
-using Zebble.Mvvm;
-
-namespace ViewModel
+﻿namespace ViewModel
 {
+    using System.Linq;
+    using Zebble;
+    using Zebble.Mvvm;
+
     class ShoesPage : FullScreen
     {
-        public Bindable<DateTime> Date = new Bindable<DateTime>(LocalTime.Today);
-        public Bindable<string> Tomorrow => Date.Get(x => x.AddDays(1).ToString("dd MMM yyyy"));
-
-        public void SayHi()
-        {
-            Dialog.Alert("Hi");
-        }
-
         public readonly CollectionViewModel<Item> Items = new CollectionViewModel<Item>();
 
         protected override void NavigationStarted()
@@ -25,8 +16,8 @@ namespace ViewModel
 
         public class Item : ViewModel<Domain.Shoe>
         {
-            public Bindable<string> Brand => Source.Get(x => x.Brand);
             public Bindable<string> ImageUrl => Source.Get(x => x.ImageUrl);
+            public Bindable<string> Brand => Source.Get(x => x.Brand);
 
             public void Tap()
             {

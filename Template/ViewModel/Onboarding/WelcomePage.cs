@@ -1,9 +1,9 @@
-﻿using Zebble;
-using Zebble.Mvvm;
-
-namespace ViewModel
+﻿namespace ViewModel
 {
-    class WelcomePage : FullScreen
+    using Zebble;
+    using Zebble.Mvvm;
+
+    public class WelcomePage : FullScreen
     {
         public readonly Bindable<string> SampleProperty = new Bindable<string>("Hellow world!");
 
@@ -11,10 +11,12 @@ namespace ViewModel
 
         public void TapSignUp()
         {
-            Dialog.Alert("It's not implemented yet!");
+            Dialog.Alert("Sign up is not implemented");
 
-            if (Dialog.Confirm("Would you like to log in instead?"))
-                TapLogin();
+            if (Dialog.Confirm("Would you like to see some shoes instead?"))
+                MyShoes();
         }
+
+        public void MyShoes() => Forward<ShoesPage>();
     }
 }

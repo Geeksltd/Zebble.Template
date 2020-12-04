@@ -1,16 +1,13 @@
 <?xml version="1.0"?>
-
 <z-Component z-type="Welcome"
 			 z-base="NavBarPage"
 			 z-namespace="UI.Pages"
 			 z-viewmodel="ViewModel.WelcomePage"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:noNamespaceSchemaLocation="./../.zebble-schema.xml">
-
 	<z-place inside="Body">
 		<ImageView Path="Images/Logo.png" />
 		<TextView Text="Hello there" CssClass="title"/>
-
 		<Button Text="Login" on-Tapped="@{Model.TapLogin()}"/>
 		<Button Text="Sign up" on-Tapped="@{Model.TapSignUp()}"/>
 	</z-place>

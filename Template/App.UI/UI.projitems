@@ -12,33 +12,27 @@
     <None Include="$(MSBuildThisFileDirectory)compilerconfig.json" />
     <None Include="$(MSBuildThisFileDirectory)Splash.png" />
     <None Include="$(MSBuildThisFileDirectory)Icon.png" />
-    <None Include="$(MSBuildThisFileDirectory)Styles\Windows.scss" />
+    <None Include="$(MSBuildThisFileDirectory)Styles\PlatformSpecific.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\_Core.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\Common.scss" />
-    <None Include="$(MSBuildThisFileDirectory)Styles\iOS.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\_Settings.scss" />
-    <None Include="$(MSBuildThisFileDirectory)Styles\Android.scss" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Config.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Zebble-Meta.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <None Include="$(MSBuildThisFileDirectory)Views\.zebble-schema.xml" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Login.zbl" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Shoes.zbl" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Welcome.zbl" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="$(MSBuildThisFileDirectory)Styles\Android.css" />
     <Content Include="$(MSBuildThisFileDirectory)Styles\Common.css" />
-    <Content Include="$(MSBuildThisFileDirectory)Styles\iOS.css" />
-    <Content Include="$(MSBuildThisFileDirectory)Styles\Windows.css" />
+    <Content Include="$(MSBuildThisFileDirectory)Styles\PlatformSpecific.css" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory).zebble-generated-css.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory).zebble-generated.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StartUp.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Widgets\Row.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Views\Pages\" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tests\TestCases\SampleTest.cs" />
   </ItemGroup>
 </Project>

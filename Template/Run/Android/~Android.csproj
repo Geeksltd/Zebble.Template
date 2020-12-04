@@ -94,7 +94,7 @@
       <Version>28.0.0.3</Version>
     </PackageReference>
     <PackageReference Include="Zebble">
-      <Version>4.5.388</Version>
+      <Version>4.5.390</Version>
     </PackageReference>
     <PackageReference Include="Zebble.CheckBox">
       <Version>1.22.116</Version>
@@ -131,6 +131,9 @@
     </PackageReference>
     <PackageReference Include="Zebble.Testing">
       <Version>1.2.102</Version>
+    </PackageReference>
+    <PackageReference Include="Zebble.BoxShadow">
+      <Version>1.2.140</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="..\..\App.Domain\Domain.projitems" Label="Shared" Condition="Exists('..\..\App.Domain\Domain.projitems')" />
