@@ -1,7 +1,7 @@
 namespace UI.Templates
 {
-    using System;
     using System.Threading.Tasks;
+    using UI.Modules;
     using Zebble;
 
     class MainTabsPage : NavBarTabsPage<Modules.MainTabs>
@@ -9,7 +9,7 @@ namespace UI.Templates
         public override async Task OnInitializing()
         {
             await base.OnInitializing();
-            BodyScroller.Background(Colors.White);
+
             await WhenShown(() => new MainTabsMenuLauncher().Setup());
         }
 
@@ -19,4 +19,6 @@ namespace UI.Templates
 
         protected override Task OnMenuTapped() => MainTabsMenuLauncher.Current.Show();
     }
+
+    class MainTabsMenuLauncher : MainMenuLauncher<MainTabs> { }
 }

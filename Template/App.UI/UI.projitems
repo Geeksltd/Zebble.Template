@@ -36,7 +36,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)StartUp.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Templates\MainTabsPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tests\TestCases\SampleTest.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\Modules\MainTabsMenuLauncher.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Widgets\ActionButton.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Widgets\Center.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Widgets\FillParent.cs" />
