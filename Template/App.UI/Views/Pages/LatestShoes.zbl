@@ -1,13 +1,14 @@
 <?xml version="1.0"?>
-<z-Component z-type="LatestShoesTab"
+<z-Component z-type="LatestShoes"
 			 z-base="Templates.MainTabsPage"
-			 z-namespace="UI.Modules"
-			 z-viewmodel="ViewModel.LatestShoesTab"
+			 z-namespace="UI.Pages"
+			 z-viewmodel="ViewModel.LatestShoesPage"
 			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-			 xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
-	<Stack>
+			 xsi:noNamespaceSchemaLocation="../.zebble-schema.xml"
+			 CssClass="primary-bg">
+	<FillParent CssClass="m-big">
 		<ImageView Path="Images/Logo.png" />
 		<TextView Text="Latest Shoes" CssClass="title" />
 		<Modules.ShoeList Model.Items="@Model.Items" />
-	</Stack>
+	</FillParent>
 </z-Component>

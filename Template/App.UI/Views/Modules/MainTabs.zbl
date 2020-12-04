@@ -3,10 +3,10 @@
 			 z-base="Zebble.Tabs"
 			 z-namespace="UI.Modules"
 			 z-viewmodel="ViewModel.MainTabs"
-			 on-Tapped="@Model.Tap"
 			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-			 xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
-	<Tab z-of="Modules.ProfileTab" Label.Text="Profile" Icon.Path="Images/Tabs.Profile.png" />
-	<Tab z-of="Modules.PopularShoesTab" Label.Text="Popular" Icon.Path="Images/Tabs.Popular-Shoes.png" />
-	<Tab z-of="Modules.LatestShoesTab" Label.Text="Latest" Icon.Path="Images/Tabs.Latest-Shoes.png" />
+			 xsi:noNamespaceSchemaLocation="../.zebble-schema.xml"
+			 on-Tapped="@Model.Tap">
+	<Tab z-of="Pages.Home" Label.Text="Home" Icon.Path="Images/Tabs-Home.png" />
+	<Tab z-of="Pages.PopularShoes" Label.Text="Popular" Icon.Path="Images/Tabs-Popular-Shoes.png" />
+	<Tab z-of="Pages.LatestShoes" Label.Text="Latest" Icon.Path="Images/Tabs-Latest-Shoes.png" />
 </z-Component>

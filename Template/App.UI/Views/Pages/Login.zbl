@@ -20,7 +20,7 @@
 				<TextInput Text="@{Model.Password}" Placeholder="Password" KeyboardActionType="Done" TextMode="Password" />
 			</Stack>
 			<Button Text="Login" on-Tapped="@{Model.TapLogin()}" CssClass="lg primary" />
-			<TextView Text="" CssClass="separator" />
+			<TextView CssClass="separator" />
 			<ActionButton Primary.Text="Don't have an account?" Secondary.Text="Register here with ease." on-Tapped="@{Model.TapRegister()}" />
 		</Column>
 	</FillParent>

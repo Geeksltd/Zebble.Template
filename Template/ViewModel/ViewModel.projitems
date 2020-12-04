@@ -9,10 +9,9 @@
     <Import_RootNamespace>ViewModel</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Modules\ProfileTab.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Modules\LatestShoesTab.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\LatestShoesPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Modules\MainTabs.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Modules\PopularShoesTab.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\PopularShoesPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Modules\ShoeList.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\HomePage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\LoginPage.cs" />

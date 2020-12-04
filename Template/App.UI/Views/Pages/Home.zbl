@@ -4,4 +4,12 @@
 			 z-namespace="UI.Pages"
 			 z-viewmodel="ViewModel.HomePage"
 			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-			 xsi:noNamespaceSchemaLocation="../.zebble-schema.xml" />
+			 xsi:noNamespaceSchemaLocation="../.zebble-schema.xml"
+			 CssClass="primary-bg">
+	<FillParent CssClass="m-big">
+		<ImageView Path="Images/Logo.png" CssClass="parent-center m-b-big logo" />
+		<TextView Text="Welcome back" CssClass="title" />
+		<TextView Text="@{Model.LoggedInUserEmail}" CssClass="title" />
+		<Button Text="Logout" on-Tapped="@{Model.TapLogout()}" />
+	</FillParent>
+</z-Component>
