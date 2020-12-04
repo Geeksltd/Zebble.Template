@@ -27,7 +27,7 @@
                 var isValid = await AuthService.ValidateUserValidity();
 
                 if (isValid)
-                    Go<HomePage>();
+                    Go<PopularShoesPage>();
                 else
                     IsAnonymous.Set(true);
             }

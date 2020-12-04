@@ -138,6 +138,10 @@ namespace UI
             CssEngine.Add(new File_App.UI.Styles.Common.ActionButtonPrimaryCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.ActionButtonPrimaryTextViewPrimaryCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.ActionButtonPrimaryTextViewSecondaryCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.ShoeItemImageViewCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.ShoeItemTextViewProductNameCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.ShoeItemTextViewBrandCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.ShoeItemTextViewColorCssRule());
 
             // ======================================================================
             // App.UI\Styles\iOS.css-------------------------------------------------
@@ -868,23 +872,20 @@ namespace File_App.UI.Styles.Common
 namespace File_App.UI.Styles.Common
 {
     [EscapeGCop("Auto-generated")]
-    [CssSelector("Styles\\Common.css", "TextInput :active")]
+    [CssSelector("Styles\\Common.css", "TextInput:active")]
     [CssBody("background-color: red;")]
     class TextInputActiveCssRule : CssRule
     {
         public override bool Matches(View view)
         {
-            // CssEngine will only call me if a view matches: :active
-
-            view = CssEngine.FindParentByType<TextInput>(view);
-
-            if (view == null) return false;
+            if (!(view is TextInput && view.PseudoCssState.ContainsWholeWord("active"))) return false;
 
             return true;
         }
 
-        public override Task Apply(View view)
+        public override Task Apply(View untypedView)
         {
+            var view = (TextInput)untypedView;
             view.Css.BackgroundColor = Colors.Red;
 
             return Task.CompletedTask;
@@ -3181,6 +3182,125 @@ namespace File_App.UI.Styles.Common
         {
             var view = (TextView)untypedView;
             view.Css.TextColor = "#b1aced";
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", ".shoe-item ImageView")]
+    [CssBody("width: 96px; height: 96px; margin-right: 10px;")]
+    class ShoeItemImageViewCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            // CssEngine will only call me if a view matches: ImageView
+
+            view = CssEngine.FindParentByCssClass(view, "shoe-item");
+
+            if (view == null) return false;
+
+            return true;
+        }
+
+        public override Task Apply(View untypedView)
+        {
+            var view = (ImageView)untypedView;
+            view.Css.Height = 96;
+            view.Css.Width = 96;
+            view.Css.Margin.Right = 10;
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", ".shoe-item TextView.product-name")]
+    [CssBody("font-family: \"TitilliumRegular.ttf\"; font-size: 14px; font-weight: bold; color: #6358db;")]
+    class ShoeItemTextViewProductNameCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            if (!(view is TextView && HasClass(view, "product-name"))) return false;
+
+            view = CssEngine.FindParentByCssClass(view, "shoe-item");
+
+            if (view == null) return false;
+
+            return true;
+        }
+
+        public override Task Apply(View untypedView)
+        {
+            var view = (TextView)untypedView;
+            view.Css.Font.Name = "TitilliumRegular.ttf";
+            view.Css.Font.Size = 14;
+            view.Css.Font.Bold = true;
+            view.Css.TextColor = "#6358db";
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", ".shoe-item TextView.brand")]
+    [CssBody("font-family: \"TitilliumLight.ttf\"; font-size: 14px; color: #7d7d7d;")]
+    class ShoeItemTextViewBrandCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            if (!(view is TextView && HasClass(view, "brand"))) return false;
+
+            view = CssEngine.FindParentByCssClass(view, "shoe-item");
+
+            if (view == null) return false;
+
+            return true;
+        }
+
+        public override Task Apply(View untypedView)
+        {
+            var view = (TextView)untypedView;
+            view.Css.Font.Name = "TitilliumLight.ttf";
+            view.Css.Font.Size = 14;
+            view.Css.TextColor = "#7d7d7d";
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", ".shoe-item TextView.color")]
+    [CssBody("color: #7d7d7d;")]
+    class ShoeItemTextViewColorCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            if (!(view is TextView && HasClass(view, "color"))) return false;
+
+            view = CssEngine.FindParentByCssClass(view, "shoe-item");
+
+            if (view == null) return false;
+
+            return true;
+        }
+
+        public override Task Apply(View untypedView)
+        {
+            var view = (TextView)untypedView;
+            view.Css.TextColor = "#7d7d7d";
 
             return Task.CompletedTask;
         }

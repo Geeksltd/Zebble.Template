@@ -176,3 +176,11 @@ ActionButton.primary { background-color: #6358db; }
 ActionButton.primary TextView.primary { color: #f0f0f0; }
 
 ActionButton.primary TextView.secondary { color: #b1aced; }
+
+.shoe-item ImageView { width: 96px; height: 96px; margin-right: 10px; }
+
+.shoe-item TextView.product-name { font-family: "TitilliumRegular.ttf"; font-size: 14px; font-weight: bold; color: #6358db; }
+
+.shoe-item TextView.brand { font-family: "TitilliumLight.ttf"; font-size: 14px; color: #7d7d7d; }
+
+.shoe-item TextView.color { color: #7d7d7d; }

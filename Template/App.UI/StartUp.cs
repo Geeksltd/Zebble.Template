@@ -42,14 +42,7 @@ namespace UI
 
         public static Task LoadFirstPage()
         {
-            try
-            {
-                Zebble.Mvvm.Templates.Register(Assembly.GetExecutingAssembly());
-            }
-            catch
-            {
-
-            }
+            Zebble.Mvvm.Templates.Register(Assembly.GetExecutingAssembly());
             return ViewModel.StartUp.Run();
         }
     }

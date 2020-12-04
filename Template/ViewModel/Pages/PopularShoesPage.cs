@@ -32,8 +32,12 @@
 
         public class Item : ViewModel<Shoe>
         {
+            public Bindable<string> ProductName => Source.Get(x => x.ProductName);
+            public Bindable<string> Brand => Source.Get(x => $"By {x.Brand}");
             public Bindable<string> ImageUrl => Source.Get(x => x.ImageUrl);
-            public Bindable<string> Brand => Source.Get(x => x.Brand);
+            public Bindable<string[]> Colors => Source.Get(x => x.Colors);
+            public Bindable<string> Price => Source.Get(x => $"{x.Price:00}");
+            public Bindable<int> RemainedQuantity => Source.Get(x => x.RemainedQuantity);
 
             public void Tap()
             {

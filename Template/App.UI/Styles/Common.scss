@@ -52,3 +52,28 @@ ActionButton.primary {
         color: $button-light-text-color;
     }
 }
+
+.shoe-item {
+    ImageView {
+        width: 96px;
+        height: 96px;
+        margin-right: 10px;
+    }
+
+    TextView.product-name {
+        font-family: $font-family-regular;
+        font-size: 14px;
+        font-weight: bold;
+        color: $heading-text-color;
+    }
+
+    TextView.brand {
+        font-family: $font-family-light;
+        font-size: 14px;
+        color: $grey;
+    }
+
+    TextView.color {
+        color: $grey;
+    }
+}
