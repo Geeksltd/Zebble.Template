@@ -101,6 +101,9 @@ namespace UI
             CssEngine.Add(new File_App.UI.Styles.Common.TabsTabsTabCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.TabsTabsTabIconCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.TabsTabsTabLabelCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.TabsTabsTabActiveCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.TabsIconOnlyIconCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.TabsIconOnlyLabelCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.DatePickerCellCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.TimePickerCellCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.DatePickerCellLabelCssRule());
@@ -2090,7 +2093,7 @@ namespace File_App.UI.Styles.Common
 {
     [EscapeGCop("Auto-generated")]
     [CssSelector("Styles\\Common.css", "Tabs")]
-    [CssBody("background: #444444; height: 54px;")]
+    [CssBody("background: #6358db;")]
     class TabsCssRule : CssRule
     {
         public override bool Matches(View view)
@@ -2103,8 +2106,7 @@ namespace File_App.UI.Styles.Common
         public override Task Apply(View untypedView)
         {
             var view = (Tabs)untypedView;
-            view.Css.Height = 54;
-            view.Css.BackgroundColor = "#444444";
+            view.Css.BackgroundColor = "#6358db";
 
             return Task.CompletedTask;
         }
@@ -2203,6 +2205,94 @@ namespace File_App.UI.Styles.Common
             view.Css.TextAlignment = Alignment.Middle;
 
             return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", "Tabs Tabs-Tab:active")]
+    [CssBody("background-color: #fff;")]
+    class TabsTabsTabActiveCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            if (!(view is Tabs.Tab && view.PseudoCssState.ContainsWholeWord("active"))) return false;
+
+            view = CssEngine.FindParentByType<Tabs>(view);
+
+            if (view == null) return false;
+
+            return true;
+        }
+
+        public override Task Apply(View untypedView)
+        {
+            var view = (Tabs.Tab)untypedView;
+            view.Css.BackgroundColor = "#fff";
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", "Tabs.icon-only #Icon")]
+    [CssBody("height: 48px;")]
+    class TabsIconOnlyIconCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            // CssEngine will only call me if a view matches: #Icon
+
+            view = view.parent;
+            while (true)
+            {
+                if (view == null) return false;
+                else if (view is Tabs && HasClass(view, "icon-only")) break;
+                view = view.parent;
+            }
+
+            return true;
+        }
+
+        public override Task Apply(View view)
+        {
+            view.Css.Height = 48;
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", "Tabs.icon-only #Label")]
+    [CssBody("display: none;")]
+    class TabsIconOnlyLabelCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            // CssEngine will only call me if a view matches: #Label
+
+            view = view.parent;
+            while (true)
+            {
+                if (view == null) return false;
+                else if (view is Tabs && HasClass(view, "icon-only")) break;
+                view = view.parent;
+            }
+
+            return true;
+        }
+
+        public override async Task Apply(View view)
+        {
+            await view.Css.IgnoredAsync(true);
         }
     }
 }

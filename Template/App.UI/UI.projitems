@@ -23,7 +23,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <None Include="$(MSBuildThisFileDirectory)Views\Modules\MainTabs.zbl" />
-    <None Include="$(MSBuildThisFileDirectory)Views\Modules\ShoeList.zbl" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\Home.zbl" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\LatestShoes.zbl" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\Login.zbl" />
@@ -54,14 +53,14 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Tabs-Latest-Shoes.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Tabs-Popular-Shoes.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Tabs-Home.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Tabs-Popular-Shoes.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Spinner-Primary.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>

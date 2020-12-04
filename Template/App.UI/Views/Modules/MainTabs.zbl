@@ -4,8 +4,9 @@
 			 z-namespace="UI.Modules"
 			 z-viewmodel="ViewModel.MainTabs"
 			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-			 xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
-	<Tab z-of="Pages.Home" Label.Text="Home" Icon.Path="Images/Tabs-Home.png" on-Tapped="@{Model.TapHome()}" />
-	<Tab z-of="Pages.PopularShoes" Label.Text="Popular" Icon.Path="Images/Tabs-Popular-Shoes.png" on-Tapped="@{Model.TapPopularShoes()}" />
-	<Tab z-of="Pages.LatestShoes" Label.Text="Latest" Icon.Path="Images/Tabs-Latest-Shoes.png" on-Tapped="@{Model.TapLatestShoes()}" />
+			 xsi:noNamespaceSchemaLocation="../.zebble-schema.xml"
+			 CssClass="icon-only">
+	<Tab z-of="Pages.Home" Icon.Path="Images/Tabs-Home.png" on-Tapped="@{Model.TapHome()}" />
+	<Tab z-of="Pages.PopularShoes" Icon.Path="Images/Tabs-Popular-Shoes.png" on-Tapped="@{Model.TapPopularShoes()}" />
+	<Tab z-of="Pages.LatestShoes" Icon.Path="Images/Tabs-Latest-Shoes.png" on-Tapped="@{Model.TapLatestShoes()}" />
 </z-Component>

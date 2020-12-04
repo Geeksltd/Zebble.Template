@@ -2,7 +2,7 @@
 <data>
   <image path="Images/Logo.png" width="512" height="512" />
   <image path="Images/Spinner-Primary.png" width="100" height="100" />
-  <image path="Images/Tabs-Home.png" width="60" height="60" />
-  <image path="Images/Tabs-Latest-Shoes.png" width="60" height="60" />
-  <image path="Images/Tabs-Popular-Shoes.png" width="60" height="60" />
+  <image path="Images/Tabs-Home.png" width="100" height="100" />
+  <image path="Images/Tabs-Latest-Shoes.png" width="100" height="100" />
+  <image path="Images/Tabs-Popular-Shoes.png" width="100" height="100" />
 </data>

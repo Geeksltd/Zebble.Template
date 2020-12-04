@@ -2,7 +2,7 @@
 
 TextInput:skeleton { color: #7d7d7d; }
 
-TextInput :active { background-color: red; }
+TextInput:active { background-color: red; }
 
 Button { padding: 10px; border-radius: 20px; background: #f0f0f0; color: #6358db; }
 
@@ -101,13 +101,19 @@ NavigationBar > #Title { font-size: 18px; font-weight: bold; text-align: center;
 
 #RefreshingIndicator { width: 50px; height: 50px; background: url(Images/Icons/Spinner.png); }
 
-Tabs { background: #444444; height: 54px; }
+Tabs { background: #6358db; }
 
 Tabs Tabs-Tab { padding-top: 9px; padding-bottom: 9px; }
 
 Tabs Tabs-Tab #Icon { background-position: center; height: 22px; width: 100%; }
 
 Tabs Tabs-Tab #Label { font-size: 11px; color: #eeeeee; width: 100%; text-align: center; }
+
+Tabs Tabs-Tab:active { background-color: #fff; }
+
+Tabs.icon-only #Icon { height: 48px; }
+
+Tabs.icon-only #Label { display: none; }
 
 DatePicker-Cell, TimePicker-Cell { height: 50px; width: 100%; }
 

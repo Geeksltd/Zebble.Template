@@ -6,7 +6,12 @@
 			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 			 xsi:noNamespaceSchemaLocation="../.zebble-schema.xml"
 			 CssClass="primary-bg">
-	<FillParent CssClass="m-big">
-		<Modules.ShoeList Model.Items="@Model.Items" />
-	</FillParent>
+	<z-place inside="Body">
+		<CollectionView z-of="ViewModel.PopularShoesPage.Item, ItemRow" Source="@Model.Items">
+			<z-Component z-type="ItemRow" z-base="Row" z-viewmodel="ViewModel.PopularShoesPage.Item" on-Tapped="@{Model.Tap()}">
+				<ImageView Path="@{Model.ImageUrl}" />
+				<TextView Text="@{Model.Brand}"/>
+			</z-Component>
+		</CollectionView>
+	</z-place>
 </z-Component>

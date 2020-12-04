@@ -3,8 +3,10 @@ $grey: #7d7d7d;
 $very-light-grey: #e6e6e6;
 $dark-grey: #505050;
 
+$primary-color: #6358db;
+
 $text-color: black;
-$heading-text-color: #6358db;
+$heading-text-color: $primary-color;
 $muted-text-color: $grey;
 
 $primary-bg-color: #b8b3fb;
@@ -21,3 +23,5 @@ $button-border-radius: $base-border-radius;
 $button-bg-color: #f0f0f0;
 $button-text-color: $heading-text-color;
 $button-light-text-color: lighten($heading-text-color, 20%);
+
+$tab-bg-color: $primary-color;

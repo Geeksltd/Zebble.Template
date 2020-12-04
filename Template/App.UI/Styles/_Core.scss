@@ -8,7 +8,7 @@ TextInput {
         color: $grey;
     }
 
-    :active {
+    &:active {
         background-color: red;
     }
 }
@@ -272,8 +272,7 @@ NavigationBar {
 }
 
 Tabs {
-    background: #444444;
-    height: 54px;
+    background: $tab-bg-color;
 
     Tabs-Tab {
         padding-top: 9px;
@@ -290,6 +289,20 @@ Tabs {
             color: #eeeeee;
             width: 100%;
             text-align: center;
+        }
+
+        &:active {
+            background-color: $white;
+        }
+    }
+
+    &.icon-only {
+        #Icon {
+            height: 48px;
+        }
+
+        #Label {
+            display: none;
         }
     }
 }

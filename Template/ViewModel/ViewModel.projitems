@@ -12,7 +12,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Pages\LatestShoesPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Modules\MainTabs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\PopularShoesPage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Modules\ShoeList.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\HomePage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\LoginPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\RegisterPage.cs" />
