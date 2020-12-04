@@ -4,7 +4,7 @@ namespace UI.Templates
     using UI.Modules;
     using Zebble;
 
-    class MainTabsPage : NavBarTabsPage<Modules.MainTabs>
+    class MainTabsPage : NavBarTabsPage<MainTabs>
     {
         public override async Task OnInitializing()
         {

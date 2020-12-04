@@ -4,10 +4,10 @@
 			 z-namespace="UI.Pages"
 			 z-viewmodel="ViewModel.WelcomePage"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:noNamespaceSchemaLocation="./../.zebble-schema.xml"
+             xsi:noNamespaceSchemaLocation="../.zebble-schema.xml"
 			 CssClass="primary-bg">
 	<FillParent CssClass="m-big">
-		<ImageView Path="Images/Logo.png" CssClass="parent-center m-b-big logo" />
+		<ImageView Path="Images/Logo.png" CssClass="parent-center m-b-normal logo" />
 		<TextView Text="Geeky Shoes Store" CssClass="title" />
 		<Column Ignored="@{Model.IsAnonymous, x => !x}" CssClass="m-t-big">
 			<ActionButton Primary.Text="Existing user..." Secondary.Text="Let's log in to your account." CssClass="m-b-normal primary" on-Tapped="@{Model.TapLogin()}" />
