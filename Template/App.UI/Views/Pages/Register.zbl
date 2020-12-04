@@ -7,7 +7,7 @@
 			 xsi:noNamespaceSchemaLocation="../.zebble-schema.xml"
 			 CssClass="primary-bg">
 	<FillParent CssClass="m-big">
-		<ImageView Path="Images/Logo.png" CssClass="parent-center m-b-big logo" />
+		<ImageView Path="Images/Logo.png" CssClass="parent-center m-b-normal logo" />
 		<TextView Text="Create a new account" CssClass="title" />
 		<Column CssClass="m-t-big">
 			<Stack CssClass="m-b-normal input-wrapper">
