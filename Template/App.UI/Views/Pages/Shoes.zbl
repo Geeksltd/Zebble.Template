@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <z-Component z-type="Shoes"
-			 z-base="Templates.NavBar" 
+			 z-base="Templates.NavBarTabs" 
 			 z-namespace="UI.Pages"
 			 Title="Shoes"
 			 z-viewmodel="ViewModel.ShoesPage"

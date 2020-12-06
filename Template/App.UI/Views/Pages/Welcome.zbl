@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <z-Component z-type="Welcome"
-			 z-base="Templates.NavBar"
+			 z-base="Templates.NavBarTabs"
 			 z-namespace="UI.Pages"
 			 z-viewmodel="ViewModel.WelcomePage"
 			 Title="Welcome!"

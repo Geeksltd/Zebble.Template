@@ -1,24 +1,28 @@
 ﻿@import "../_Settings";
 
-#Tabs {
-    background: #444444;
+Tabs {
+    border-top: 1px solid $grey;
+    background: $very-light-grey;
     height: 54px;
+    position:absolute;
+}
 
-    #Tabs-Tab {
-        padding-top: 9px;
-        padding-bottom: 9px;
+Tab {
+    opacity: 0.5;
+    padding-top: 9px;
+    padding-bottom: 9px;
 
-        #Icon {
-            background-position: center;
-            height: 22px;
-            width: 100%;
-        }
-
-        #Label {
-            font-size: 11px;
-            color: #eeeeee;
-            width: 100%;
-            text-align: center;
-        }
+    #IconView {
+        background-position: center;
+        height: 22px;
+        width: 100%;
     }
+
+    #Label {
+        font-size: 11px;
+        width: 100%;
+        text-align: center;
+    }
+
+    &:active{opacity:1}
 }

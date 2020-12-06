@@ -24,13 +24,15 @@ NavigationBar > #Title { font-size: 18px; font-weight: bold; text-align: center;
 
 NavigationBar TextView { color: #fff; }
 
-#Tabs { background: #444444; height: 54px; }
+Tabs { border-top: 1px solid #C8C8C8; background: #e6e6e6; height: 54px; position: absolute; }
 
-#Tabs #Tabs-Tab { padding-top: 9px; padding-bottom: 9px; }
+Tab { opacity: 0.5; padding-top: 9px; padding-bottom: 9px; }
 
-#Tabs #Tabs-Tab #Icon { background-position: center; height: 22px; width: 100%; }
+Tab #IconView { background-position: center; height: 22px; width: 100%; }
 
-#Tabs #Tabs-Tab #Label { font-size: 11px; color: #eeeeee; width: 100%; text-align: center; }
+Tab #Label { font-size: 11px; width: 100%; text-align: center; }
+
+Tab:active { opacity: 1; }
 
 PopUp { width: 100%; height: 100%; padding: 0 20px; }
 

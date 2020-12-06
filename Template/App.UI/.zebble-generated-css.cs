@@ -35,9 +35,10 @@ namespace UI
             CssEngine.Add(new File_App.UI.Styles.Common.NavigationBarTitleCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.NavigationBarTextViewCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.TabsCssRule());
-            CssEngine.Add(new File_App.UI.Styles.Common.TabsTabsTabCssRule());
-            CssEngine.Add(new File_App.UI.Styles.Common.TabsTabsTabIconCssRule());
-            CssEngine.Add(new File_App.UI.Styles.Common.TabsTabsTabLabelCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.TabCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.TabIconViewCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.TabLabelCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.TabActiveCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.PopUpCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.PopupOverlayCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.WaitingOverlayCssRule());
@@ -492,21 +493,24 @@ namespace File_App.UI.Styles.Common
 namespace File_App.UI.Styles.Common
 {
     [EscapeGCop("Auto-generated")]
-    [CssSelector("Styles\\Common.css", "#Tabs")]
-    [CssBody("background: #444444; height: 54px;")]
+    [CssSelector("Styles\\Common.css", "Tabs")]
+    [CssBody("border-top: 1px solid #C8C8C8; background: #e6e6e6; height: 54px; position: absolute;")]
     class TabsCssRule : CssRule
     {
         public override bool Matches(View view)
         {
-            // CssEngine will only call me if a view matches: #Tabs
+            // CssEngine will only call me if a view matches: Tabs
 
             return true;
         }
 
-        public override Task Apply(View view)
+        public override Task Apply(View untypedView)
         {
+            var view = (Tabs)untypedView;
             view.Css.Height = 54;
-            view.Css.BackgroundColor = "#444444";
+            view.Css.Border = new Border{ Top = 1, Color = "#C8C8C8"};
+            view.Css.BackgroundColor = "#e6e6e6";
+            view.Css.Absolute = true;
 
             return Task.CompletedTask;
         }
@@ -516,25 +520,23 @@ namespace File_App.UI.Styles.Common
 namespace File_App.UI.Styles.Common
 {
     [EscapeGCop("Auto-generated")]
-    [CssSelector("Styles\\Common.css", "#Tabs #Tabs-Tab")]
-    [CssBody("padding-top: 9px; padding-bottom: 9px;")]
-    class TabsTabsTabCssRule : CssRule
+    [CssSelector("Styles\\Common.css", "Tab")]
+    [CssBody("opacity: 0.5; padding-top: 9px; padding-bottom: 9px;")]
+    class TabCssRule : CssRule
     {
         public override bool Matches(View view)
         {
-            // CssEngine will only call me if a view matches: #Tabs-Tab
-
-            view = CssEngine.FindParentById(view, "Tabs");
-
-            if (view == null) return false;
+            // CssEngine will only call me if a view matches: Tab
 
             return true;
         }
 
-        public override Task Apply(View view)
+        public override Task Apply(View untypedView)
         {
+            var view = (Tab)untypedView;
             view.Css.Padding.Top = 9;
             view.Css.Padding.Bottom = 9;
+            view.Css.Opacity = 0.5f;
 
             return Task.CompletedTask;
         }
@@ -544,19 +546,15 @@ namespace File_App.UI.Styles.Common
 namespace File_App.UI.Styles.Common
 {
     [EscapeGCop("Auto-generated")]
-    [CssSelector("Styles\\Common.css", "#Tabs #Tabs-Tab #Icon")]
+    [CssSelector("Styles\\Common.css", "Tab #IconView")]
     [CssBody("background-position: center; height: 22px; width: 100%;")]
-    class TabsTabsTabIconCssRule : CssRule
+    class TabIconViewCssRule : CssRule
     {
         public override bool Matches(View view)
         {
-            // CssEngine will only call me if a view matches: #Icon
+            // CssEngine will only call me if a view matches: #IconView
 
-            view = CssEngine.FindParentById(view, "Tabs-Tab");
-
-            if (view == null) return false;
-
-            view = CssEngine.FindParentById(view, "Tabs");
+            view = CssEngine.FindParentByType<Tab>(view);
 
             if (view == null) return false;
 
@@ -577,19 +575,15 @@ namespace File_App.UI.Styles.Common
 namespace File_App.UI.Styles.Common
 {
     [EscapeGCop("Auto-generated")]
-    [CssSelector("Styles\\Common.css", "#Tabs #Tabs-Tab #Label")]
-    [CssBody("font-size: 11px; color: #eeeeee; width: 100%; text-align: center;")]
-    class TabsTabsTabLabelCssRule : CssRule
+    [CssSelector("Styles\\Common.css", "Tab #Label")]
+    [CssBody("font-size: 11px; width: 100%; text-align: center;")]
+    class TabLabelCssRule : CssRule
     {
         public override bool Matches(View view)
         {
             // CssEngine will only call me if a view matches: #Label
 
-            view = CssEngine.FindParentById(view, "Tabs-Tab");
-
-            if (view == null) return false;
-
-            view = CssEngine.FindParentById(view, "Tabs");
+            view = CssEngine.FindParentByType<Tab>(view);
 
             if (view == null) return false;
 
@@ -600,8 +594,31 @@ namespace File_App.UI.Styles.Common
         {
             view.Css.Width = 100.Percent();
             view.Css.Font.Size = 11;
-            view.Css.TextColor = "#eeeeee";
             view.Css.TextAlignment = Alignment.Middle;
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", "Tab:active")]
+    [CssBody("opacity: 1;")]
+    class TabActiveCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            if (!(view is Tab && view.PseudoCssState.ContainsWholeWord("active"))) return false;
+
+            return true;
+        }
+
+        public override Task Apply(View untypedView)
+        {
+            var view = (Tab)untypedView;
+            view.Css.Opacity = 1f;
 
             return Task.CompletedTask;
         }
