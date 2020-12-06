@@ -12,16 +12,32 @@
     <None Include="$(MSBuildThisFileDirectory)compilerconfig.json" />
     <None Include="$(MSBuildThisFileDirectory)Splash.png" />
     <None Include="$(MSBuildThisFileDirectory)Icon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Styles\Components\_PopUp.scss" />
+    <None Include="$(MSBuildThisFileDirectory)Styles\Components\_Dialog.scss" />
+    <None Include="$(MSBuildThisFileDirectory)Styles\Components\_Tabs.scss" />
+    <None Include="$(MSBuildThisFileDirectory)Styles\Components\_NavBar.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\PlatformSpecific.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\_Core.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\Common.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\_Settings.scss" />
+    <None Include="$(MSBuildThisFileDirectory)Templates\NavBar.zbl" />
+    <None Include="$(MSBuildThisFileDirectory)Templates\Widgets\NavigationBar.zbl" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Config.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Icons\Menu.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Icons\not-found.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Logo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Zebble-Meta.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <None Include="$(MSBuildThisFileDirectory)Views\.zebble-schema.xml" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\Login.zbl" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\Shoes.zbl" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\Welcome.zbl" />
@@ -32,6 +48,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)StartUp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Templates\NavBar.zbl.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>NavBar.zbl</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Templates\Widgets\NavigationBar.zbl.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>NavigationBar.zbl</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Tests\TestCases\SampleTest.cs" />
   </ItemGroup>
   <ItemGroup>

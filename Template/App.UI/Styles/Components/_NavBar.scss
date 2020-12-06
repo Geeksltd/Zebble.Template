@@ -1,0 +1,63 @@
+﻿@import "../_Settings";
+
+NavBar {
+    height: 100%;
+    width: 100%;
+
+    & > Stack {
+        height: calc("View.Root.Height, x=>x");
+    }
+
+    #BodyScrollerWrapper {
+        height: calc("Container");
+    }
+
+    #BodyScroller {
+        background: white;
+        height: 100%;
+        width: 100%;
+
+        & > #Body {
+            padding: 10px;
+        }
+    }
+}
+
+NavigationBar {
+    height: 64px;
+    background: $primary-color;
+    padding: 10px;
+
+    & > * {
+        height: 100%;
+    }
+
+    & > #Left {
+        width: 50%;
+
+        & > * {
+            height: 100%;
+            padding: 7px;
+        }
+
+        #Menu {
+            background: url("Images/Icons/Menu.png");
+        }
+    }
+
+    & > #Right {
+        width: 50%;
+        left: 50%;
+    }
+
+    & > #Title {
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        width: 100%;
+    }
+
+    TextView {
+        color: #fff;
+    }
+}

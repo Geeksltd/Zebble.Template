@@ -1,5 +1,8 @@
 <?xml version="1.0"?>
-<z-Component z-type="Shoes" z-base="NavBarPage" z-namespace="UI.Pages"
+<z-Component z-type="Shoes"
+			 z-base="Templates.NavBar" 
+			 z-namespace="UI.Pages"
+			 Title="Shoes"
 			 z-viewmodel="ViewModel.ShoesPage"
 			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 			 xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">

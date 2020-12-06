@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <settings>
-
   <!--Learn about the settings at: http://zebble.net/docs/standard-zebble-settings -->
 
   <Dev.Mode value="true" />
@@ -18,5 +17,4 @@
   <Android.Hardware.Back.Can.Close value="false" />
   <Sanity.Enabled value="false" />
   <Sanity.Windows.Listener.Url value="http://localhost:62001" />
-
 </settings>

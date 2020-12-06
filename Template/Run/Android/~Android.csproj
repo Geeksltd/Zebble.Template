@@ -114,9 +114,6 @@
     <PackageReference Include="Zebble.ListView">
       <Version>4.10.172</Version>
     </PackageReference>
-    <PackageReference Include="Zebble.NavBarTabs">
-      <Version>2.6.355</Version>
-    </PackageReference>
     <PackageReference Include="Zebble.OptionsList">
       <Version>3.15.134</Version>
     </PackageReference>

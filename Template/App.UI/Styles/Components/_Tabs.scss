@@ -1,0 +1,24 @@
+﻿@import "../_Settings";
+
+#Tabs {
+    background: #444444;
+    height: 54px;
+
+    #Tabs-Tab {
+        padding-top: 9px;
+        padding-bottom: 9px;
+
+        #Icon {
+            background-position: center;
+            height: 22px;
+            width: 100%;
+        }
+
+        #Label {
+            font-size: 11px;
+            color: #eeeeee;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

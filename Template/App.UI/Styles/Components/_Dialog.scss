@@ -1,0 +1,66 @@
+﻿@import "../_Settings";
+@import "_PopUp";
+
+Dialog {
+    background: white;
+    padding: 15px;
+
+    & > #Title {
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    & > #ButtonsRow {
+        margin-top: 30px;
+    }
+}
+
+Prompt {
+    #Description {
+        white-space: pre-wrap;
+    }
+
+    #Input {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+AlertDialog {
+    #Message {
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+Toast {
+    background: black;
+    border-radius: 7px;
+    margin: 20px;
+    padding: 20px;
+
+    #OKButton {
+        height: auto;
+        width: 50px;
+    }
+
+    #Label {
+        color: #fff
+    }
+}
+
+#WaitingOverlay {
+    @extend #PopupOverlay;
+    opacity: 0.15;
+}
+
+.wait-spinner {
+    height: 60px;
+    border-radius: 30px;
+
+    ImageView {
+        height: 100%;
+    }
+}

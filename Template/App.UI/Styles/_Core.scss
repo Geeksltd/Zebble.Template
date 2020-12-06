@@ -1,4 +1,7 @@
 ﻿@import "_Settings";
+@import "Components/_NavBar";
+@import "Components/_Tabs";
+@import "Components/_Dialog";
 
 TextInput {
     padding: 7px;
@@ -24,7 +27,7 @@ CheckBox {
         background-color: $primary-color;
     }
 
-    &>#CheckedImage {
+    & > #CheckedImage {
         width: 100%;
         height: 100%;
         background-image: url(Images/Icons/Check.png);
@@ -33,37 +36,18 @@ CheckBox {
     }
 }
 
-IconButton {
-    margin: 2px;
-    height: 40px;
-    padding: 5px;
-
-    &>#TextView {
-        text-align: center;
-        height: 100%;
-    }
-
-    &>#Icon {
-        height: 20px;
-        background-position: left;
-        background-size: contain;
-        margin-top: 5px;
-        margin-left: 5px;
-    }
-}
-
 SearchInput {
-    &>#Icon {
+    & > #Icon {
         background-image: url(Images/Icons/Search.png);
         opacity: 0.3;
         padding: 8px;
     }
 
-    &>#TextBox {
+    & > #TextBox {
         text-align: center;
     }
 
-    &>#CancelButton {
+    & > #CancelButton {
         border: 0;
         height: 100%;
         left: 100%;
@@ -73,12 +57,12 @@ SearchInput {
     }
 
     &:focus {
-        &>#TextBox {
+        & > #TextBox {
             text-align: left;
             padding-left: 30px;
         }
 
-        &>#CancelButton {
+        & > #CancelButton {
             opacity: 1;
         }
     }
@@ -115,94 +99,8 @@ Switch {
     & > #Preview { width: 35px; height: 35px; background-size: cover; }
 }*/
 
-FormField {
-    margin-top: 5px;
-
-    &>#Label {
-        width: 30%;
-        height: 100%;
-    }
-
-    &>#Icon {
-        width: 30%;
-        width: 25px;
-        height: 25px;
-    }
-}
-
-
-Dialog {
-    background: white;
-    padding: 15px;
-
-    &>#Title {
-        text-align: center;
-        font-size: 16px;
-        margin-bottom: 10px;
-        font-weight: bold;
-    }
-
-    &>#ButtonsRow {
-        margin-top: 30px;
-    }
-}
-
-Prompt {
-    #Description {
-        white-space: pre-wrap;
-    }
-
-    #Input {
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-}
-
-AlertDialog {
-    #Message {
-        text-align: center;
-        margin-top: 10px;
-    }
-}
-
-PopUp {
-    width: 100%;
-    height: 100%;
-    padding: 0 20px;
-}
-
-#PopupOverlay,
-#WaitingOverlay {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    opacity: 0.35;
-    background: black;
-}
-
-#WaitingOverlay {
-    opacity: 0.15;
-}
-
-Toast {
-    background: black;
-    border-radius: 7px;
-    margin: 20px;
-    padding: 20px;
-
-    #OKButton {
-        height: auto;
-        width: 50px;
-    }
-
-    #Label {
-        color: #fff
-    }
-}
-
-Grid,
-ListView {
-    &>#EmptyTextLabel {
+Grid, ListView {
+    & > #EmptyTextLabel {
         text-align: center;
     }
 }
@@ -211,9 +109,6 @@ ListViewItem {
     border-top: 1px;
 }
 
-ListView:lazy-loaded OptionsList-Option {
-    height: 30px;
-}
 
 /*Carousel {
     #BulletsContainer { text-align: center; }
@@ -221,74 +116,13 @@ ListView:lazy-loaded OptionsList-Option {
     Carousel-Slide { height: 100%; }
 }*/
 
-NavBarPage {
-    height: 100%;
-    width: 100%;
-
-    #BodyScroller {
-        background: white;
-        height: 100%;
-        width: 100%;
-
-        &>#Body {
-            padding: 10px;
-        }
-    }
-}
-
-NavigationBar {
-    height: 64px;
-    padding: 10px;
-
-    &>#Title {
-        font-size: 18px;
-        font-weight: bold;
-        text-align: center;
-        width: 100%;
-        height: 100%;
-    }
-}
-
-.wait-spinner {
-    height: 60px;
-    border-radius: 30px;
-
-    ImageView {
-        height: 100%;
-    }
-}
-
 #RefreshingIndicator {
     width: 50px;
     height: 50px;
     background: url(Images/Icons/Spinner.png);
 }
 
-Tabs {
-    background: #444444;
-    height: 54px;
-
-    Tabs-Tab {
-        padding-top: 9px;
-        padding-bottom: 9px;
-
-        #Icon {
-            background-position: center;
-            height: 22px;
-            width: 100%;
-        }
-
-        #Label {
-            font-size: 11px;
-            color: #eeeeee;
-            width: 100%;
-            text-align: center;
-        }
-    }
-}
-
-DatePicker-Cell,
-TimePicker-Cell {
+DatePicker-Cell, TimePicker-Cell {
     height: 50px;
     width: 100%;
 
@@ -300,8 +134,7 @@ TimePicker-Cell {
     }
 }
 
-DatePicker-Dialog,
-TimePicker-Dialog {
+DatePicker-Dialog, TimePicker-Dialog {
     #RotatorsRow {
         margin-top: 15px;
     }

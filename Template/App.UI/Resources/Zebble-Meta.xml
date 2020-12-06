@@ -1,2 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<data />
+<data>
+  <image path="Images/Logo.png" width="397" height="390" />
+  <image path="Images/Icons/Menu.png" width="200" height="200" />
+  <image path="Images/Icons/not-found.png" width="255" height="256" />
+</data>
