@@ -145,7 +145,7 @@ namespace File_App.UI.Styles.Common
 {
     [EscapeGCop("Auto-generated")]
     [CssSelector("Styles\\Common.css", "NavBar > Stack")]
-    [CssBody("height: calc(\"View.Root.Height, x=>x\");")]
+    [CssBody("height: calc(\"Container\");")]
     class NavBarStackCssRule : CssRule
     {
         public override bool Matches(View view)
@@ -163,7 +163,7 @@ namespace File_App.UI.Styles.Common
         public override Task Apply(View untypedView)
         {
             var view = (Stack)untypedView;
-            view.Css.Height = new Length.BindingLengthRequest(View.Root.Height, x=>x);
+            view.Css.Height = Length.AutoStrategy.Container;
 
             return Task.CompletedTask;
         }
@@ -709,7 +709,7 @@ namespace File_App.UI.Styles.Common
 {
     [EscapeGCop("Auto-generated")]
     [CssSelector("Styles\\Common.css", "Dialog")]
-    [CssBody("background: white; padding: 15px;")]
+    [CssBody("margin-top: 150px; background: white; padding: 15px;")]
     class DialogCssRule : CssRule
     {
         public override bool Matches(View view)
@@ -723,6 +723,7 @@ namespace File_App.UI.Styles.Common
         {
             var view = (Dialog)untypedView;
             view.Css.Padding(15);
+            view.Css.Margin.Top = 150;
             view.Css.BackgroundColor = Colors.White;
 
             return Task.CompletedTask;

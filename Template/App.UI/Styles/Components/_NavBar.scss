@@ -5,7 +5,7 @@ NavBar {
     width: 100%;
 
     & > Stack {
-        height: calc("View.Root.Height, x=>x");
+        height: calc("Container");
     }
 
     #BodyScrollerWrapper {

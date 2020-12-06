@@ -1,6 +1,6 @@
 ﻿NavBar { height: 100%; width: 100%; }
 
-NavBar > Stack { height: calc("View.Root.Height, x=>x"); }
+NavBar > Stack { height: calc("Container"); }
 
 NavBar #BodyScrollerWrapper { height: calc("Container"); }
 
@@ -38,7 +38,7 @@ PopUp { width: 100%; height: 100%; padding: 0 20px; }
 
 #PopupOverlay, #WaitingOverlay { width: 100%; height: 100%; position: absolute; opacity: 0.35; background: black; }
 
-Dialog { background: white; padding: 15px; }
+Dialog { margin-top: 150px; background: white; padding: 15px; }
 
 Dialog > #Title { text-align: center; font-size: 16px; margin-bottom: 10px; font-weight: bold; }
 
