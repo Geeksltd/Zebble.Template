@@ -1,0 +1,117 @@
+﻿@import "../_Settings";
+
+TextInput {
+    padding: 7px;
+    border: 1px solid #eee;
+
+    &:skeleton {
+        color: $grey;
+    }
+}
+
+CheckBox {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #aaaaaa;
+    border-radius: 12px;
+    background: transparent;
+
+    &:checked {
+        background-color: $primary-color;
+    }
+
+    & > #CheckedImage {
+        width: 100%;
+        height: 100%;
+        background-image: url(Images/Icons/Check.png);
+        background-size: contain;
+        padding: 2px;
+    }
+}
+
+Picker {
+    padding: 7px;
+    border: 1px solid #eee;
+
+    #Label {
+        height: 100%;
+    }
+
+    #Caret {
+        background: url(Images/Icons/Caret.png);
+        width: 20px;
+    }
+
+    #PlaceholderLabel {
+        color: #ddd;
+        height: 100%;
+    }
+}
+
+DatePicker-Dialog, TimePicker-Dialog {
+    #RotatorsRow {
+        margin-top: 15px;
+    }
+}
+
+DatePicker-Cell, TimePicker-Cell {
+    height: 50px;
+    width: 100%;
+
+    #Label {
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+    }
+}
+
+Switch {
+    width: 56px;
+    height: 32px;
+
+    #Bar {
+        height: 32px;
+        border-radius: 16px;
+    }
+
+    #Toggle {
+        height: 28px;
+        width: 28px;
+        border-radius: 14px;
+        background: white;
+        margin: 2px;
+    }
+}
+
+SearchInput {
+    & > #Icon {
+        background-image: url(Images/Icons/Search.png);
+        opacity: 0.3;
+        padding: 8px;
+    }
+
+    & > #TextBox {
+        text-align: center;
+    }
+
+    & > #CancelButton {
+        border: 0;
+        height: 100%;
+        left: 100%;
+        white-space: nowrap;
+        padding: 0;
+        opacity: 0;
+    }
+
+    &:focus {
+        & > #TextBox {
+            text-align: left;
+            padding-left: 30px;
+        }
+
+        & > #CancelButton {
+            opacity: 1;
+        }
+    }
+}

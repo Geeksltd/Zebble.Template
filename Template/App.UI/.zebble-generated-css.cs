@@ -56,34 +56,33 @@ namespace UI
             CssEngine.Add(new File_App.UI.Styles.Common.WaitSpinnerImageViewCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.TextInputCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.TextInputSkeletonCssRule());
-            CssEngine.Add(new File_App.UI.Styles.Common.ButtonCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.CheckBoxCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.CheckBoxCheckedCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.CheckBoxCheckedImageCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.PickerCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.PickerLabelCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.PickerCaretCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.PickerPlaceholderLabelCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.DatePickerDialogRotatorsRowCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.TimePickerDialogRotatorsRowCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.DatePickerCellCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.TimePickerCellCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.DatePickerCellLabelCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.TimePickerCellLabelCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.SwitchCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.SwitchBarCssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.SwitchToggleCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.SearchInputIconCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.SearchInputTextBoxCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.SearchInputCancelButtonCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.SearchInputFocusTextBoxCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.SearchInputFocusCancelButtonCssRule());
-            CssEngine.Add(new File_App.UI.Styles.Common.SwitchCssRule());
-            CssEngine.Add(new File_App.UI.Styles.Common.SwitchBarCssRule());
-            CssEngine.Add(new File_App.UI.Styles.Common.SwitchToggleCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.GridEmptyTextLabelCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.ListViewEmptyTextLabelCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.ListViewItemCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.RefreshingIndicatorCssRule());
-            CssEngine.Add(new File_App.UI.Styles.Common.DatePickerCellCssRule());
-            CssEngine.Add(new File_App.UI.Styles.Common.TimePickerCellCssRule());
-            CssEngine.Add(new File_App.UI.Styles.Common.DatePickerCellLabelCssRule());
-            CssEngine.Add(new File_App.UI.Styles.Common.TimePickerCellLabelCssRule());
-            CssEngine.Add(new File_App.UI.Styles.Common.DatePickerDialogRotatorsRowCssRule());
-            CssEngine.Add(new File_App.UI.Styles.Common.TimePickerDialogRotatorsRowCssRule());
-            CssEngine.Add(new File_App.UI.Styles.Common.PickerCssRule());
-            CssEngine.Add(new File_App.UI.Styles.Common.PickerLabelCssRule());
-            CssEngine.Add(new File_App.UI.Styles.Common.PickerCaretCssRule());
-            CssEngine.Add(new File_App.UI.Styles.Common.PickerPlaceholderLabelCssRule());
             CssEngine.Add(new File_App.UI.Styles.Common.TextViewTitleCssRule());
-            CssEngine.Add(new File_App.UI.Styles.Common.Button_1CssRule());
+            CssEngine.Add(new File_App.UI.Styles.Common.ButtonCssRule());
 
             // ======================================================================
             // App.UI\Styles\PlatformSpecific.css------------------------------------
@@ -1082,30 +1081,6 @@ namespace File_App.UI.Styles.Common
 namespace File_App.UI.Styles.Common
 {
     [EscapeGCop("Auto-generated")]
-    [CssSelector("Styles\\Common.css", "Button")]
-    [CssBody("padding: 5px;")]
-    class ButtonCssRule : CssRule
-    {
-        public override bool Matches(View view)
-        {
-            // CssEngine will only call me if a view matches: Button
-
-            return true;
-        }
-
-        public override Task Apply(View untypedView)
-        {
-            var view = (Button)untypedView;
-            view.Css.Padding(5);
-
-            return Task.CompletedTask;
-        }
-    }
-}
-
-namespace File_App.UI.Styles.Common
-{
-    [EscapeGCop("Auto-generated")]
     [CssSelector("Styles\\Common.css", "CheckBox")]
     [CssBody("width: 24px; height: 24px; border: 1px solid #aaaaaa; border-radius: 12px; background: transparent;")]
     class CheckBoxCssRule : CssRule
@@ -1181,6 +1156,362 @@ namespace File_App.UI.Styles.Common
             view.Css.Width = 100.Percent();
             view.Css.Padding(2);
             view.Css.BackgroundImagePath = "Images/Icons/Check.png";
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", "Picker")]
+    [CssBody("padding: 7px; border: 1px solid #eee;")]
+    class PickerCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            // CssEngine will only call me if a view matches: Picker
+
+            return true;
+        }
+
+        public override Task Apply(View untypedView)
+        {
+            var view = (Picker)untypedView;
+            view.Css.Padding(7);
+            view.Css.Border = new Border(1, "#eee");
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", "Picker #Label")]
+    [CssBody("height: 100%;")]
+    class PickerLabelCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            // CssEngine will only call me if a view matches: #Label
+
+            view = CssEngine.FindParentByType<Picker>(view);
+
+            if (view == null) return false;
+
+            return true;
+        }
+
+        public override Task Apply(View view)
+        {
+            view.Css.Height = 100.Percent();
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", "Picker #Caret")]
+    [CssBody("background: url(Images/Icons/Caret.png); width: 20px;")]
+    class PickerCaretCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            // CssEngine will only call me if a view matches: #Caret
+
+            view = CssEngine.FindParentByType<Picker>(view);
+
+            if (view == null) return false;
+
+            return true;
+        }
+
+        public override Task Apply(View view)
+        {
+            view.Css.Width = 20;
+            view.Css.BackgroundImagePath = "Images/Icons/Caret.png";
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", "Picker #PlaceholderLabel")]
+    [CssBody("color: #ddd; height: 100%;")]
+    class PickerPlaceholderLabelCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            // CssEngine will only call me if a view matches: #PlaceholderLabel
+
+            view = CssEngine.FindParentByType<Picker>(view);
+
+            if (view == null) return false;
+
+            return true;
+        }
+
+        public override Task Apply(View view)
+        {
+            view.Css.Height = 100.Percent();
+            view.Css.TextColor = "#ddd";
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", "DatePicker-Dialog #RotatorsRow")]
+    [CssBody("margin-top: 15px;")]
+    class DatePickerDialogRotatorsRowCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            // CssEngine will only call me if a view matches: #RotatorsRow
+
+            view = CssEngine.FindParentByType<DatePicker.Dialog>(view);
+
+            if (view == null) return false;
+
+            return true;
+        }
+
+        public override Task Apply(View view)
+        {
+            view.Css.Margin.Top = 15;
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", "TimePicker-Dialog #RotatorsRow")]
+    [CssBody("margin-top: 15px;")]
+    class TimePickerDialogRotatorsRowCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            // CssEngine will only call me if a view matches: #RotatorsRow
+
+            view = CssEngine.FindParentByType<TimePicker.Dialog>(view);
+
+            if (view == null) return false;
+
+            return true;
+        }
+
+        public override Task Apply(View view)
+        {
+            view.Css.Margin.Top = 15;
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", "DatePicker-Cell")]
+    [CssBody("height: 50px; width: 100%;")]
+    class DatePickerCellCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            // CssEngine will only call me if a view matches: DatePicker-Cell
+
+            return true;
+        }
+
+        public override Task Apply(View untypedView)
+        {
+            var view = (DatePicker.Cell)untypedView;
+            view.Css.Height = 50;
+            view.Css.Width = 100.Percent();
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", "TimePicker-Cell")]
+    [CssBody("height: 50px; width: 100%;")]
+    class TimePickerCellCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            // CssEngine will only call me if a view matches: TimePicker-Cell
+
+            return true;
+        }
+
+        public override Task Apply(View untypedView)
+        {
+            var view = (TimePicker.Cell)untypedView;
+            view.Css.Height = 50;
+            view.Css.Width = 100.Percent();
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", "DatePicker-Cell #Label")]
+    [CssBody("height: 100%; width: 100%; text-align: center; font-size: 16px;")]
+    class DatePickerCellLabelCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            // CssEngine will only call me if a view matches: #Label
+
+            view = CssEngine.FindParentByType<DatePicker.Cell>(view);
+
+            if (view == null) return false;
+
+            return true;
+        }
+
+        public override Task Apply(View view)
+        {
+            view.Css.Height = 100.Percent();
+            view.Css.Width = 100.Percent();
+            view.Css.Font.Size = 16;
+            view.Css.TextAlignment = Alignment.Middle;
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", "TimePicker-Cell #Label")]
+    [CssBody("height: 100%; width: 100%; text-align: center; font-size: 16px;")]
+    class TimePickerCellLabelCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            // CssEngine will only call me if a view matches: #Label
+
+            view = CssEngine.FindParentByType<TimePicker.Cell>(view);
+
+            if (view == null) return false;
+
+            return true;
+        }
+
+        public override Task Apply(View view)
+        {
+            view.Css.Height = 100.Percent();
+            view.Css.Width = 100.Percent();
+            view.Css.Font.Size = 16;
+            view.Css.TextAlignment = Alignment.Middle;
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", "Switch")]
+    [CssBody("width: 56px; height: 32px;")]
+    class SwitchCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            // CssEngine will only call me if a view matches: Switch
+
+            return true;
+        }
+
+        public override Task Apply(View untypedView)
+        {
+            var view = (Switch)untypedView;
+            view.Css.Height = 32;
+            view.Css.Width = 56;
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", "Switch #Bar")]
+    [CssBody("height: 32px; border-radius: 16px;")]
+    class SwitchBarCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            // CssEngine will only call me if a view matches: #Bar
+
+            view = CssEngine.FindParentByType<Switch>(view);
+
+            if (view == null) return false;
+
+            return true;
+        }
+
+        public override Task Apply(View view)
+        {
+            view.Css.Height = 32;
+            view.Css.Border.Radius = 16;
+
+            return Task.CompletedTask;
+        }
+    }
+}
+
+namespace File_App.UI.Styles.Common
+{
+    [EscapeGCop("Auto-generated")]
+    [CssSelector("Styles\\Common.css", "Switch #Toggle")]
+    [CssBody("height: 28px; width: 28px; border-radius: 14px; background: white; margin: 2px;")]
+    class SwitchToggleCssRule : CssRule
+    {
+        public override bool Matches(View view)
+        {
+            // CssEngine will only call me if a view matches: #Toggle
+
+            view = CssEngine.FindParentByType<Switch>(view);
+
+            if (view == null) return false;
+
+            return true;
+        }
+
+        public override Task Apply(View view)
+        {
+            view.Css.Height = 28;
+            view.Css.Width = 28;
+            view.Css.Margin(2);
+            view.Css.Border.Radius = 14;
+            view.Css.BackgroundColor = Colors.White;
 
             return Task.CompletedTask;
         }
@@ -1338,90 +1669,6 @@ namespace File_App.UI.Styles.Common
 namespace File_App.UI.Styles.Common
 {
     [EscapeGCop("Auto-generated")]
-    [CssSelector("Styles\\Common.css", "Switch")]
-    [CssBody("width: 56px; height: 32px;")]
-    class SwitchCssRule : CssRule
-    {
-        public override bool Matches(View view)
-        {
-            // CssEngine will only call me if a view matches: Switch
-
-            return true;
-        }
-
-        public override Task Apply(View untypedView)
-        {
-            var view = (Switch)untypedView;
-            view.Css.Height = 32;
-            view.Css.Width = 56;
-
-            return Task.CompletedTask;
-        }
-    }
-}
-
-namespace File_App.UI.Styles.Common
-{
-    [EscapeGCop("Auto-generated")]
-    [CssSelector("Styles\\Common.css", "Switch #Bar")]
-    [CssBody("height: 32px; border-radius: 16px;")]
-    class SwitchBarCssRule : CssRule
-    {
-        public override bool Matches(View view)
-        {
-            // CssEngine will only call me if a view matches: #Bar
-
-            view = CssEngine.FindParentByType<Switch>(view);
-
-            if (view == null) return false;
-
-            return true;
-        }
-
-        public override Task Apply(View view)
-        {
-            view.Css.Height = 32;
-            view.Css.Border.Radius = 16;
-
-            return Task.CompletedTask;
-        }
-    }
-}
-
-namespace File_App.UI.Styles.Common
-{
-    [EscapeGCop("Auto-generated")]
-    [CssSelector("Styles\\Common.css", "Switch #Toggle")]
-    [CssBody("height: 28px; width: 28px; border-radius: 14px; background: white; margin: 2px;")]
-    class SwitchToggleCssRule : CssRule
-    {
-        public override bool Matches(View view)
-        {
-            // CssEngine will only call me if a view matches: #Toggle
-
-            view = CssEngine.FindParentByType<Switch>(view);
-
-            if (view == null) return false;
-
-            return true;
-        }
-
-        public override Task Apply(View view)
-        {
-            view.Css.Height = 28;
-            view.Css.Width = 28;
-            view.Css.Margin(2);
-            view.Css.Border.Radius = 14;
-            view.Css.BackgroundColor = Colors.White;
-
-            return Task.CompletedTask;
-        }
-    }
-}
-
-namespace File_App.UI.Styles.Common
-{
-    [EscapeGCop("Auto-generated")]
     [CssSelector("Styles\\Common.css", "Grid > #EmptyTextLabel")]
     [CssBody("text-align: center;")]
     class GridEmptyTextLabelCssRule : CssRule
@@ -1527,278 +1774,6 @@ namespace File_App.UI.Styles.Common
 namespace File_App.UI.Styles.Common
 {
     [EscapeGCop("Auto-generated")]
-    [CssSelector("Styles\\Common.css", "DatePicker-Cell")]
-    [CssBody("height: 50px; width: 100%;")]
-    class DatePickerCellCssRule : CssRule
-    {
-        public override bool Matches(View view)
-        {
-            // CssEngine will only call me if a view matches: DatePicker-Cell
-
-            return true;
-        }
-
-        public override Task Apply(View untypedView)
-        {
-            var view = (DatePicker.Cell)untypedView;
-            view.Css.Height = 50;
-            view.Css.Width = 100.Percent();
-
-            return Task.CompletedTask;
-        }
-    }
-}
-
-namespace File_App.UI.Styles.Common
-{
-    [EscapeGCop("Auto-generated")]
-    [CssSelector("Styles\\Common.css", "TimePicker-Cell")]
-    [CssBody("height: 50px; width: 100%;")]
-    class TimePickerCellCssRule : CssRule
-    {
-        public override bool Matches(View view)
-        {
-            // CssEngine will only call me if a view matches: TimePicker-Cell
-
-            return true;
-        }
-
-        public override Task Apply(View untypedView)
-        {
-            var view = (TimePicker.Cell)untypedView;
-            view.Css.Height = 50;
-            view.Css.Width = 100.Percent();
-
-            return Task.CompletedTask;
-        }
-    }
-}
-
-namespace File_App.UI.Styles.Common
-{
-    [EscapeGCop("Auto-generated")]
-    [CssSelector("Styles\\Common.css", "DatePicker-Cell #Label")]
-    [CssBody("height: 100%; width: 100%; text-align: center; font-size: 16px;")]
-    class DatePickerCellLabelCssRule : CssRule
-    {
-        public override bool Matches(View view)
-        {
-            // CssEngine will only call me if a view matches: #Label
-
-            view = CssEngine.FindParentByType<DatePicker.Cell>(view);
-
-            if (view == null) return false;
-
-            return true;
-        }
-
-        public override Task Apply(View view)
-        {
-            view.Css.Height = 100.Percent();
-            view.Css.Width = 100.Percent();
-            view.Css.Font.Size = 16;
-            view.Css.TextAlignment = Alignment.Middle;
-
-            return Task.CompletedTask;
-        }
-    }
-}
-
-namespace File_App.UI.Styles.Common
-{
-    [EscapeGCop("Auto-generated")]
-    [CssSelector("Styles\\Common.css", "TimePicker-Cell #Label")]
-    [CssBody("height: 100%; width: 100%; text-align: center; font-size: 16px;")]
-    class TimePickerCellLabelCssRule : CssRule
-    {
-        public override bool Matches(View view)
-        {
-            // CssEngine will only call me if a view matches: #Label
-
-            view = CssEngine.FindParentByType<TimePicker.Cell>(view);
-
-            if (view == null) return false;
-
-            return true;
-        }
-
-        public override Task Apply(View view)
-        {
-            view.Css.Height = 100.Percent();
-            view.Css.Width = 100.Percent();
-            view.Css.Font.Size = 16;
-            view.Css.TextAlignment = Alignment.Middle;
-
-            return Task.CompletedTask;
-        }
-    }
-}
-
-namespace File_App.UI.Styles.Common
-{
-    [EscapeGCop("Auto-generated")]
-    [CssSelector("Styles\\Common.css", "DatePicker-Dialog #RotatorsRow")]
-    [CssBody("margin-top: 15px;")]
-    class DatePickerDialogRotatorsRowCssRule : CssRule
-    {
-        public override bool Matches(View view)
-        {
-            // CssEngine will only call me if a view matches: #RotatorsRow
-
-            view = CssEngine.FindParentByType<DatePicker.Dialog>(view);
-
-            if (view == null) return false;
-
-            return true;
-        }
-
-        public override Task Apply(View view)
-        {
-            view.Css.Margin.Top = 15;
-
-            return Task.CompletedTask;
-        }
-    }
-}
-
-namespace File_App.UI.Styles.Common
-{
-    [EscapeGCop("Auto-generated")]
-    [CssSelector("Styles\\Common.css", "TimePicker-Dialog #RotatorsRow")]
-    [CssBody("margin-top: 15px;")]
-    class TimePickerDialogRotatorsRowCssRule : CssRule
-    {
-        public override bool Matches(View view)
-        {
-            // CssEngine will only call me if a view matches: #RotatorsRow
-
-            view = CssEngine.FindParentByType<TimePicker.Dialog>(view);
-
-            if (view == null) return false;
-
-            return true;
-        }
-
-        public override Task Apply(View view)
-        {
-            view.Css.Margin.Top = 15;
-
-            return Task.CompletedTask;
-        }
-    }
-}
-
-namespace File_App.UI.Styles.Common
-{
-    [EscapeGCop("Auto-generated")]
-    [CssSelector("Styles\\Common.css", "Picker")]
-    [CssBody("padding: 7px; border: 1px solid #eee;")]
-    class PickerCssRule : CssRule
-    {
-        public override bool Matches(View view)
-        {
-            // CssEngine will only call me if a view matches: Picker
-
-            return true;
-        }
-
-        public override Task Apply(View untypedView)
-        {
-            var view = (Picker)untypedView;
-            view.Css.Padding(7);
-            view.Css.Border = new Border(1, "#eee");
-
-            return Task.CompletedTask;
-        }
-    }
-}
-
-namespace File_App.UI.Styles.Common
-{
-    [EscapeGCop("Auto-generated")]
-    [CssSelector("Styles\\Common.css", "Picker #Label")]
-    [CssBody("height: 100%;")]
-    class PickerLabelCssRule : CssRule
-    {
-        public override bool Matches(View view)
-        {
-            // CssEngine will only call me if a view matches: #Label
-
-            view = CssEngine.FindParentByType<Picker>(view);
-
-            if (view == null) return false;
-
-            return true;
-        }
-
-        public override Task Apply(View view)
-        {
-            view.Css.Height = 100.Percent();
-
-            return Task.CompletedTask;
-        }
-    }
-}
-
-namespace File_App.UI.Styles.Common
-{
-    [EscapeGCop("Auto-generated")]
-    [CssSelector("Styles\\Common.css", "Picker #Caret")]
-    [CssBody("background: url(Images/Icons/Caret.png); width: 20px;")]
-    class PickerCaretCssRule : CssRule
-    {
-        public override bool Matches(View view)
-        {
-            // CssEngine will only call me if a view matches: #Caret
-
-            view = CssEngine.FindParentByType<Picker>(view);
-
-            if (view == null) return false;
-
-            return true;
-        }
-
-        public override Task Apply(View view)
-        {
-            view.Css.Width = 20;
-            view.Css.BackgroundImagePath = "Images/Icons/Caret.png";
-
-            return Task.CompletedTask;
-        }
-    }
-}
-
-namespace File_App.UI.Styles.Common
-{
-    [EscapeGCop("Auto-generated")]
-    [CssSelector("Styles\\Common.css", "Picker #PlaceholderLabel")]
-    [CssBody("color: #ddd; height: 100%;")]
-    class PickerPlaceholderLabelCssRule : CssRule
-    {
-        public override bool Matches(View view)
-        {
-            // CssEngine will only call me if a view matches: #PlaceholderLabel
-
-            view = CssEngine.FindParentByType<Picker>(view);
-
-            if (view == null) return false;
-
-            return true;
-        }
-
-        public override Task Apply(View view)
-        {
-            view.Css.Height = 100.Percent();
-            view.Css.TextColor = "#ddd";
-
-            return Task.CompletedTask;
-        }
-    }
-}
-
-namespace File_App.UI.Styles.Common
-{
-    [EscapeGCop("Auto-generated")]
     [CssSelector("Styles\\Common.css", "TextView.title")]
     [CssBody("font-weight: bold; font-size: 28px; text-align: center; margin-bottom: 20px;")]
     class TextViewTitleCssRule : CssRule
@@ -1828,7 +1803,7 @@ namespace File_App.UI.Styles.Common
     [EscapeGCop("Auto-generated")]
     [CssSelector("Styles\\Common.css", "Button")]
     [CssBody("border-radius: 10px; background: #f0f0f0; margin: 10px; padding: 10px;")]
-    class Button_1CssRule : CssRule
+    class ButtonCssRule : CssRule
     {
         public override bool Matches(View view)
         {

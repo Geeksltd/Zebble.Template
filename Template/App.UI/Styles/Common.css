@@ -66,13 +66,31 @@ TextInput { padding: 7px; border: 1px solid #eee; }
 
 TextInput:skeleton { color: #C8C8C8; }
 
-Button { padding: 5px; }
-
 CheckBox { width: 24px; height: 24px; border: 1px solid #aaaaaa; border-radius: 12px; background: transparent; }
 
 CheckBox:checked { background-color: #ed1459; }
 
 CheckBox > #CheckedImage { width: 100%; height: 100%; background-image: url(Images/Icons/Check.png); background-size: contain; padding: 2px; }
+
+Picker { padding: 7px; border: 1px solid #eee; }
+
+Picker #Label { height: 100%; }
+
+Picker #Caret { background: url(Images/Icons/Caret.png); width: 20px; }
+
+Picker #PlaceholderLabel { color: #ddd; height: 100%; }
+
+DatePicker-Dialog #RotatorsRow, TimePicker-Dialog #RotatorsRow { margin-top: 15px; }
+
+DatePicker-Cell, TimePicker-Cell { height: 50px; width: 100%; }
+
+DatePicker-Cell #Label, TimePicker-Cell #Label { height: 100%; width: 100%; text-align: center; font-size: 16px; }
+
+Switch { width: 56px; height: 32px; }
+
+Switch #Bar { height: 32px; border-radius: 16px; }
+
+Switch #Toggle { height: 28px; width: 28px; border-radius: 14px; background: white; margin: 2px; }
 
 SearchInput > #Icon { background-image: url(Images/Icons/Search.png); opacity: 0.3; padding: 8px; }
 
@@ -84,12 +102,17 @@ SearchInput:focus > #TextBox { text-align: left; padding-left: 30px; }
 
 SearchInput:focus > #CancelButton { opacity: 1; }
 
-Switch { width: 56px; height: 32px; }
+Grid > #EmptyTextLabel, ListView > #EmptyTextLabel { text-align: center; }
 
-Switch #Bar { height: 32px; border-radius: 16px; }
+ListViewItem { border-top: 1px; }
 
-Switch #Toggle { height: 28px; width: 28px; border-radius: 14px; background: white; margin: 2px; }
+#RefreshingIndicator { width: 50px; height: 50px; background: url(Images/Icons/Spinner.png); }
 
+/*Carousel {
+    #BulletsContainer { text-align: center; }
+    Carousel-Bullet { border-radius: 8px; width: 16px; height: 16px; margin: 3px; }
+    Carousel-Slide { height: 100%; }
+}*/
 /*VideoPlayer { width: 100%; height: 100%; background: #ddd; }*/
 /*Slider { height: 40px;
     #RangeBar { height: 2px; background: black; }
@@ -100,31 +123,6 @@ Switch #Toggle { height: 28px; width: 28px; border-radius: 14px; background: whi
     & > #Button { text-align: left; height: 100%; }
     & > #Preview { width: 35px; height: 35px; background-size: cover; }
 }*/
-Grid > #EmptyTextLabel, ListView > #EmptyTextLabel { text-align: center; }
-
-ListViewItem { border-top: 1px; }
-
-/*Carousel {
-    #BulletsContainer { text-align: center; }
-    Carousel-Bullet { border-radius: 8px; width: 16px; height: 16px; margin: 3px; }
-    Carousel-Slide { height: 100%; }
-}*/
-#RefreshingIndicator { width: 50px; height: 50px; background: url(Images/Icons/Spinner.png); }
-
-DatePicker-Cell, TimePicker-Cell { height: 50px; width: 100%; }
-
-DatePicker-Cell #Label, TimePicker-Cell #Label { height: 100%; width: 100%; text-align: center; font-size: 16px; }
-
-DatePicker-Dialog #RotatorsRow, TimePicker-Dialog #RotatorsRow { margin-top: 15px; }
-
-Picker { padding: 7px; border: 1px solid #eee; }
-
-Picker #Label { height: 100%; }
-
-Picker #Caret { background: url(Images/Icons/Caret.png); width: 20px; }
-
-Picker #PlaceholderLabel { color: #ddd; height: 100%; }
-
 TextView.title { font-weight: bold; font-size: 28px; text-align: center; margin-bottom: 20px; }
 
 Button { border-radius: 10px; background: #f0f0f0; margin: 10px; padding: 10px; }

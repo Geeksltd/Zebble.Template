@@ -14,6 +14,7 @@
     <None Include="$(MSBuildThisFileDirectory)Icon.png" />
     <None Include="$(MSBuildThisFileDirectory)Styles\Components\_PopUp.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\Components\_Dialog.scss" />
+    <None Include="$(MSBuildThisFileDirectory)Styles\Components\_FormControls.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\Components\_Tabs.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\Components\_NavBar.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\PlatformSpecific.scss" />
@@ -51,6 +52,7 @@
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\Welcome.zbl" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Icons\Spinner.png" />
     <Content Include="$(MSBuildThisFileDirectory)Styles\Common.css" />
     <Content Include="$(MSBuildThisFileDirectory)Styles\PlatformSpecific.css" />
   </ItemGroup>

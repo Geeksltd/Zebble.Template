@@ -5,4 +5,5 @@
   <image path="Images/Icons/Menu.png" width="200" height="200" />
   <image path="Images/Icons/not-found.png" width="255" height="256" />
   <image path="Images/Icons/Shoes.png" width="564" height="466" />
+  <image path="Images/Icons/Spinner.png" width="512" height="512" />
 </data>
