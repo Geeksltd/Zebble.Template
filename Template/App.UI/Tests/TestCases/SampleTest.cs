@@ -3,12 +3,12 @@ namespace UI.Tests
     using System.Threading.Tasks;
     using Zebble.Testing;
 
-    //[UnderDevelopment]
+    // [UnderDevelopment]
     public class SampleTest : UITest
     {
         public override async Task Run()
         {
-            //TODO : ....
+            // TODO : ....
         }
     }
 }

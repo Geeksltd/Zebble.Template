@@ -10,10 +10,7 @@
         // Note: You can have nested view models:
         public readonly ShoeHeader Header = new ShoeHeader();
 
-        public ShoePage()
-        {
-            Header.Source.Bind(Source, x => x);
-        }
+        public ShoePage() => Header.Source.Bind(Source, x => x);
     }
 
     class ShoeHeader : ViewModel<Domain.Shoe>

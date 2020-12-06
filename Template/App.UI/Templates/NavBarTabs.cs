@@ -6,7 +6,6 @@ namespace UI.Templates
 {
     class NavBarTabs : NavBar
     {
-
         static NavBarTabs() => Nav.NavigationAnimationStarted.FullEvent += HandleNavigationAnimationStarted;
 
         static void HandleNavigationAnimationStarted(NavigationEventArgs args)

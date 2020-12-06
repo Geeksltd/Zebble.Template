@@ -24,9 +24,6 @@ namespace Zebble
             }
         }
 
-        Task OpenMenu()
-        {
-            return null;
-        }
+        Task OpenMenu() => null;
     }
 }
