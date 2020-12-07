@@ -35,6 +35,7 @@ namespace UI
 
         public async Task Launch()
         {
+            Zebble.Mvvm.Templates.Register(Assembly.GetExecutingAssembly());
             await LoadFirstPage();
 
             if (IsTestMode()) TestEngine.Run();
@@ -42,7 +43,15 @@ namespace UI
 
         public static Task LoadFirstPage()
         {
-            Zebble.Mvvm.Templates.Register(Assembly.GetExecutingAssembly());
+            // Testing a specific page?  
+            // -------------------------------
+            // return Zebble.Mvvm.TestRender.Page<ViewModel.MyPage>()
+            //    .Configure(c => c...)
+            //    .FireEvents() // -> only if you need. Mostly you don't.
+            //    .Run();
+
+            // Run normally?
+            // -------------------------------
             return ViewModel.StartUp.Run();
         }
     }
