@@ -9,6 +9,8 @@
     <Import_RootNamespace>Domain</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Shoe.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)User.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\DateTimeExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\JsonExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\ListExtensions.cs" />
@@ -26,10 +28,5 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\IShoeService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\LoginResult.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\RegisterResult.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Entities\User.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Entities\Shoe.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Entities\" />
   </ItemGroup>
 </Project>

@@ -5,7 +5,6 @@
 
     interface IShoeService
     {
-        Task<IList<Shoe>> GetPopularShoes();
-        Task<IList<Shoe>> GetLatestShoes();
+        Task<IList<Shoe>> GetShoes();
     }
 }

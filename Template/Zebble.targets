@@ -11,10 +11,6 @@
       <Compile Include="$(SolutionDir)\App.UI\.zebble-generated-css.cs" Exclude="@(Compile)" />
     </ItemGroup>
   </Target>
-  <Target Name="ZebbleGenerateImagesAndUpdateSizes" BeforeTargets="CompileDesignTime;PrepareForBuild">
-    <Exec WorkingDirectory="$(SolutionDir)" Command="zebble-image splash" />
-    <Exec WorkingDirectory="$(SolutionDir)" Command="zebble-image update-sizes" />
-  </Target>
   <Target Name="UpdateZebbleSchemaAndWatchForCssChanges" AfterTargets="AfterBuild">
     <Exec WorkingDirectory="$(SolutionDir)" Command="start zebble-schema" />
     <Exec WorkingDirectory="$(SolutionDir)" Command="start zebble-css watch" />

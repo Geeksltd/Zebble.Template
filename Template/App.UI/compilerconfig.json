@@ -1,22 +1,10 @@
 ﻿[
     {
-        "outputFile": "Styles/AndroidStandard.css",
-        "inputFile": "Styles/AndroidStandard.scss"
-    },
-    {
-        "outputFile": "Styles/Android.css",
-        "inputFile": "Styles/Android.scss"
-    },
-    {
         "outputFile": "Styles/Common.css",
         "inputFile": "Styles/Common.scss"
-    }, 
-    {
-        "outputFile": "Styles/iOS.css",
-        "inputFile": "Styles/iOS.scss"
     },
     {
-        "outputFile": "Styles/Windows.css",
-        "inputFile": "Styles/Windows.scss"
+        "outputFile": "Styles/PlatformSpecific.css",
+        "inputFile": "Styles/PlatformSpecific.scss"
     }
 ]

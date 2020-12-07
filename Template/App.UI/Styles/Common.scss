@@ -1,15 +1,14 @@
-﻿@import "_Core";
-@import "_Utilities";
+﻿@import "_Settings";
+@import "_Core";
 
 ImageView.logo {
     width: 150px;
-    height: 150px;
+    height: 160px;
 }
 
 TextView.title {
-    color: $heading-text-color;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 28px;
     text-align: center;
 }
 
@@ -21,19 +20,6 @@ TextView.separator {
     margin-bottom: 20px;
     margin-bottom: 20px;
     border-bottom: solid 1px #f0f0f0;
-}
-
-Stack.input-wrapper {
-    padding: 2px;
-    padding-bottom: 1px;
-    background-color: #fff;
-    border-radius: $input-border-radius;
-}
-
-Button.lg {
-    padding: 20px;
-    font-size: 18px;
-    font-weight: bold;
 }
 
 Button.primary {
@@ -50,30 +36,5 @@ ActionButton.primary {
 
     TextView.secondary {
         color: $button-light-text-color;
-    }
-}
-
-.shoe-item {
-    ImageView {
-        width: 96px;
-        height: 96px;
-        margin-right: 10px;
-    }
-
-    TextView.product-name {
-        font-family: $font-family-regular;
-        font-size: 14px;
-        font-weight: bold;
-        color: $heading-text-color;
-    }
-
-    TextView.brand {
-        font-family: $font-family-light;
-        font-size: 14px;
-        color: $grey;
-    }
-
-    TextView.color {
-        color: $grey;
     }
 }

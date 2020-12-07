@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<z-Component z-type="Tabs"
+			 z-base="Row"
+			 z-namespace="Zebble"
+			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			 xsi:noNamespaceSchemaLocation="./../Views/.zebble-schema.xml">
+
+	<Tab Icon="Images/Icons/Home.png" Text="Home" Target="@typeof(ViewModel.HomePage)" />
+	<Tab Icon="Images/Icons/Shoes.png" Text="Shoes" Target="@typeof(ViewModel.ShoesPage)" />
+
+</z-Component>

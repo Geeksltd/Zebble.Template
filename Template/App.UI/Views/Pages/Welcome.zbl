@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
 <z-Component z-type="Welcome"
-			 z-base="Page"
+			 z-base="Templates.NavBar"
 			 z-namespace="UI.Pages"
 			 z-viewmodel="ViewModel.WelcomePage"
+			 Title="Welcome!"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:noNamespaceSchemaLocation="../.zebble-schema.xml"
-			 CssClass="primary-bg">
-	<FillParent CssClass="m-big">
-		<ImageView Path="Images/Logo.png" CssClass="parent-center m-b-normal logo" />
-		<TextView Text="Geeky Shoes Store" CssClass="title" />
+             xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
+	<z-place inside="Body">
+		<ImageView Path="Images/Logo.png" CssClass="logo" />
+		<TextView Text="Hello there" CssClass="title" />
 		<Column Ignored="@{Model.IsAnonymous, x => !x}" CssClass="m-t-big">
 			<ActionButton Primary.Text="Existing user..." Secondary.Text="Let's log in to your account." CssClass="m-b-normal primary" on-Tapped="@{Model.TapLogin()}" />
 			<ActionButton Primary.Text="I'm new here..." Secondary.Text="Create your account with ease." on-Tapped="@{Model.TapRegister()}" />
 		</Column>
-	</FillParent>
+	</z-place>
 </z-Component>

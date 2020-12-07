@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <z-Component z-type="Home"
-			 z-base="Templates.MainTabsPage"
+			 z-base="Templates.NavBarTabs"
 			 z-namespace="UI.Pages"
+			 Title="Home"
 			 z-viewmodel="ViewModel.HomePage"
 			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-			 xsi:noNamespaceSchemaLocation="../.zebble-schema.xml"
-			 CssClass="primary-bg">
-	<CenterVertically CssClass="m-big">
-		<ImageView Path="Images/Logo.png" CssClass="parent-center m-b-normal logo" />
+			 xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
+	<z-place inside="Body">
+		<ImageView Path="Images/Logo.png" CssClass="logo" />
 		<TextView Text="@{Model.WelcomeMessage}" CssClass="title" />
 		<TextView CssClass="separator" />
 		<ActionButton Primary.Text="Wrong account?" Secondary.Text="Log in to another account." on-Tapped="@{Model.TapLogout()}" />
-	</CenterVertically>
+	</z-place>
 </z-Component>

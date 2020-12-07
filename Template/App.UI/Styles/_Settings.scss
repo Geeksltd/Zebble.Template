@@ -1,32 +1,10 @@
-﻿$white: #fff;
-$grey: #7d7d7d;
+﻿$text-color: black;
+$base-padding: 7px;
+$grey: #C8C8C8;
+$primary-color: #ed1459;
 $very-light-grey: #e6e6e6;
 $dark-grey: #505050;
 
-$primary-color: #6358db;
-
-$text-color: black;
-$heading-text-color: $primary-color;
-$muted-text-color: $grey;
-
-$primary-bg-color: #b8b3fb;
-$primary-border-color: lighten($primary-bg-color, 10%);
-
-$base-padding: 10px;
-$base-border-radius: 20px;
-
-$input-padding: $base-padding;
-$input-border-radius: $base-border-radius;
-
-$button-padding: $base-padding;
-$button-border-radius: $base-border-radius;
 $button-bg-color: #f0f0f0;
-$button-text-color: $heading-text-color;
-$button-light-text-color: lighten($heading-text-color, 20%);
-
-$tab-bg-color: $primary-color;
-
-$font-family-light: "TitilliumLight.ttf";
-$font-family-regular: "TitilliumRegular.ttf";
-$font-family-semi-bold: "TitilliumSemiBold.ttf";
-$font-family-bold: "TitilliumBold.ttf";
+$button-text-color: red;
+$button-light-text-color: yellow;
