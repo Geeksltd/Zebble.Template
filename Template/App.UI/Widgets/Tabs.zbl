@@ -6,7 +6,7 @@
 			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 			 xsi:noNamespaceSchemaLocation="./../Views/.zebble-schema.xml">
 
-	<Tab Icon="Images/Icons/Home.png" Text="Home" Target="@typeof(ViewModel.HomePage)" />
+	<Tab Icon="Images/Icons/Home.png" Text="Home" Target="@typeof(ViewModel.WelcomePage)" />
 	<Tab Icon="Images/Icons/Shoes.png" Text="Shoes" Target="@typeof(ViewModel.ShoesPage)" />
 
 </z-Component>

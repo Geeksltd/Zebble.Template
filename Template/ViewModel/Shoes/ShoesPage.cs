@@ -3,7 +3,6 @@
     using Domain;
     using Domain.Extensions;
     using System.Threading.Tasks;
-    using UI.Utils;
     using Zebble;
     using Zebble.Mvvm;
 
@@ -13,17 +12,12 @@
 
         public readonly CollectionViewModel<Item> Items = new CollectionViewModel<Item>();
 
-        public readonly WaitingAwareBindable IsBusy = new WaitingAwareBindable(false);
-
         public ShoesPage() => ShoeService = new FirebaseShoeService();
 
         protected override async Task NavigationStartedAsync()
         {
-            using (await IsBusy.SetAsync(true))
-            {
-                Items.Clear();
-                (await ShoeService.GetShoes()).ForEach(Items.Add);
-            }
+            Items.Clear();
+            (await ShoeService.GetShoes()).ForEach(Items.Add);
 
             await base.NavigationStartedAsync();
         }

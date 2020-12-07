@@ -8,12 +8,10 @@
 			 xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
 	<z-place inside="Body">
 		<TextView Text="Login to your account" CssClass="title" />
-		<Column CssClass="m-t-big">
-			<TextInput Text="@{Model.Email}" Placeholder="Email" KeyboardActionType="Next" TextMode="Email" />
-			<TextInput Text="@{Model.Password}" Placeholder="Password" KeyboardActionType="Done" TextMode="Password" />
-			<Button Text="Login" on-Tapped="@{Model.TapLogin()}" CssClass="lg primary" />
-			<TextView CssClass="separator" />
-			<ActionButton Primary.Text="Don't have an account?" Secondary.Text="Register here with ease." on-Tapped="@{Model.TapRegister()}" />
-		</Column>
+		<TextInput Text="@{Model.Email}" Placeholder="Email" KeyboardActionType="Next" TextMode="Email" />
+		<TextInput Text="@{Model.Password}" Placeholder="Password" KeyboardActionType="Done" TextMode="Password" />
+		<Button Text="Login" on-Tapped="@{Model.TapLogin()}" CssClass="lg primary" />
+		<TextView CssClass="separator" />
+		<ActionButton Primary.Text="Don't have an account?" Secondary.Text="Register here with ease." on-Tapped="@{Model.TapRegister()}" />
 	</z-place>
 </z-Component>

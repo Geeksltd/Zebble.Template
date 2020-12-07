@@ -22,7 +22,6 @@
     <None Include="$(MSBuildThisFileDirectory)Styles\Common.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\_Settings.scss" />
     <None Include="$(MSBuildThisFileDirectory)Templates\NavBar.zbl" />
-    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Home.zbl" />
     <None Include="$(MSBuildThisFileDirectory)Widgets\NavigationBar.zbl" />
     <None Include="$(MSBuildThisFileDirectory)Widgets\Tab.zbl" />
     <None Include="$(MSBuildThisFileDirectory)Widgets\Tabs.zbl" />
@@ -64,8 +63,6 @@
       <DependentUpon>NavBar.zbl</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Templates\NavBarTabs.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Utils\AuthRevertBindable.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Utils\WaitingAwareBindable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Widgets\ActionButton.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Widgets\Column.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Widgets\NavigationBar.zbl.cs">
@@ -80,5 +77,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Tabs.zbl</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Styles\Common.css" />
+    <Content Include="$(MSBuildThisFileDirectory)Styles\PlatformSpecific.css" />
   </ItemGroup>
 </Project>

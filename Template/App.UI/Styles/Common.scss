@@ -2,8 +2,8 @@
 @import "_Core";
 
 ImageView.logo {
-    width: 150px;
     height: 160px;
+    background-position: center;
 }
 
 TextView.title {
@@ -31,18 +31,18 @@ TextView.separator {
 }
 
 Button.primary {
-    background-color: $button-text-color;
+    background-color: $primary-color;
     color: $button-bg-color;
 }
 
 ActionButton.primary {
-    background-color: $button-text-color;
+    background-color: $primary-color;
 
     TextView.primary {
         color: $button-bg-color;
     }
 
     TextView.secondary {
-        color: $button-light-text-color;
+        color: darken($button-bg-color, 10%);
     }
 }

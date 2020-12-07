@@ -1,0 +1,5 @@
+﻿.windows-only TextView, .windows-only TextInput { font-family: "Segoe UI"; }
+
+.ios-only TextInput, .ios-only TextView { font-family: Arial; }
+
+.android-only TextInput, .android-only TextView { font-family: Roboto; }
