@@ -8,7 +8,6 @@
         public static Task Run()
         {
             // TODO: Any required init
-
             Zebble.Mvvm.ViewModel.Go<WelcomePage>();
             return Task.CompletedTask;
         }
