@@ -17,5 +17,5 @@
   <Android.Hardware.Back.Can.Close value="false" />
   <Sanity.Enabled value="false" />
   <Sanity.Windows.Listener.Url value="http://localhost:62001" />
-  <Firebase.ApiToken value="" />
+  <Firebase.ApiToken value="AIzaSyByD-QhNGhHYUz0Dr-SUy4AkaQbJ3fvrtE" />
 </settings>
