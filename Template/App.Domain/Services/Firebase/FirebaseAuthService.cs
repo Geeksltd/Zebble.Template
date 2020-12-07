@@ -6,6 +6,7 @@
     using System.Net.Http;
     using System.Text;
     using System.Threading.Tasks;
+    using Zebble;
     using Zebble.Device;
 
     class FirebaseAuthService : IAuthService
@@ -101,7 +102,6 @@
 
     static class FirebaseAuthApis
     {
-        const string WEB_API_TOKEN = "AIzaSyByD-QhNGhHYUz0Dr-SUy4AkaQbJ3fvrtE";
         const string BASE_ADDRESS = "https://identitytoolkit.googleapis.com/";
         const string REQUEST_PATH = "/v1/{0}?key={1}";
 
@@ -142,27 +142,34 @@
 
                 return encoding.GetString(await message.Content.ReadAsByteArrayAsync()).FromJson<T>();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return CreateDefault<T>();
+                return CreateDefault<T>(ex);
             }
         }
 
-        private static T CreateDefault<T>() where T : FirebaseResponseBase, new()
+        private static T CreateDefault<T>(Exception ex) where T : FirebaseResponseBase, new()
         {
             return new T
             {
                 Error = new FirebaseError
                 {
                     Code = -1,
-                    Message = "Can't connect to Firebase Auth APIS"
+                    Message = $"Can't connect to Firebase Auth APIS. {ex.Message}"
                 }
             };
         }
 
-        //static HttpClient CreateClient() => Network.HttpClient(BASE_ADDRESS, TimeSpan.FromSeconds(30));
-        static HttpClient CreateClient() => new() { BaseAddress = new Uri(BASE_ADDRESS), Timeout = TimeSpan.FromSeconds(30) };
+        static HttpClient CreateClient() => Network.HttpClient(BASE_ADDRESS, TimeSpan.FromSeconds(30));
 
-        static string CreateRequestUri(string path) => REQUEST_PATH.FormatWith(path, WEB_API_TOKEN);
+        static string CreateRequestUri(string path)
+        {
+            var apiToken = Config.Get<string>("Firebase.ApiToken");
+
+            if (!apiToken.HasValue())
+                throw new Exception("To use Google Firebase Auth service you'll need to add the provided API token to the Config.xml file.");
+
+            return REQUEST_PATH.FormatWith(path, apiToken);
+        }
     }
 }
