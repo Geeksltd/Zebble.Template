@@ -16,7 +16,6 @@
 
         protected override async Task NavigationStartedAsync()
         {
-            Items.Clear();
             (await ShoeService.GetShoes()).ForEach(Items.Add);
 
             await base.NavigationStartedAsync();

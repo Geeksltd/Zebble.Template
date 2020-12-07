@@ -19,7 +19,7 @@
             var result = await AuthService.Register(Email.Value, Password.Value);
 
             if (result.Succeeded)
-                Go<ShoesPage>();
+                Go<WelcomePage>();
             else
                 Dialog.Alert($"Register failed: {result.Message} ({result.Code})");
         }

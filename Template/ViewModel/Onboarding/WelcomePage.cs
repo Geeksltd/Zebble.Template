@@ -20,6 +20,9 @@
         {
             IsBusy.Set(true);
 
+            LoggedInUserEmail.Set("...");
+            IsAnonymous.Set(false);
+
             var isValid = await AuthService.ValidateUserValidity();
 
             if (isValid)
@@ -46,7 +49,7 @@
 
             await AuthService.Logout();
 
-            Go<WelcomePage>(PageTransition.SlideBack);
+            Go<LoginPage>(PageTransition.SlideBack);
 
             IsBusy.Set(false);
         }

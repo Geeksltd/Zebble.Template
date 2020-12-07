@@ -19,7 +19,7 @@
             var result = await AuthService.Login(Email.Value, Password.Value);
 
             if (result.Succeeded)
-                Go<ShoesPage>();
+                Go<WelcomePage>();
             else
                 Dialog.Alert($"Login failed: {result.Message} ({result.Code})");
         }
