@@ -1,9 +1,9 @@
-using System;
-using System.Threading.Tasks;
-using Zebble;
-
 namespace UI.Templates
 {
+	using System;
+	using System.Threading.Tasks;
+	using Zebble;
+
     class NavBarTabs : NavBar
     {
         static NavBarTabs() => Nav.NavigationAnimationStarted.FullEvent += HandleNavigationAnimationStarted;

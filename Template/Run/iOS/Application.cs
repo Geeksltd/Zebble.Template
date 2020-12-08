@@ -1,17 +1,17 @@
-﻿public class Application
-{
-    using System;
+﻿using System;
 
+public class Application
+{
     // This is the main entry point of the application.
     static void Main(string[] args)
-{
-    try
     {
-        UIKit.UIApplication.Main(args, null, typeof(IOS.AppDelegate));
+        try
+        {
+            UIKit.UIApplication.Main(args, null, typeof(IOS.AppDelegate));
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.ToLogString());
+        }
     }
-    catch (Exception ex)
-    {
-        Console.WriteLine(ex.ToLogString());
-    }
-}
 }
