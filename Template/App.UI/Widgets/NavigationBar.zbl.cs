@@ -24,6 +24,6 @@ namespace Zebble
             }
         }
 
-        Task OpenMenu() => null;
+        Task OpenMenu() => MainMenu.Current.Expand();
     }
 }

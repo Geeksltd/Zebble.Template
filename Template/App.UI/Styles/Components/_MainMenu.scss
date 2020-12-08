@@ -1,0 +1,10 @@
+﻿@import "../_Settings";
+
+MainMenu {
+    background: $very-light-grey;  
+    padding: 20px;
+    ImageView {
+        height: 100px;
+        background-position:center;
+    }
+}

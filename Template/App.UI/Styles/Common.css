@@ -102,6 +102,10 @@ SearchInput:focus > #TextBox { text-align: left; padding-left: 30px; }
 
 SearchInput:focus > #CancelButton { opacity: 1; }
 
+MainMenu { background: #e6e6e6; padding: 20px; }
+
+MainMenu ImageView { height: 100px; background-position: center; }
+
 Grid > #EmptyTextLabel, ListView > #EmptyTextLabel { text-align: center; }
 
 ListViewItem { border-top: 1px; }

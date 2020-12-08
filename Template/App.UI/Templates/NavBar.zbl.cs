@@ -14,6 +14,8 @@ namespace UI.Templates
 
             BodyScrollerWrapper.Y.BindTo(Bar.Height, SafeAreaContainer.Padding.Top, (h, p) => h + p);
             BodyScrollerWrapper.Height.BindTo(SafeAreaContainer.Height, Bar.Height, Tabs.Current.Height, SafeAreaContainer.Padding.Top, (vh, nh, ts, st) => vh - nh - st - ts);
+
+            MainMenu.Setup<UI.MainMenu>();
         }
     }
 }

@@ -9,6 +9,7 @@
     <Import_RootNamespace>ViewModel</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)MainMenu.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Onboarding\LoginPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Shoes\ShoePage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Shoes\ShoesPage.cs" />
