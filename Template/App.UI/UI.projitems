@@ -40,6 +40,9 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Icons\Shoes.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Icons\Spinner.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Logo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -52,7 +55,6 @@
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\Welcome.zbl" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Icons\Spinner.png" />
     <Content Include="$(MSBuildThisFileDirectory)Styles\Common.css" />
     <Content Include="$(MSBuildThisFileDirectory)Styles\PlatformSpecific.css" />
   </ItemGroup>

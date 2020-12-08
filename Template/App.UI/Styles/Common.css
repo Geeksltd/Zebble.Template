@@ -24,7 +24,7 @@ NavigationBar > #Title { font-size: 18px; font-weight: bold; text-align: center;
 
 NavigationBar TextView { color: #fff; }
 
-Tabs { border-top: 1px solid #C8C8C8; background: #e6e6e6; height: 54px; position: absolute; }
+Tabs { border-top: 1px solid #C8C8C8; background-color: whitesmoke; height: 54px; position: absolute; }
 
 Tab { opacity: 0.5; padding-top: 9px; padding-bottom: 9px; }
 
