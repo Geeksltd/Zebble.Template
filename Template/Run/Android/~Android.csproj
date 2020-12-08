@@ -97,7 +97,7 @@
       <Version>1.2.0.5</Version>
     </PackageReference>
     <PackageReference Include="Zebble">
-      <Version>4.5.396</Version>
+      <Version>4.5.398</Version>
     </PackageReference>
     <PackageReference Include="Zebble.CheckBox">
       <Version>1.22.116</Version>
@@ -115,7 +115,7 @@
       <Version>3.12.164</Version>
     </PackageReference>
     <PackageReference Include="Zebble.ListView">
-      <Version>4.10.172</Version>
+      <Version>4.10.173</Version>
     </PackageReference>
     <PackageReference Include="Zebble.OptionsList">
       <Version>3.15.134</Version>
@@ -130,7 +130,7 @@
       <Version>4.5.385</Version>
     </PackageReference>
     <PackageReference Include="Zebble.Testing">
-      <Version>1.2.103</Version>
+      <Version>1.2.104</Version>
     </PackageReference>
     <PackageReference Include="Zebble.BoxShadow">
       <Version>1.2.140</Version>
