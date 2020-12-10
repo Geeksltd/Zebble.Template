@@ -97,7 +97,7 @@
       <Version>1.2.0.5</Version>
     </PackageReference>
     <PackageReference Include="Zebble">
-      <Version>4.5.402</Version>
+      <Version>4.5.405</Version>
     </PackageReference>
     <PackageReference Include="Zebble.CheckBox">
       <Version>1.22.116</Version>
@@ -115,7 +115,7 @@
       <Version>3.12.164</Version>
     </PackageReference>
     <PackageReference Include="Zebble.ListView">
-      <Version>4.10.174</Version>
+      <Version>4.10.177</Version>
     </PackageReference>
     <PackageReference Include="Zebble.OptionsList">
       <Version>3.15.134</Version>
@@ -136,7 +136,7 @@
       <Version>1.2.140</Version>
     </PackageReference>
     <PackageReference Include="Zebble.Widgets">
-      <Version>1.1.101</Version>
+      <Version>1.1.105</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="..\..\App.Domain\Domain.projitems" Label="Shared" Condition="Exists('..\..\App.Domain\Domain.projitems')" />

@@ -57,8 +57,8 @@
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\Welcome.zbl" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="$(MSBuildThisFileDirectory)Styles\Common.css" />
-    <Content Include="$(MSBuildThisFileDirectory)Styles\PlatformSpecific.css" />
+    <None Include="$(MSBuildThisFileDirectory)Styles\Common.css" />
+    <None Include="$(MSBuildThisFileDirectory)Styles\PlatformSpecific.css" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)StartUp.cs" />

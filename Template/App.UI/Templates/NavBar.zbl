@@ -6,13 +6,12 @@
 			 xsi:noNamespaceSchemaLocation="./../Views/.zebble-schema.xml"
 			 Style="height:Container">
 
-	<SafeArea Id="SafeAreaContainer">
+	<Stack>
 		<NavigationBar Id="Bar" />
 		<Canvas Id="BodyScrollerWrapper">
 			<ScrollView Id="BodyScroller">
 				<Stack Id="Body" />
 			</ScrollView>
 		</Canvas>
-	</SafeArea>
-
+	</Stack>
 </z-Component>

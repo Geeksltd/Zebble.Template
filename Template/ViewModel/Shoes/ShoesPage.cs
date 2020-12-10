@@ -21,8 +21,7 @@
 
             public void Tap()
             {
-                The<ShoePage>().Source.Set(Source);
-                Forward<ShoePage>();
+                Forward<ShoePage>(x => x.Source(Source));
             }
         }
     }
