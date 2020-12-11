@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<z-Component z-type="MainMenu"
+			 z-base="Zebble.MainMenu"
+			 z-namespace="UI"
+			 z-viewmodel="ViewModel.MainMenu"
+			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			 xsi:noNamespaceSchemaLocation="./../Views/.zebble-schema.xml">
+	<ImageView Path="Images/Logo.png" />
+	<Button Text="Item 1" on-Tapped="@Model.TapItem1()" />
+	<Button Text="Item 2" />
+	<Button Text="Item 3" />
+	<Button Text="About us" />	
+</z-Component>

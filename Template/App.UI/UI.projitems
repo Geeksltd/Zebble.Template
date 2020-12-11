@@ -15,6 +15,7 @@
     <None Include="$(MSBuildThisFileDirectory)Styles\Components\_PopUp.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\Components\_Dialog.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\Components\_FormControls.scss" />
+    <None Include="$(MSBuildThisFileDirectory)Styles\Components\_MainMenu.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\Components\_Tabs.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\Components\_NavBar.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\PlatformSpecific.scss" />
@@ -22,6 +23,7 @@
     <None Include="$(MSBuildThisFileDirectory)Styles\Common.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\_Settings.scss" />
     <None Include="$(MSBuildThisFileDirectory)Templates\NavBar.zbl" />
+    <None Include="$(MSBuildThisFileDirectory)Widgets\MainMenu.zbl" />
     <None Include="$(MSBuildThisFileDirectory)Widgets\NavigationBar.zbl" />
     <None Include="$(MSBuildThisFileDirectory)Widgets\Tab.zbl" />
     <None Include="$(MSBuildThisFileDirectory)Widgets\Tabs.zbl" />
@@ -56,8 +58,8 @@
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\Welcome.zbl" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="$(MSBuildThisFileDirectory)Styles\Common.css" />
-    <Content Include="$(MSBuildThisFileDirectory)Styles\PlatformSpecific.css" />
+    <None Include="$(MSBuildThisFileDirectory)Styles\Common.css" />
+    <None Include="$(MSBuildThisFileDirectory)Styles\PlatformSpecific.css" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)StartUp.cs" />
@@ -67,6 +69,11 @@
       <DependentUpon>NavBar.zbl</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Templates\NavBarTabs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Widgets\MainMenu.zbl.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MainMenu.zbl</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Widgets\ActionButton.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Widgets\Column.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Widgets\NavigationBar.zbl.cs">

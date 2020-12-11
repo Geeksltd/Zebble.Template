@@ -1,9 +1,6 @@
 ﻿namespace ViewModel
 {
-    using Domain;
-    using Domain.Extensions;
     using System.Linq;
-    using System.Threading.Tasks;
     using Zebble;
     using Zebble.Mvvm;
 
@@ -11,7 +8,7 @@
     {
         public readonly CollectionViewModel<Item> Items = new CollectionViewModel<Item>();
 
-        protected override async Task NavigationStartedAsync()
+        protected override void NavigationStarted()
         {
             var shoes = Enumerable.Range(1, 100).Select(v => new Domain.Shoe { Brand = "Shoe " + v }).ToArray();
             Items.Add(shoes);
@@ -24,8 +21,7 @@
 
             public void Tap()
             {
-                The<ShoePage>().Source.Set(Source);
-                Forward<ShoePage>();
+                Forward<ShoePage>(x => x.Source(Source));
             }
         }
     }
