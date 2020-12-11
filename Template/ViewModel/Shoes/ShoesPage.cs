@@ -2,23 +2,19 @@
 {
     using Domain;
     using Domain.Extensions;
+    using System.Linq;
     using System.Threading.Tasks;
     using Zebble;
     using Zebble.Mvvm;
 
     class ShoesPage : FullScreen
     {
-        readonly IShoeService ShoeService;
-
         public readonly CollectionViewModel<Item> Items = new CollectionViewModel<Item>();
-
-        public ShoesPage() => ShoeService = new FirebaseShoeService();
 
         protected override async Task NavigationStartedAsync()
         {
-            (await ShoeService.GetShoes()).ForEach(Items.Add);
-
-            await base.NavigationStartedAsync();
+            var shoes = Enumerable.Range(1, 100).Select(v => new Domain.Shoe { Brand = "Shoe " + v }).ToArray();
+            Items.Add(shoes);
         }
 
         public class Item : ViewModel<Domain.Shoe>

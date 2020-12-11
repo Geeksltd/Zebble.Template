@@ -1,20 +1,15 @@
 ﻿namespace ViewModel
 {
-    using Domain;
     using System.Threading.Tasks;
     using Zebble;
     using Zebble.Mvvm;
 
     class WelcomePage : FullScreen
     {
-        readonly IAuthService AuthService;
-
         public readonly Bindable<string> SampleProperty = new Bindable<string>("Hello world!");
         public Bindable<bool> IsBusy = new Bindable<bool>(false);
         public Bindable<bool> IsAnonymous = new Bindable<bool>(false);
         public readonly Bindable<string> LoggedInUserEmail = new("...");
-
-        public WelcomePage() => AuthService = new FirebaseAuthService();
 
         protected async override Task NavigationStartedAsync()
         {
@@ -23,11 +18,11 @@
             LoggedInUserEmail.Set("...");
             IsAnonymous.Set(false);
 
-            var isValid = await AuthService.ValidateUserValidity();
+            var isValid = await FirebaseAuth.Current.RefreshTokenExpiry();
 
             if (isValid)
             {
-                var user = await AuthService.GetUser();
+                var user = await FirebaseAuth.Current.GetUser();
 
                 LoggedInUserEmail.Set(user.Email);
             }
@@ -47,7 +42,7 @@
         {
             IsBusy.Set(true);
 
-            await AuthService.Logout();
+            await FirebaseAuth.Current.Logout();
 
             Go<LoginPage>(PageTransition.SlideBack);
 
