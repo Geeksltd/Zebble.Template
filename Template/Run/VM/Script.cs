@@ -1,13 +1,7 @@
-﻿using Zebble;
-using System;
-using System.Linq;
-using System.Collections.Generic;
-using System.Text;
-using ViewModel;
-using Zebble.Mvvm;
-
 namespace VM
 {
+    using Zebble.Mvvm;
+
     class Script : TestScript
     {
         public static void Run()

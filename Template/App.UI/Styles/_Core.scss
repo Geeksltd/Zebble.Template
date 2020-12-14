@@ -20,7 +20,6 @@ ListViewItem {
     height: 50px;
     background: url(Images/Icons/Spinner.png);
 }
- 
 
 /*Carousel {
     #BulletsContainer { text-align: center; }
@@ -40,3 +39,19 @@ ListViewItem {
     & > #Button { text-align: left; height: 100%; }
     & > #Preview { width: 35px; height: 35px; background-size: cover; }
 }*/
+
+ActionButton {
+    height: 56px;
+
+    Column {
+        padding: 10px;
+    }
+
+    TextView.primary {
+        font-size: 18px;
+    }
+
+    TextView.secondary {
+        font-size: 14px;
+    }
+}

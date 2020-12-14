@@ -1,6 +1,11 @@
 ﻿@import "_Settings";
 @import "_Core";
 
+ImageView.logo {
+    height: 160px;
+    background-position: center;
+}
+
 TextView.title {
     font-weight: bold;
     font-size: 28px;
@@ -13,4 +18,31 @@ Button {
     background: #f0f0f0;
     margin: 10px;
     padding: 10px;
+}
+
+TextView.sub-title {
+    font-size: 18px;
+}
+
+TextView.separator {
+    margin-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: solid 1px #f0f0f0;
+}
+
+Button.primary {
+    background-color: $primary-color;
+    color: $button-bg-color;
+}
+
+ActionButton.primary {
+    background-color: $primary-color;
+
+    TextView.primary {
+        color: $button-bg-color;
+    }
+
+    TextView.secondary {
+        color: darken($button-bg-color, 10%);
+    }
 }

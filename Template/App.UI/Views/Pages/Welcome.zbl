@@ -5,11 +5,16 @@
 			 z-viewmodel="ViewModel.WelcomePage"
 			 Title="Welcome!"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:noNamespaceSchemaLocation="./../.zebble-schema.xml">
+             xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
 	<z-place inside="Body">
-		<ImageView Path="Images/Logo.png" Style="background-position:center; height: 150px;" />
-		<TextView Text="Hello there" CssClass="title"/>
-		<Button Text="Login" on-Tapped="@{Model.TapLogin()}"/>
-		<Button Text="Sign up" on-Tapped="@{Model.TapSignUp()}"/>
+		<ImageView Path="Images/Logo.png" CssClass="logo" />
+		<TextView Text="Hello there" CssClass="title" />
+		<Stack Ignored="@{Model.IsBusy}">
+			<TextView Text="@{Model.LoggedInUserEmail}" CssClass="title" />
+			<TextView CssClass="separator" />
+			<ActionButton Ignored="@{Model.IsAnonymous, x => x}" Primary.Text="Wrong account?" Secondary.Text="Log in to another account." on-Tapped="@{Model.TapLogout()}" />
+			<ActionButton Ignored="@{Model.IsAnonymous, x => !x}" Primary.Text="Existing user..." Secondary.Text="Let's log in to your account." CssClass="primary" on-Tapped="@{Model.TapLogin()}" />
+			<ActionButton Ignored="@{Model.IsAnonymous, x => !x}" Primary.Text="I'm new here..." Secondary.Text="Create your account with ease." on-Tapped="@{Model.TapRegister()}" />
+		</Stack>
 	</z-place>
 </z-Component>
