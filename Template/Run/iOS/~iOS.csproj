@@ -222,7 +222,7 @@
       <Version>4.3.4</Version>
     </PackageReference>
     <PackageReference Include="Zebble">
-      <Version>4.5.405</Version>
+      <Version>4.5.413</Version>
     </PackageReference>
     <PackageReference Include="Zebble.CheckBox">
       <Version>1.22.116</Version>
@@ -231,7 +231,7 @@
       <Version>4.6.286</Version>
     </PackageReference>
     <PackageReference Include="Zebble.Grid">
-      <Version>3.12.152</Version>
+      <Version>3.12.153</Version>
     </PackageReference>
     <PackageReference Include="Zebble.IconButton">
       <Version>3.20.273</Version>
