@@ -4,21 +4,21 @@
     using Zebble;
     using Zebble.Mvvm;
 
-    class LoginPage : FullScreen
+    class RegisterPage : FullScreen
     {
         public readonly Bindable<string> Email = new Bindable<string>();
         public readonly Bindable<string> Password = new Bindable<string>();
 
-        public async Task TapLogin()
+        public async Task TapRegister()
         {
-            var result = await FirebaseAuth.Current.Login(Email.Value, Password.Value);
+            var result = await FirebaseAuth.Current.Register(Email.Value, Password.Value);
 
             if (result.Succeeded)
                 Go<WelcomePage>();
             else
-                Dialog.Alert($"Login failed: {result.Message} ({result.Code})");
+                Dialog.Alert($"Register failed: {result.Message} ({result.Code})");
         }
 
-        public void TapRegister() => Forward<RegisterPage>();
+        public void TapLogin() => Forward<LoginPage>();
     }
 }

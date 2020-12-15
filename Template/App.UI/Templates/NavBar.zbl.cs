@@ -1,9 +1,9 @@
-using System;
-using System.Threading.Tasks;
-using Zebble;
-
 namespace UI.Templates
 {
+	using System;
+	using System.Threading.Tasks;
+	using Zebble;
+
     partial class NavBar
     {
         public string Title { get => Bar.Title.Text; set => Bar.Title.Text(value); }

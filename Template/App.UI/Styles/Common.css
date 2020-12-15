@@ -8,23 +8,23 @@ NavBar #BodyScroller { background: white; height: 100%; width: 100%; }
 
 NavBar #BodyScroller > #Body { padding: 10px; }
 
-NavigationBar { background: #ed1459; }
+NavigationBar { height: 64px; background: #ed1459; padding: 10px; }
 
-NavigationBar #NavBarContent { height: 64px; }
+NavigationBar > * { height: 100%; }
 
-NavigationBar #NavBarContent #Left, NavigationBar #NavBarContent #Right { height: 100%; width: 50%; }
+NavigationBar > #Left { width: 50%; }
 
-NavigationBar #NavBarContent #Left > *, NavigationBar #NavBarContent #Right > * { height: 100%; padding: 12px; }
+NavigationBar > #Left > * { height: 100%; padding: 7px; }
 
-NavigationBar #NavBarContent #Right { left: 50%; }
+NavigationBar > #Left #Menu { background: url("Images/Icons/Menu.png"); }
 
-NavigationBar #NavBarContent #Menu { background: url("Images/Icons/Menu.png"); }
+NavigationBar > #Right { width: 50%; left: 50%; }
 
-NavigationBar #NavBarContent > #Title { height: 100%; font-size: 18px; font-weight: bold; text-align: center; width: 100%; }
+NavigationBar > #Title { font-size: 18px; font-weight: bold; text-align: center; width: 100%; }
 
-NavigationBar #NavBarContent TextView { color: #fff; }
+NavigationBar TextView { color: #fff; }
 
-Tabs { border-top: 1px solid #C8C8C8; background-color: whitesmoke; height: 54px; position: absolute; }
+Tabs { border-top: 1px solid #C8C8C8; background: #e6e6e6; height: 54px; position: absolute; }
 
 Tab { opacity: 0.5; padding-top: 9px; padding-bottom: 9px; }
 
@@ -102,10 +102,6 @@ SearchInput:focus > #TextBox { text-align: left; padding-left: 30px; }
 
 SearchInput:focus > #CancelButton { opacity: 1; }
 
-MainMenu { background: #e6e6e6; }
-
-MainMenu ImageView { height: 100px; background-position: center; }
-
 Grid > #EmptyTextLabel, ListView > #EmptyTextLabel { text-align: center; }
 
 ListViewItem { border-top: 1px; }
@@ -127,6 +123,28 @@ ListViewItem { border-top: 1px; }
     & > #Button { text-align: left; height: 100%; }
     & > #Preview { width: 35px; height: 35px; background-size: cover; }
 }*/
+ActionButton { height: 56px; }
+
+ActionButton Column { padding: 10px; }
+
+ActionButton TextView.primary { font-size: 18px; }
+
+ActionButton TextView.secondary { font-size: 14px; }
+
+ImageView.logo { height: 160px; background-position: center; }
+
 TextView.title { font-weight: bold; font-size: 28px; text-align: center; margin-bottom: 20px; }
 
 Button { border-radius: 10px; background: #f0f0f0; margin: 10px; padding: 10px; }
+
+TextView.sub-title { font-size: 18px; }
+
+TextView.separator { margin-bottom: 20px; margin-bottom: 20px; border-bottom: solid 1px #f0f0f0; }
+
+Button.primary { background-color: #ed1459; color: #f0f0f0; }
+
+ActionButton.primary { background-color: #ed1459; }
+
+ActionButton.primary TextView.primary { color: #f0f0f0; }
+
+ActionButton.primary TextView.secondary { color: #d7d7d7; }

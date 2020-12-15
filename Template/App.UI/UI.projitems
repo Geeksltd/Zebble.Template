@@ -53,6 +53,7 @@
     </EmbeddedResource>
     <None Include="$(MSBuildThisFileDirectory)Views\.zebble-schema.xml" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\Login.zbl" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Register.zbl" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\Shoes.zbl" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\Welcome.zbl" />
   </ItemGroup>
@@ -73,6 +74,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>MainMenu.zbl</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Widgets\ActionButton.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Widgets\Column.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Widgets\NavigationBar.zbl.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

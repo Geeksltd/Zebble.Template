@@ -230,6 +230,9 @@
     <PackageReference Include="Zebble.DateTimePicker">
       <Version>4.6.286</Version>
     </PackageReference>
+    <PackageReference Include="Zebble.FirebaseAuth">
+      <Version>1.0.0.4</Version>
+    </PackageReference>
     <PackageReference Include="Zebble.Grid">
       <Version>3.12.153</Version>
     </PackageReference>
