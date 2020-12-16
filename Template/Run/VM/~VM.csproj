@@ -4,6 +4,11 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <LangVersion>latest</LangVersion>
+    <RootNamespace>App</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;CS1998</NoWarn>
   </PropertyGroup>
 
   <Import Project="..\..\App.Domain\Domain.projitems" Label="Shared" />
@@ -11,7 +16,7 @@
   <Import Project="..\..\ViewModel\ViewModel.projitems" Label="Shared" />
 
   <ItemGroup>
-    <PackageReference Include="Zebble" Version="4.5.406" />
+    <PackageReference Include="Zebble" Version="4.5.413" />    
     <PackageReference Include="Zebble.FirebaseAuth" Version="1.0.0.5" />
     <PackageReference Include="Zebble.WebApi" Version="4.5.385" />
   </ItemGroup>
