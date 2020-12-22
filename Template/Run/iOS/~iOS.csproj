@@ -222,7 +222,7 @@
       <Version>4.3.4</Version>
     </PackageReference>
     <PackageReference Include="Zebble">
-      <Version>4.5.413</Version>
+      <Version>4.5.418</Version>
     </PackageReference>
     <PackageReference Include="Zebble.CheckBox">
       <Version>1.22.116</Version>
@@ -231,7 +231,7 @@
       <Version>4.6.286</Version>
     </PackageReference>
     <PackageReference Include="Zebble.FirebaseAuth">
-      <Version>1.0.0.4</Version>
+      <Version>1.0.0.5</Version>
     </PackageReference>
     <PackageReference Include="Zebble.Grid">
       <Version>3.12.153</Version>
@@ -246,7 +246,7 @@
       <Version>4.10.177</Version>
     </PackageReference>
     <PackageReference Include="Zebble.OptionsList">
-      <Version>3.15.134</Version>
+      <Version>3.15.135</Version>
     </PackageReference>
     <PackageReference Include="Zebble.SearchInput">
       <Version>3.18.272</Version>
@@ -258,7 +258,7 @@
       <Version>4.5.385</Version>
     </PackageReference>
     <PackageReference Include="Zebble.Testing">
-      <Version>1.2.104</Version>
+      <Version>1.2.105</Version>
     </PackageReference>
     <PackageReference Include="Zebble.BoxShadow">
       <Version>1.2.140</Version>
