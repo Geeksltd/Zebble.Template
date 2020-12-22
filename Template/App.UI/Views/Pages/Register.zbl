@@ -1,17 +1,19 @@
 <?xml version="1.0"?>
 <z-Component z-type="Register"
-			 z-base="Templates.NavBar"
-			 z-namespace="UI.Pages"
-			 z-viewmodel="ViewModel.RegisterPage"
-			 Title="Register"
-			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-			 xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
-	<z-place inside="Body">
-		<TextView Text="Create a new account" CssClass="title" />
-		<TextInput Text="@{Model.Email}" Placeholder="Email" KeyboardActionType="Next" TextMode="Email" />
-		<TextInput Text="@{Model.Password}" Placeholder="Password" KeyboardActionType="Done" TextMode="Password"/>
-		<Button Text="Register" on-Tapped="@{Model.TapRegister()}" CssClass="lg primary" />
-		<TextView CssClass="separator" />
-		<ActionButton Primary.Text="Already have an account?" Secondary.Text="Log in to it quickly." on-Tapped="@{Model.TapLogin()}" />
-	</z-place>
+             z-base="Templates.NavBar"
+             z-namespace="UI.Pages"
+             z-viewmodel="ViewModel.RegisterPage"
+             Title="Register"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
+   <z-place inside="Body">
+      <TextView Text="Create a new account" CssClass="title" />
+      <TextInput Text="@{Model.Email}" Placeholder="Email" KeyboardActionType="Next" TextMode="Email" />
+      <TextInput Text="@{Model.Password}" Placeholder="Password" KeyboardActionType="Done" TextMode="Password" />
+      <Button Text="Register" on-Tapped="@{Model.TapRegister()}" CssClass="lg primary" />
+      <TextView CssClass="separator" />
+      <ActionButton Primary.Text="Already have an account?"
+                    Secondary.Text="Log in to it quickly."
+                    on-Tapped="@{Model.TapLogin()}" />
+   </z-place>
 </z-Component>

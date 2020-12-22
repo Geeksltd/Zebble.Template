@@ -1,20 +1,17 @@
 <?xml version="1.0"?>
 <z-Component z-type="Shoes"
-			 z-base="Templates.NavBarTabs" 
-			 z-namespace="UI.Pages"
-			 Title="Shoes"
-			 z-viewmodel="ViewModel.ShoesPage"
-			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-			 xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
-	<z-place inside="Body">
-		<CollectionView z-of="ViewModel.ShoesPage.Item, ShoeItem" Source="@Model.Items">
-			<z-Component z-type="ShoeItem"
-						 z-base="Row"
-						 z-viewmodel="ViewModel.ShoesPage.Item"						 
-						 on-Tapped="@{Model.Tap()}">
-				<ImageView Path="@{Model.ImageUrl}" />
-				<TextView Text="@{Model.Brand}"/>
-			</z-Component>
-		</CollectionView>
-	</z-place>
+             z-base="Templates.NavBarTabs"
+             z-namespace="UI.Pages"
+             Title="Shoes"
+             z-viewmodel="ViewModel.ShoesPage"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
+   <z-place inside="Body">
+      <CollectionView z-of="ViewModel.ShoesPage.Item, ShoeItem" Source="@Model.Items">
+         <z-Component z-type="ShoeItem" z-base="Row" z-viewmodel="ViewModel.ShoesPage.Item" on-Tapped="@{Model.Tap()}">
+            <ImageView Path="@{Model.ImageUrl}" />
+            <TextView Text="@{Model.Brand}" />
+         </z-Component>
+      </CollectionView>
+   </z-place>
 </z-Component>

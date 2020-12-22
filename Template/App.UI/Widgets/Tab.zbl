@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <z-Component z-type="Tab"
-			 z-base="Stack"
-			 z-namespace="Zebble"
-			 on-Tapped="Tap"
-			 AutoFlash="false"
-			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		 xsi:noNamespaceSchemaLocation="./../Views/.zebble-schema.xml">
-	<ImageView Id="IconView"/>
-	<TextView Id="Label"/>
+             z-base="Stack"
+             z-namespace="Zebble"
+             on-Tapped="Tap"
+             AutoFlash="false"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="./../Views/.zebble-schema.xml">
+   <ImageView Id="IconView" />
+   <TextView Id="Label" />
 </z-Component>
