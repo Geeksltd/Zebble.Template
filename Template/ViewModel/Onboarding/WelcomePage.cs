@@ -11,7 +11,7 @@
         public Bindable<bool> IsAnonymous = new Bindable<bool>(false);
         public readonly Bindable<string> LoggedInUserEmail = new("...");
 
-        protected async override Task NavigationStartedAsync()
+        protected override async Task NavigationStartedAsync()
         {
             IsBusy.Set(true);
 
