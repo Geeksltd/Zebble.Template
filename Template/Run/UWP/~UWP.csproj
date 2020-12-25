@@ -133,7 +133,7 @@
       <Version>12.0.3</Version>
     </PackageReference>
     <PackageReference Include="Zebble">
-      <Version>4.5.418</Version>
+      <Version>4.5.419</Version>
     </PackageReference>
     <PackageReference Include="Zebble.CheckBox">
       <Version>1.22.116</Version>
@@ -151,7 +151,7 @@
       <Version>3.20.273</Version>
     </PackageReference>
     <PackageReference Include="Zebble.Inspector">
-      <Version>2.7.146</Version>
+      <Version>2.7.148</Version>
     </PackageReference>
     <PackageReference Include="Zebble.ItemPicker">
       <Version>3.12.164</Version>
