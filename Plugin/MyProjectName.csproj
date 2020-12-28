@@ -22,7 +22,7 @@
     <PackageIconUrl>https://raw.githubusercontent.com/Geeksltd/Zebble.MyProjectName/master/icon.png</PackageIconUrl>
     <PackageTags>xamarin, windows, ios, android, zebble</PackageTags>
     <Title>Zebble.MyProjectName</Title>
-    <Description>MyProjectName for Zebble (Xamarin)</Description>
+    <Description>MyProjectDescription</Description>
     <PackageReleaseNotes>Minor fixes</PackageReleaseNotes>
     <Owners>Geeks Ltd</Owners>
     <Authors>Geeks Ltd</Authors>
