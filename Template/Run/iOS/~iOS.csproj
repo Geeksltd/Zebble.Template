@@ -222,10 +222,10 @@
       <Version>4.3.4</Version>
     </PackageReference>
     <PackageReference Include="Zebble">
-      <Version>4.5.445</Version>
+      <Version>4.5.447</Version>
     </PackageReference>
     <PackageReference Include="Zebble.CheckBox">
-      <Version>1.22.121</Version>
+      <Version>1.22.122</Version>
     </PackageReference>
     <PackageReference Include="Zebble.DateTimePicker">
       <Version>4.6.290</Version>
@@ -234,16 +234,16 @@
       <Version>1.0.8</Version>
     </PackageReference>
     <PackageReference Include="Zebble.Grid">
-      <Version>3.12.159</Version>
+      <Version>3.12.160</Version>
     </PackageReference>
     <PackageReference Include="Zebble.IconButton">
-      <Version>3.20.281</Version>
+      <Version>3.20.282</Version>
     </PackageReference>
     <PackageReference Include="Zebble.ItemPicker">
       <Version>3.12.169</Version>
     </PackageReference>
     <PackageReference Include="Zebble.ListView">
-      <Version>4.10.184</Version>
+      <Version>4.10.185</Version>
     </PackageReference>
     <PackageReference Include="Zebble.OptionsList">
       <Version>3.15.140</Version>
@@ -261,7 +261,7 @@
       <Version>1.2.111</Version>
     </PackageReference>
     <PackageReference Include="Zebble.BoxShadow">
-      <Version>1.2.146</Version>
+      <Version>1.2.148</Version>
     </PackageReference>
     <PackageReference Include="Zebble.Widgets">
       <Version>1.1.115</Version>
