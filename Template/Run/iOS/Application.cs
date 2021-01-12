@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Olive;
+using System;
 
 public class Application
 {
@@ -7,6 +8,7 @@ public class Application
     {
         try
         {
+            Zebble.HostInitialization.Initialize();
             UIKit.UIApplication.Main(args, null, typeof(IOS.AppDelegate));
         }
         catch (Exception ex)

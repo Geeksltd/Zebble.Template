@@ -15,6 +15,7 @@ namespace Android
         public override void OnCreate()
         {
             base.OnCreate();
+            Zebble.HostInitialization.Initialize();
             RegisterActivityLifecycleCallbacks(this);
         }
 
