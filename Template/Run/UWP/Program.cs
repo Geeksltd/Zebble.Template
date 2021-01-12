@@ -6,7 +6,7 @@
     {
         public static void Main()
         {
-            Zebble.UIRuntime.GetEntryAssembly = () => typeof(Program).GetAssembly();
+            Zebble.UIRuntime.GetEntryAssembly = () => typeof(Program).Assembly;
 
             Windows.UI.Xaml.Application.Start((p) => new App());
         }
