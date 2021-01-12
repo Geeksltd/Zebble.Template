@@ -3,6 +3,7 @@
     using System.Threading.Tasks;
     using Zebble;
     using Zebble.Mvvm;
+    using Olive;
 
     class WelcomePage : FullScreen
     {

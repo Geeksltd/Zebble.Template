@@ -222,49 +222,49 @@
       <Version>4.3.4</Version>
     </PackageReference>
     <PackageReference Include="Zebble">
-      <Version>4.5.418</Version>
+      <Version>4.5.445</Version>
     </PackageReference>
     <PackageReference Include="Zebble.CheckBox">
-      <Version>1.22.116</Version>
+      <Version>1.22.121</Version>
     </PackageReference>
     <PackageReference Include="Zebble.DateTimePicker">
-      <Version>4.6.286</Version>
+      <Version>4.6.290</Version>
     </PackageReference>
     <PackageReference Include="Zebble.FirebaseAuth">
-      <Version>1.0.0.5</Version>
+      <Version>1.0.8</Version>
     </PackageReference>
     <PackageReference Include="Zebble.Grid">
-      <Version>3.12.153</Version>
+      <Version>3.12.159</Version>
     </PackageReference>
     <PackageReference Include="Zebble.IconButton">
-      <Version>3.20.273</Version>
+      <Version>3.20.281</Version>
     </PackageReference>
     <PackageReference Include="Zebble.ItemPicker">
-      <Version>3.12.164</Version>
+      <Version>3.12.169</Version>
     </PackageReference>
     <PackageReference Include="Zebble.ListView">
-      <Version>4.10.177</Version>
+      <Version>4.10.184</Version>
     </PackageReference>
     <PackageReference Include="Zebble.OptionsList">
-      <Version>3.15.135</Version>
+      <Version>3.15.140</Version>
     </PackageReference>
     <PackageReference Include="Zebble.SearchInput">
-      <Version>3.18.272</Version>
+      <Version>3.18.280</Version>
     </PackageReference>
     <PackageReference Include="Zebble.Switch">
-      <Version>1.31.239</Version>
+      <Version>1.31.243</Version>
     </PackageReference>
     <PackageReference Include="Zebble.WebApi">
-      <Version>4.5.385</Version>
+      <Version>4.5.390</Version>
     </PackageReference>
     <PackageReference Include="Zebble.Testing">
-      <Version>1.2.105</Version>
+      <Version>1.2.111</Version>
     </PackageReference>
     <PackageReference Include="Zebble.BoxShadow">
-      <Version>1.2.140</Version>
+      <Version>1.2.146</Version>
     </PackageReference>
     <PackageReference Include="Zebble.Widgets">
-      <Version>1.1.105</Version>
+      <Version>1.1.115</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="..\..\App.Domain\Domain.projitems" Label="Shared" Condition="Exists('..\..\App.Domain\Domain.projitems')" />

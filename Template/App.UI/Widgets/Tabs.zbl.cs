@@ -4,6 +4,7 @@ namespace Zebble
     using System.Linq;
     using System.Threading.Tasks;
     using Mvvm;
+    using Olive;
 
     partial class Tabs
     {

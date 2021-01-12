@@ -2,6 +2,7 @@
 {
     using Zebble;
     using Zebble.Mvvm;
+    using Olive;
 
     class ShoePage : FullScreen<Domain.Shoe>
     {

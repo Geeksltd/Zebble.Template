@@ -3,6 +3,7 @@
     using System.Linq;
     using Zebble;
     using Zebble.Mvvm;
+    using Olive;
 
     class ShoesPage : FullScreen
     {
