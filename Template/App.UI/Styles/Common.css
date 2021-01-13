@@ -8,23 +8,23 @@ NavBar #BodyScroller { background: white; height: 100%; width: 100%; }
 
 NavBar #BodyScroller > #Body { padding: 10px; }
 
-NavigationBar { height: 64px; background: #ed1459; padding: 10px; }
+NavigationBar { background: #ed1459; }
 
-NavigationBar > * { height: 100%; }
+NavigationBar #NavBarContent { height: 64px; }
 
-NavigationBar > #Left { width: 50%; }
+NavigationBar #NavBarContent #Left, NavigationBar #NavBarContent #Right { height: 100%; width: 50%; }
 
-NavigationBar > #Left > * { height: 100%; padding: 7px; }
+NavigationBar #NavBarContent #Left > *, NavigationBar #NavBarContent #Right > * { height: 100%; padding: 12px; }
 
-NavigationBar > #Left #Menu { background: url("Images/Icons/Menu.png"); }
+NavigationBar #NavBarContent #Right { left: 50%; }
 
-NavigationBar > #Right { width: 50%; left: 50%; }
+NavigationBar #NavBarContent #Menu { background: url("Images/Icons/Menu.png"); }
 
-NavigationBar > #Title { font-size: 18px; font-weight: bold; text-align: center; width: 100%; }
+NavigationBar #NavBarContent > #Title { height: 100%; font-size: 18px; font-weight: bold; text-align: center; width: 100%; }
 
-NavigationBar TextView { color: #fff; }
+NavigationBar #NavBarContent TextView { color: #fff; }
 
-Tabs { border-top: 1px solid #C8C8C8; background: #e6e6e6; height: 54px; position: absolute; }
+Tabs { border-top: 1px solid #C8C8C8; background-color: whitesmoke; height: 54px; position: absolute; }
 
 Tab { opacity: 0.5; padding-top: 9px; padding-bottom: 9px; }
 
@@ -101,6 +101,10 @@ SearchInput > #CancelButton { border: 0; height: 100%; left: 100%; white-space: 
 SearchInput:focus > #TextBox { text-align: left; padding-left: 30px; }
 
 SearchInput:focus > #CancelButton { opacity: 1; }
+
+MainMenu { background: #e6e6e6; }
+
+MainMenu ImageView { height: 100px; background-position: center; }
 
 Grid > #EmptyTextLabel, ListView > #EmptyTextLabel { text-align: center; }
 
