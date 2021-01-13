@@ -11,8 +11,6 @@ namespace UI
         {
             ApplicationName = "MyProjectName";
 
-            InitializeHost();
-
             await InstallIfNeeded();
 
             CssStyles.LoadAll();
