@@ -12,6 +12,7 @@
         public static async Task Main(string[] args)
         {
             Zebble.Console.Configure();
+            Zebble.HostInitialization.Initialize();
             await ViewModel.StartUp.Run();
 
             if (Doing == Intention.OneTest) await Test.Run<LoginTest>();
