@@ -243,7 +243,7 @@
       <Version>3.12.169</Version>
     </PackageReference>
     <PackageReference Include="Zebble.ListView">
-      <Version>4.10.185</Version>
+      <Version>4.10.186</Version>
     </PackageReference>
     <PackageReference Include="Zebble.OptionsList">
       <Version>3.15.140</Version>
