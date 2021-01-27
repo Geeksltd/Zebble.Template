@@ -23,9 +23,9 @@
         protected override async void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
+            Xamarin.Essentials.Platform.Init(this, bundle);
 
             SetContentView(Resource.Layout.Main);
-
             Setup.Start(FindViewById<FrameLayout>(Resource.Id.Main_Layout), this).RunInParallel();
 
             await (StartUp.Current = new UI.StartUp()).Run();
