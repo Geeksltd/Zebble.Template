@@ -9,7 +9,6 @@
     <Version>MyProjectVersion</Version>
     <PackOnBuild>true</PackOnBuild>
     <NeutralLanguage>en</NeutralLanguage>
-    <LangVersion>default</LangVersion>
     <DefineConstants>$(DefineConstants)</DefineConstants>
     <UseFullSemVerForNuGet>false</UseFullSemVerForNuGet>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
