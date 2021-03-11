@@ -222,16 +222,16 @@
       <Version>4.3.4</Version>
     </PackageReference>
     <PackageReference Include="Zebble">
-      <Version>4.5.487</Version>
+      <Version>4.5.503</Version>
     </PackageReference>
     <PackageReference Include="Zebble.CheckBox">
       <Version>1.22.125</Version>
     </PackageReference>
     <PackageReference Include="Zebble.DateTimePicker">
-      <Version>4.6.291</Version>
+      <Version>4.6.292</Version>
     </PackageReference>
     <PackageReference Include="Zebble.FirebaseAuth">
-      <Version>1.0.8</Version>
+      <Version>1.0.9</Version>
     </PackageReference>
     <PackageReference Include="Zebble.Grid">
       <Version>3.12.160</Version>
@@ -240,10 +240,10 @@
       <Version>3.20.282</Version>
     </PackageReference>
     <PackageReference Include="Zebble.ItemPicker">
-      <Version>3.12.172</Version>
+      <Version>3.12.173</Version>
     </PackageReference>
     <PackageReference Include="Zebble.ListView">
-      <Version>4.10.195</Version>
+      <Version>4.10.197</Version>
     </PackageReference>
     <PackageReference Include="Zebble.OptionsList">
       <Version>3.15.145</Version>
@@ -255,10 +255,10 @@
       <Version>1.31.244</Version>
     </PackageReference>
     <PackageReference Include="Zebble.WebApi">
-      <Version>4.5.394</Version>
+      <Version>4.5.395</Version>
     </PackageReference>
     <PackageReference Include="Zebble.Testing">
-      <Version>1.2.111</Version>
+      <Version>1.2.112</Version>
     </PackageReference>
     <PackageReference Include="Zebble.BoxShadow">
       <Version>1.2.151</Version>
