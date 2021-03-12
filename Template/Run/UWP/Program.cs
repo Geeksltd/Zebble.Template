@@ -4,8 +4,7 @@
     {
         public static void Main()
         {
-            Zebble.UIRuntime.GetEntryAssembly = () => typeof(Program).Assembly;
-            Zebble.HostInitialization.Initialize();
+            Zebble.UIRuntime.Initialize<Program>("MyProjectName");
             Windows.UI.Xaml.Application.Start((p) => new App());
         }
     }

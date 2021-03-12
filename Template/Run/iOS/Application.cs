@@ -8,7 +8,7 @@ public class Application
     {
         try
         {
-            Zebble.HostInitialization.Initialize();
+            Zebble.UIRuntime.Initialize<Application>("MyProjectName");
             UIKit.UIApplication.Main(args, null, typeof(IOS.AppDelegate));
         }
         catch (Exception ex)

@@ -4,6 +4,7 @@
     using Olive;
     using System.Threading.Tasks;
     using Test = Zebble.Mvvm.TestScript;
+    using Zebble;
 
     class Program
     {
@@ -11,8 +12,8 @@
 
         public static async Task Main(string[] args)
         {
-            Zebble.Console.Configure();
-            Zebble.HostInitialization.Initialize();
+            UIRuntime.Initialize<Program>("MyProjectName");
+
             await ViewModel.StartUp.Run();
 
             if (Doing == Intention.OneTest) await Test.Run<LoginTest>();
