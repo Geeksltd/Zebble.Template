@@ -2,17 +2,19 @@
 {
     using System.Threading.Tasks;
     using Zebble;
+    using Zebble.Mvvm;
     using Olive;
+    using Domain.Api;
 
-    // TODO: Learn: https://zebble.net/docs/introduction
     class StartUp
     {
         public static Task Run()
         {
-            FirebaseAuth.Current.Initialize(Config.Get("Firebase.ApiToken"));
+            // Comment this line out to use the Live API
+            Api.Fake();
+           
+            ViewModel.Go<LandingPage>(PageTransition.Fade);
 
-            // TODO: Any required init
-            Zebble.Mvvm.ViewModel.Go<WelcomePage>();
             return Task.CompletedTask;
         }
     }
