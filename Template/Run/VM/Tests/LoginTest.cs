@@ -12,15 +12,14 @@ namespace App.Tests
     {
         protected override async Task Execute()
         {
-            On<WelcomePage>().TapLogin();
-            On<LoginPage>().TapLogin();
-            Expect("Please enter your email.");
-            On<LoginPage>().Email.Set("jack.smith@geeks.ltd.uk");
-            On<LoginPage>().TapLogin();
-            Expect("Please enter your password.");
-            On<LoginPage>().Password.Set("something wrong");
-            On<LoginPage>().TapLogin();
-            Expect("Invalid email or password.");
+            //On<LoginPage>().TapLogin();
+            //Expect("Please enter your email.");
+            //On<LoginPage>().Email.Set("jack.smith@geeks.ltd.uk");
+            //On<LoginPage>().TapLogin();
+            //Expect("Please enter your password.");
+            //On<LoginPage>().Password.Set("something wrong");
+            //On<LoginPage>().TapLogin();
+            //Expect("Invalid email or password.");
             // ...
         }
     }
