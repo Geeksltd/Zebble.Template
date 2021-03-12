@@ -12,8 +12,12 @@
     <None Include="$(MSBuildThisFileDirectory)compilerconfig.json" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\Splash.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\Icons\Icon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Styles\Components\_Button.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\PlatformSpecific.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\Common.scss" />
+    <None Include="$(MSBuildThisFileDirectory)Styles\Shared\_Colors.scss" />
+    <None Include="$(MSBuildThisFileDirectory)Styles\Shared\_Fonts.scss" />
+    <None Include="$(MSBuildThisFileDirectory)Templates\Blank.zbl" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\Landing.zbl" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Config.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -53,8 +57,6 @@
     <Content Include="$(MSBuildThisFileDirectory)Views\.zebble-schema.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Styles\Components\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Templates\" />
     <Folder Include="$(MSBuildThisFileDirectory)Widgets\" />
   </ItemGroup>
 </Project>
