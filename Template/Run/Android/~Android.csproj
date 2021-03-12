@@ -67,7 +67,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="SplashScreen.cs" />
-    <None Include="-READ-ME-NOW!!!!!!!!!!!!.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -95,6 +94,9 @@
     </PackageReference>
     <PackageReference Include="Xamarin.AndroidX.AppCompat">
       <Version>1.2.0.7</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Essentials">
+      <Version>1.6.1</Version>
     </PackageReference>
     <PackageReference Include="Zebble">
       <Version>4.5.503</Version>
