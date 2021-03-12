@@ -10,23 +10,11 @@
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)compilerconfig.json.defaults" />
     <None Include="$(MSBuildThisFileDirectory)compilerconfig.json" />
-    <None Include="$(MSBuildThisFileDirectory)Splash.png" />
-    <None Include="$(MSBuildThisFileDirectory)Icon.png" />
-    <None Include="$(MSBuildThisFileDirectory)Styles\Components\_PopUp.scss" />
-    <None Include="$(MSBuildThisFileDirectory)Styles\Components\_Dialog.scss" />
-    <None Include="$(MSBuildThisFileDirectory)Styles\Components\_FormControls.scss" />
-    <None Include="$(MSBuildThisFileDirectory)Styles\Components\_MainMenu.scss" />
-    <None Include="$(MSBuildThisFileDirectory)Styles\Components\_Tabs.scss" />
-    <None Include="$(MSBuildThisFileDirectory)Styles\Components\_NavBar.scss" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\Splash.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\Icons\Icon.png" />
     <None Include="$(MSBuildThisFileDirectory)Styles\PlatformSpecific.scss" />
-    <None Include="$(MSBuildThisFileDirectory)Styles\_Core.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\Common.scss" />
-    <None Include="$(MSBuildThisFileDirectory)Styles\_Settings.scss" />
-    <None Include="$(MSBuildThisFileDirectory)Templates\NavBar.zbl" />
-    <None Include="$(MSBuildThisFileDirectory)Widgets\MainMenu.zbl" />
-    <None Include="$(MSBuildThisFileDirectory)Widgets\NavigationBar.zbl" />
-    <None Include="$(MSBuildThisFileDirectory)Widgets\Tab.zbl" />
-    <None Include="$(MSBuildThisFileDirectory)Widgets\Tabs.zbl" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Landing.zbl" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Config.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -51,11 +39,6 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Zebble-Meta.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <None Include="$(MSBuildThisFileDirectory)Views\.zebble-schema.xml" />
-    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Login.zbl" />
-    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Register.zbl" />
-    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Shoes.zbl" />
-    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Welcome.zbl" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Styles\Common.css" />
@@ -65,30 +48,13 @@
     <Compile Include="$(MSBuildThisFileDirectory).zebble-generated-css.cs" />
     <Compile Include="$(MSBuildThisFileDirectory).zebble-generated.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StartUp.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Templates\NavBar.zbl.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>NavBar.zbl</DependentUpon>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Templates\NavBarTabs.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Widgets\MainMenu.zbl.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>MainMenu.zbl</DependentUpon>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Widgets\ActionButton.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Widgets\Column.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Widgets\NavigationBar.zbl.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>NavigationBar.zbl</DependentUpon>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Tests\TestCases\SampleTest.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Widgets\Tab.zbl.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Widgets\Tabs.zbl.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Tabs.zbl</DependentUpon>
-    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Views\.zebble-schema.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Styles\Components\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Templates\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Widgets\" />
   </ItemGroup>
 </Project>

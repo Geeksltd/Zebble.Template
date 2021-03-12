@@ -9,8 +9,6 @@ namespace UI
     {
         public override async Task Run()
         {
-            ApplicationName = "MyProjectName";
-
             await InstallIfNeeded();
 
             CssStyles.LoadAll();
@@ -54,5 +52,6 @@ namespace UI
             // -------------------------------
             return ViewModel.StartUp.Run();
         }
+
     }
 }
