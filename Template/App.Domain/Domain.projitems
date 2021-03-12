@@ -9,6 +9,11 @@
     <Import_RootNamespace>Domain</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Shoe.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Api\Api.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Api\Fake\BaseFakeApi.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Api\Fake\CoffeeDrinksApi.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Api\Interfaces\ICoffeeDrinksApi.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Api\Live\CoffeeDrinksApi.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\CoffeeDrink.cs" />
   </ItemGroup>
 </Project>
