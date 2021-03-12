@@ -1,1 +1,10 @@
-﻿
+﻿@import "Shared/_Colors.scss";
+@import "Components/_Button.scss";
+
+#Body{
+	height:100%;
+}
+
+#Wrapper{
+	padding:16px;
+}
