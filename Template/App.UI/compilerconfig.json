@@ -1,12 +1,10 @@
 ﻿[
   {
-    "OutputFile": "Styles/Common.css",
-    "InputFile": "Styles/Common.scss",
-    "SourceMap": true
+    "outputFile": "Styles/Common.css",
+    "inputFile": "Styles/Common.scss"
   },
   {
-    "OutputFile": "Styles/PlatformSpecific.css",
-    "InputFile": "Styles/PlatformSpecific.scss",
-    "SourceMap": true
+    "outputFile": "Styles/PlatformSpecific.css",
+    "inputFile": "Styles/PlatformSpecific.scss"
   }
 ]
