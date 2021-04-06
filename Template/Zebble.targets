@@ -8,5 +8,6 @@
     <Exec WorkingDirectory="$(SolutionDir)" Command="start zebble-css watch" />
     <Exec WorkingDirectory="$(SolutionDir)" Command="start zebble-build nav-xml" />
     <Exec WorkingDirectory="$(SolutionDir)" Command="zebble-format-zbl" />
+    <Exec WorkingDirectory="$(SolutionDir)" Command="zebble-image update-sizes" />    
   </Target>
 </Project>
