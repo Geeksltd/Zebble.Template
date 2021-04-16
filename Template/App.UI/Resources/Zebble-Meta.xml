@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <data>
   <image path="Images/Logo.png" width="397" height="390" />
+  <image path="Images/Splash.png" width="3000" height="3000" />
   <image path="Images/Icons/Home.png" width="200" height="200" />
+  <image path="Images/Icons/Icon.png" width="2000" height="2000" />
   <image path="Images/Icons/Menu.png" width="200" height="200" />
   <image path="Images/Icons/not-found.png" width="255" height="256" />
   <image path="Images/Icons/Shoes.png" width="564" height="466" />

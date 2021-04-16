@@ -18,6 +18,9 @@
     <None Include="$(MSBuildThisFileDirectory)Styles\Shared\_Colors.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\Shared\_Fonts.scss" />
     <None Include="$(MSBuildThisFileDirectory)Templates\Blank.zbl" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Contacts.zbl" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Settings.zbl" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Categories.zbl" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\Landing.zbl" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Config.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -43,6 +46,8 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Zebble-Meta.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <None Include="$(MSBuildThisFileDirectory)Widgets\Tabs.zbl" />
+    <None Include="$(MSBuildThisFileDirectory)Widgets\Tab.zbl" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Styles\Common.css" />
@@ -54,9 +59,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)StartUp.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Resources\Images\Icons\categories-icon.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\Images\Icons\contacts-icon.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\Images\Icons\settings-icon.png" />
     <Content Include="$(MSBuildThisFileDirectory)Views\.zebble-schema.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Widgets\" />
   </ItemGroup>
 </Project>
