@@ -16,7 +16,7 @@
   <Import Project="..\..\ViewModel\ViewModel.projitems" Label="Shared" />
 
   <ItemGroup>
-    <PackageReference Include="Zebble" Version="4.5.504" />    
+    <PackageReference Include="Zebble" Version="4.5.513" />    
     <PackageReference Include="Zebble.FirebaseAuth" Version="1.0.9" />
     <PackageReference Include="Zebble.WebApi" Version="4.5.395" />
   </ItemGroup>

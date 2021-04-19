@@ -1,21 +1,21 @@
 ﻿namespace ViewModel
 {
-    using System.Threading.Tasks;
-    using Zebble;
-    using Zebble.Mvvm;
-    using Olive;
-    using Domain.Api;
+	using System.Threading.Tasks;
+	using Zebble;
+	using Zebble.Mvvm;
+	using Olive;
+	using Domain.Api;
 
-    class StartUp
-    {
-        public static Task Run()
-        {
-            // Comment this line out to use the Live API
-            Api.Fake();
-           
-            ViewModel.Go<LandingPage>(PageTransition.Fade);
+	class StartUp
+	{
+		public static Task Run()
+		{
+			// Comment this line out to use the Live API
+			//Api.Fake();
 
-            return Task.CompletedTask;
-        }
-    }
+			ViewModel.Go<LandingPage>(PageTransition.Fade);
+
+			return Task.CompletedTask;
+		}
+	}
 }

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<zbl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:noNamespaceSchemaLocation="./../Views/.zebble-schema.xml">
+   <class type="NavigationBar" base="Stack" namespace="Zebble">
+      <TopUnsafeAreaFiller />
+      <Canvas Id="NavBarContent">
+         <TextView Id="Title" />
+         <Row Id="Left">
+            <BackButton Id="Back" on-Tapped="() => Mvvm.ViewModel.Back()" Ignored="@{CanGoBack, x=>!x}" />
+         </Row>
+         <Row Id="Right" HorizontalAlignment="Right" />
+      </Canvas>
+   </class>
+</zbl>

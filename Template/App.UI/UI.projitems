@@ -18,6 +18,7 @@
     <None Include="$(MSBuildThisFileDirectory)Styles\Shared\_Colors.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\Shared\_Fonts.scss" />
     <None Include="$(MSBuildThisFileDirectory)Templates\Blank.zbl" />
+    <None Include="$(MSBuildThisFileDirectory)Templates\NavBar.zbl" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\Contacts.zbl" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\Settings.zbl" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\Categories.zbl" />
@@ -46,8 +47,9 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Zebble-Meta.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <None Include="$(MSBuildThisFileDirectory)Widgets\Tabs.zbl" />
+    <None Include="$(MSBuildThisFileDirectory)Widgets\NavigationBar.zbl" />
     <None Include="$(MSBuildThisFileDirectory)Widgets\Tab.zbl" />
+    <None Include="$(MSBuildThisFileDirectory)Widgets\Tabs.zbl" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Styles\Common.css" />
@@ -57,6 +59,12 @@
     <Compile Include="$(MSBuildThisFileDirectory).zebble-generated-css.cs" />
     <Compile Include="$(MSBuildThisFileDirectory).zebble-generated.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StartUp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Templates\NavBar.zbl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Templates\NavBarTabs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Widgets\Components.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Widgets\NavigationBar.zbl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Widgets\Tab.zbl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Widgets\Tabs.zbl.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)Resources\Images\Icons\categories-icon.png" />

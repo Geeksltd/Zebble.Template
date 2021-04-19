@@ -7,21 +7,6 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="z-Component">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:any minOccurs="0" maxOccurs="unbounded" />
-      </xs:sequence>
-      <xs:attribute name="z-type" type="xs:Name" use="required" />
-      <xs:attribute name="z-base" type="xs:string" use="required" />
-      <xs:attribute name="z-namespace" type="xs:Name" />
-      <xs:attribute name="z-implements" type="xs:string" />
-      <xs:attribute name="z-cache" type="Boolean" />
-      <xs:attribute name="z-viewmodel" type="xs:string" />
-      <xs:attribute name="Title" type="xs:string" />
-      <xs:anyAttribute processContents="skip" />
-    </xs:complexType>
-  </xs:element>
   <xs:element name="class">
     <xs:complexType>
       <xs:sequence>
@@ -37,7 +22,7 @@
       <xs:anyAttribute processContents="skip" />
     </xs:complexType>
   </xs:element>
-  <xs:element name="z-place">
+  <xs:element name="place">
     <xs:complexType>
       <xs:sequence>
         <xs:any minOccurs="0" maxOccurs="unbounded" />
@@ -46,7 +31,7 @@
       <xs:anyAttribute processContents="skip" />
     </xs:complexType>
   </xs:element>
-  <xs:element name="z-foreach">
+  <xs:element name="foreach">
     <xs:complexType>
       <xs:sequence>
         <xs:any minOccurs="0" maxOccurs="unbounded" />
@@ -72,8 +57,18 @@
     <xs:restriction base="xs:string">
       <xs:enumeration value="/Resources/Images/Logo.png" />
       <xs:enumeration value="/Resources/Images/Splash.png" />
+      <xs:enumeration value="/Resources/Images/Icons/categories-icon.png" />
+      <xs:enumeration value="/Resources/Images/Icons/contacts-icon.png" />
       <xs:enumeration value="/Resources/Images/Icons/Home.png" />
       <xs:enumeration value="/Resources/Images/Icons/Icon.png" />
+      <xs:enumeration value="/Resources/Images/Icons/ios-arrow-back.png" />
+      <xs:enumeration value="/Resources/Images/Icons/Menu.png" />
+      <xs:enumeration value="/Resources/Images/Icons/not-found.png" />
+      <xs:enumeration value="/Resources/Images/Icons/settings-icon.png" />
+      <xs:enumeration value="/Resources/Images/Icons/Shoes.png" />
+      <xs:enumeration value="/Resources/Images/Icons/Spinner.png" />
+      <xs:enumeration value="/Resources/Images/Logo.png" />
+      <xs:enumeration value="/Resources/Images/Icons/Home.png" />
       <xs:enumeration value="/Resources/Images/Icons/Menu.png" />
       <xs:enumeration value="/Resources/Images/Icons/not-found.png" />
       <xs:enumeration value="/Resources/Images/Icons/Shoes.png" />
@@ -118,6 +113,15 @@
       <xs:enumeration value="/Resources/Legacy-Icon-57.png" />
       <xs:enumeration value="/Resources/Legacy-Icon-72.png" />
       <xs:enumeration value="/Resources/Images/Logo.png" />
+      <xs:enumeration value="/Resources/Images/Icons/categories-icon.png" />
+      <xs:enumeration value="/Resources/Images/Icons/contacts-icon.png" />
+      <xs:enumeration value="/Resources/Images/Icons/Home.png" />
+      <xs:enumeration value="/Resources/Images/Icons/Menu.png" />
+      <xs:enumeration value="/Resources/Images/Icons/not-found.png" />
+      <xs:enumeration value="/Resources/Images/Icons/settings-icon.png" />
+      <xs:enumeration value="/Resources/Images/Icons/Shoes.png" />
+      <xs:enumeration value="/Resources/Images/Icons/Spinner.png" />
+      <xs:enumeration value="/Resources/Images/Logo.png" />
       <xs:enumeration value="/Resources/Images/Icons/Home.png" />
       <xs:enumeration value="/Resources/Images/Icons/Menu.png" />
       <xs:enumeration value="/Resources/Images/Icons/not-found.png" />
@@ -131,7 +135,10 @@
   </xs:simpleType>
   <xs:simpleType name="ZNavTypeEnum">
     <xs:restriction base="xs:string">
+      <xs:enumeration value="Pages.Categories" />
+      <xs:enumeration value="Pages.Contacts" />
       <xs:enumeration value="Pages.LandingPage" />
+      <xs:enumeration value="Pages.Settings" />
       <xs:enumeration value="@....." />
     </xs:restriction>
   </xs:simpleType>
@@ -149,15 +156,99 @@
   <xs:simpleType name="CssStyle">
     <xs:union memberTypes="CssStyleEnum StringPattern" />
   </xs:simpleType>
-  <xs:complexType name="UI__Templates__BlankType">
+  <xs:complexType name="NavigationBarType">
     <xs:sequence>
       <xs:any minOccurs="0" maxOccurs="unbounded" />
     </xs:sequence>
-    <xs:attribute name="Body" type="xs:string" />
-    <xs:attribute name="Wrapper" type="xs:string" />
+    <xs:attribute name="NavBarContent" type="xs:string" />
+    <xs:attribute name="Title" type="xs:string" />
+    <xs:attribute name="Left" type="xs:string" />
+    <xs:attribute name="Back" type="xs:string" />
+    <xs:attribute name="Right" type="xs:string" />
     <xs:anyAttribute processContents="skip" />
   </xs:complexType>
+  <xs:element name="NavigationBar" nillable="true" type="NavigationBarType" />
+  <xs:complexType name="TabType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ImageViewType">
+        <xs:attribute name="Target" type="xs:string" />
+        <xs:attribute name="IsActive" type="Boolean" />
+        <xs:attribute name="IsPrimary" type="xs:string" />
+        <xs:attribute name="Icon" type="xs:string" />
+        <xs:attribute name="ActiveIcon" type="xs:string" />
+        <xs:anyAttribute processContents="skip" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Tab" nillable="true" type="TabType" />
+  <xs:complexType name="TabsType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="RowType">
+        <xs:attribute name="Model" type="xs:string" />
+        <xs:anyAttribute processContents="skip" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Tabs" nillable="true" type="TabsType" />
+  <xs:complexType name="BackButtonType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ImageViewType">
+        <xs:anyAttribute processContents="skip" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BackButton" nillable="true" type="BackButtonType" />
+  <xs:complexType name="UI__Templates__BlankType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="Page-AbstractType">
+        <xs:attribute name="Body" type="xs:string" />
+        <xs:attribute name="Wrapper" type="xs:string" />
+        <xs:anyAttribute processContents="skip" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:element name="UI.Templates.Blank" nillable="true" type="UI__Templates__BlankType" />
+  <xs:complexType name="UI__Templates__NavBarType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="Page-AbstractType">
+        <xs:attribute name="Title" type="xs:string" />
+        <xs:attribute name="Main" type="xs:string" />
+        <xs:attribute name="Bar" type="xs:string" />
+        <xs:attribute name="BodyScrollerWrapper" type="xs:string" />
+        <xs:attribute name="BodyScroller" type="xs:string" />
+        <xs:attribute name="Body" type="xs:string" />
+        <xs:attribute name="Footer" type="xs:string" />
+        <xs:anyAttribute processContents="skip" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UI.Templates.NavBar" nillable="true" type="UI__Templates__NavBarType" />
+  <xs:complexType name="UI__Templates__NavBarTabsType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="UI__Templates__NavBarType">
+        <xs:anyAttribute processContents="skip" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UI.Templates.NavBarTabs" nillable="true" type="UI__Templates__NavBarTabsType" />
+  <xs:complexType name="UI__Pages__CategoriesType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="UI__Templates__BlankType">
+        <xs:attribute name="Model" type="xs:string" />
+        <xs:anyAttribute processContents="skip" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UI.Pages.Categories" nillable="true" type="UI__Pages__CategoriesType" />
+  <xs:complexType name="UI__Pages__ContactsType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="UI__Templates__BlankType">
+        <xs:attribute name="Model" type="xs:string" />
+        <xs:anyAttribute processContents="skip" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UI.Pages.Contacts" nillable="true" type="UI__Pages__ContactsType" />
   <xs:complexType name="UI__Pages__LandingPageType">
     <xs:complexContent mixed="false">
       <xs:extension base="UI__Templates__BlankType">
@@ -167,6 +258,15 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="UI.Pages.LandingPage" nillable="true" type="UI__Pages__LandingPageType" />
+  <xs:complexType name="UI__Pages__SettingsType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="UI__Templates__BlankType">
+        <xs:attribute name="Model" type="xs:string" />
+        <xs:anyAttribute processContents="skip" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UI.Pages.Settings" nillable="true" type="UI__Pages__SettingsType" />
   <xs:complexType name="BoxShadowType">
     <xs:complexContent mixed="false">
       <xs:extension base="BoxShadowCanvasType">

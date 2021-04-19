@@ -1,19 +1,19 @@
 <?xml version="1.0"?>
 <zbl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      xsi:noNamespaceSchemaLocation="./../Views/.zebble-schema.xml">
-    <class type="Tabs" base="Row" namespace="Zebble" viewmodel="ViewModel.Tabs">
-        <Tab IsPrimary="true"
-             Icon="Images/Icons/contacts-icon.png"
-             ActiveIcon=""
-             Target="@typeof(ViewModel.Contacts)"
-             on-Tapped="Model.OnContactsTapped()" />
-        <Tab Icon="Images/Icons/categories-icon.png"
-             ActiveIcon=""
-             Target="@typeof(ViewModel.Categories)"
-             on-Tapped="Model.OnCategoriesTapped()" />
-        <Tab Icon="Images/Icons/settings-icon.png"
-             ActiveIcon=""
-             Target="@typeof(ViewModel.Settings)"
-             on-Tapped="Model.OnSettingsTapped()" />
-    </class>
+   <class type="Tabs" base="Row" namespace="Zebble" viewmodel="ViewModel.Tabs">
+      <Tab IsPrimary="true"
+           Icon="Images/Icons/contacts-icon.png"
+           ActiveIcon=""
+           Target="@typeof(ViewModel.Contacts)"
+           on-Tapped="Model.OnContactsTapped()" />
+      <Tab Icon="Images/Icons/categories-icon.png"
+           ActiveIcon=""
+           Target="@typeof(ViewModel.Categories)"
+           on-Tapped="Model.OnCategoriesTapped()" />
+      <Tab Icon="Images/Icons/settings-icon.png"
+           ActiveIcon=""
+           Target="@typeof(ViewModel.Settings)"
+           on-Tapped="Model.OnSettingsTapped()" />
+   </class>
 </zbl>

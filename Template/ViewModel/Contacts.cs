@@ -19,7 +19,7 @@ namespace ViewModel
 			public Bindable<byte[]> Photo => Source.Get(x => x.Photo);
 			public Bindable<string> Phone => Source.Get(x => x.PhoneNumber);
 			public Bindable<DateTime> DateOfBirth => Source.Get(x => x.DateOfBirth.Value);
-			public Bindable<string> Email
+			public Bindable<string> Email => Source.Get(x => x.Email);
 		}
 
 	}
