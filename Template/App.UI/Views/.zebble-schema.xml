@@ -57,13 +57,17 @@
     <xs:restriction base="xs:string">
       <xs:enumeration value="/Resources/Images/Logo.png" />
       <xs:enumeration value="/Resources/Images/Splash.png" />
+      <xs:enumeration value="/Resources/Images/Icons/categories-icon-blue.png" />
       <xs:enumeration value="/Resources/Images/Icons/categories-icon.png" />
+      <xs:enumeration value="/Resources/Images/Icons/contacts-icon-blue.png" />
       <xs:enumeration value="/Resources/Images/Icons/contacts-icon.png" />
+      <xs:enumeration value="/Resources/Images/Icons/Home-blue.png" />
       <xs:enumeration value="/Resources/Images/Icons/Home.png" />
       <xs:enumeration value="/Resources/Images/Icons/Icon.png" />
       <xs:enumeration value="/Resources/Images/Icons/ios-arrow-back.png" />
       <xs:enumeration value="/Resources/Images/Icons/Menu.png" />
       <xs:enumeration value="/Resources/Images/Icons/not-found.png" />
+      <xs:enumeration value="/Resources/Images/Icons/settings-icon-blue.png" />
       <xs:enumeration value="/Resources/Images/Icons/settings-icon.png" />
       <xs:enumeration value="/Resources/Images/Icons/Shoes.png" />
       <xs:enumeration value="/Resources/Images/Icons/Spinner.png" />
@@ -113,18 +117,31 @@
       <xs:enumeration value="/Resources/Legacy-Icon-57.png" />
       <xs:enumeration value="/Resources/Legacy-Icon-72.png" />
       <xs:enumeration value="/Resources/Images/Logo.png" />
+      <xs:enumeration value="/Resources/Images/Icons/categories-icon-blue.png" />
       <xs:enumeration value="/Resources/Images/Icons/categories-icon.png" />
+      <xs:enumeration value="/Resources/Images/Icons/contacts-icon-blue.png" />
       <xs:enumeration value="/Resources/Images/Icons/contacts-icon.png" />
+      <xs:enumeration value="/Resources/Images/Icons/Home-blue.png" />
       <xs:enumeration value="/Resources/Images/Icons/Home.png" />
+      <xs:enumeration value="/Resources/Images/Icons/ios-arrow-back.png" />
       <xs:enumeration value="/Resources/Images/Icons/Menu.png" />
       <xs:enumeration value="/Resources/Images/Icons/not-found.png" />
+      <xs:enumeration value="/Resources/Images/Icons/settings-icon-blue.png" />
       <xs:enumeration value="/Resources/Images/Icons/settings-icon.png" />
       <xs:enumeration value="/Resources/Images/Icons/Shoes.png" />
       <xs:enumeration value="/Resources/Images/Icons/Spinner.png" />
       <xs:enumeration value="/Resources/Images/Logo.png" />
+      <xs:enumeration value="/Resources/Images/Icons/categories-icon-blue.png" />
+      <xs:enumeration value="/Resources/Images/Icons/categories-icon.png" />
+      <xs:enumeration value="/Resources/Images/Icons/contacts-icon-blue.png" />
+      <xs:enumeration value="/Resources/Images/Icons/contacts-icon.png" />
+      <xs:enumeration value="/Resources/Images/Icons/Home-blue.png" />
       <xs:enumeration value="/Resources/Images/Icons/Home.png" />
+      <xs:enumeration value="/Resources/Images/Icons/ios-arrow-back.png" />
       <xs:enumeration value="/Resources/Images/Icons/Menu.png" />
       <xs:enumeration value="/Resources/Images/Icons/not-found.png" />
+      <xs:enumeration value="/Resources/Images/Icons/settings-icon-blue.png" />
+      <xs:enumeration value="/Resources/Images/Icons/settings-icon.png" />
       <xs:enumeration value="/Resources/Images/Icons/Shoes.png" />
       <xs:enumeration value="/Resources/Images/Icons/Spinner.png" />
       <xs:enumeration value="@....." />
@@ -138,6 +155,7 @@
       <xs:enumeration value="Pages.Categories" />
       <xs:enumeration value="Pages.Contacts" />
       <xs:enumeration value="Pages.LandingPage" />
+      <xs:enumeration value="Pages.Login" />
       <xs:enumeration value="Pages.Settings" />
       <xs:enumeration value="@....." />
     </xs:restriction>
@@ -233,7 +251,7 @@
   <xs:element name="UI.Templates.NavBarTabs" nillable="true" type="UI__Templates__NavBarTabsType" />
   <xs:complexType name="UI__Pages__CategoriesType">
     <xs:complexContent mixed="false">
-      <xs:extension base="UI__Templates__BlankType">
+      <xs:extension base="UI__Templates__NavBarTabsType">
         <xs:attribute name="Model" type="xs:string" />
         <xs:anyAttribute processContents="skip" />
       </xs:extension>
@@ -242,7 +260,7 @@
   <xs:element name="UI.Pages.Categories" nillable="true" type="UI__Pages__CategoriesType" />
   <xs:complexType name="UI__Pages__ContactsType">
     <xs:complexContent mixed="false">
-      <xs:extension base="UI__Templates__BlankType">
+      <xs:extension base="UI__Templates__NavBarTabsType">
         <xs:attribute name="Model" type="xs:string" />
         <xs:anyAttribute processContents="skip" />
       </xs:extension>
@@ -258,9 +276,18 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="UI.Pages.LandingPage" nillable="true" type="UI__Pages__LandingPageType" />
+  <xs:complexType name="UI__Pages__LoginType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="UI__Templates__NavBarTabsType">
+        <xs:attribute name="Model" type="xs:string" />
+        <xs:anyAttribute processContents="skip" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UI.Pages.Login" nillable="true" type="UI__Pages__LoginType" />
   <xs:complexType name="UI__Pages__SettingsType">
     <xs:complexContent mixed="false">
-      <xs:extension base="UI__Templates__BlankType">
+      <xs:extension base="UI__Templates__NavBarTabsType">
         <xs:attribute name="Model" type="xs:string" />
         <xs:anyAttribute processContents="skip" />
       </xs:extension>

@@ -13,6 +13,7 @@
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\Splash.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\Icons\Icon.png" />
     <None Include="$(MSBuildThisFileDirectory)Styles\Components\_Button.scss" />
+    <None Include="$(MSBuildThisFileDirectory)Styles\Pages\_Landing.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\PlatformSpecific.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\Common.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\Shared\_Colors.scss" />
@@ -20,6 +21,9 @@
     <None Include="$(MSBuildThisFileDirectory)Templates\Blank.zbl" />
     <None Include="$(MSBuildThisFileDirectory)Templates\NavBar.zbl" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\Contacts.zbl" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Login.zbl" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Modal\SuccessAlert.zbl" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Modal\WarningAlert.zbl" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\Settings.zbl" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\Categories.zbl" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\Landing.zbl" />
@@ -67,9 +71,30 @@
     <Compile Include="$(MSBuildThisFileDirectory)Widgets\Tabs.zbl.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="$(MSBuildThisFileDirectory)Resources\Images\Icons\categories-icon.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Resources\Images\Icons\contacts-icon.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Resources\Images\Icons\settings-icon.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Icons\categories-icon-blue.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Icons\contacts-icon-blue.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Icons\Home-blue.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Icons\settings-icon-blue.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Icons\ios-arrow-back.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Icons\categories-icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Icons\contacts-icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Icons\settings-icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <Content Include="$(MSBuildThisFileDirectory)Views\.zebble-schema.xml" />
   </ItemGroup>
 </Project>

@@ -1,14 +1,15 @@
 ﻿
 
 Button {
-	height: 32px;
+	height: 40px;
 	border: 1px solid $clrGrey200;
-	border-radius: 16px;
+	border-radius: 10px;
 	color: $clrBlack;
+	margin-bottom:10px;
 }
 
 Button:disabled {
 	color: $clrGrey200;
 	border: 1px solid $clrGrey300;
-	border-radius: 16px;
+	border-radius: 10px;
 }

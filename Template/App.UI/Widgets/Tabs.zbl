@@ -4,15 +4,15 @@
    <class type="Tabs" base="Row" namespace="Zebble" viewmodel="ViewModel.Tabs">
       <Tab IsPrimary="true"
            Icon="Images/Icons/contacts-icon.png"
-           ActiveIcon=""
+           ActiveIcon="Images/Icons/contacts-icon-blue.png"
            Target="@typeof(ViewModel.Contacts)"
            on-Tapped="Model.OnContactsTapped()" />
       <Tab Icon="Images/Icons/categories-icon.png"
-           ActiveIcon=""
+           ActiveIcon="Images/Icons/categories-icon-blue.png"
            Target="@typeof(ViewModel.Categories)"
            on-Tapped="Model.OnCategoriesTapped()" />
       <Tab Icon="Images/Icons/settings-icon.png"
-           ActiveIcon=""
+           ActiveIcon="Images/Icons/settings-icon-blue.png"
            Target="@typeof(ViewModel.Settings)"
            on-Tapped="Model.OnSettingsTapped()" />
    </class>

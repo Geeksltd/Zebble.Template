@@ -2,13 +2,17 @@
 <data>
   <image path="Images/Logo.png" width="397" height="390" />
   <image path="Images/Splash.png" width="3000" height="3000" />
+  <image path="Images/Icons/categories-icon-blue.png" width="860" height="900" />
   <image path="Images/Icons/categories-icon.png" width="860" height="900" />
+  <image path="Images/Icons/contacts-icon-blue.png" width="840" height="592" />
   <image path="Images/Icons/contacts-icon.png" width="840" height="592" />
+  <image path="Images/Icons/Home-blue.png" width="200" height="200" />
   <image path="Images/Icons/Home.png" width="200" height="200" />
   <image path="Images/Icons/Icon.png" width="2000" height="2000" />
   <image path="Images/Icons/ios-arrow-back.png" width="350" height="350" />
   <image path="Images/Icons/Menu.png" width="200" height="200" />
   <image path="Images/Icons/not-found.png" width="255" height="256" />
+  <image path="Images/Icons/settings-icon-blue.png" width="840" height="881" />
   <image path="Images/Icons/settings-icon.png" width="840" height="881" />
   <image path="Images/Icons/Shoes.png" width="564" height="466" />
   <image path="Images/Icons/Spinner.png" width="512" height="512" />

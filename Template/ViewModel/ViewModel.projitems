@@ -12,6 +12,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Categories.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Contacts.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)LandingPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Login.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modal\WarningAlert.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Settings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StartUp.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tabs.cs" />

@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <zbl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
-   <class type="Settings" base="UI.Templates.NavBarTabs" namespace="UI.Pages" viewmodel="ViewModel.Settings">
+   <class type="Login" base="UI.Templates.NavBarTabs" namespace="UI.Pages" viewmodel="ViewModel.Login">
       <z-place inside="Body">
-         <TextInput Text="Settings" />
+         <TextInput Text="Login" />
       </z-place>
    </class>
 </zbl>

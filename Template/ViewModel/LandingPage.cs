@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using Zebble.Mvvm;
 
 namespace ViewModel
 {
-	class LandingPage : FullScreen
+	public class LandingPage : FullScreen
 	{
-
+		public async Task onLogInTapped() => Forward<Login>();
+	
 	}
 }

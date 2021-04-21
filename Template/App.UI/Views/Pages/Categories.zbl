@@ -1,7 +1,9 @@
 <?xml version="1.0"?>
 <zbl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
-   <class type="Categories" base="UI.Templates.Blank" namespace="UI.Pages" viewmodel="ViewModel.Categories">
-      <z-place inside="Body" />
+   <class type="Categories" base="UI.Templates.NavBarTabs" namespace="UI.Pages" viewmodel="ViewModel.Categories">
+      <z-place inside="Body">
+         <TextInput Text="Categories" />
+      </z-place>
    </class>
 </zbl>

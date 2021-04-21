@@ -1,7 +1,9 @@
 <?xml version="1.0"?>
 <zbl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
-   <class type="Contacts" base="UI.Templates.Blank" namespace="UI.Pages" viewmodel="ViewModel.Contacts">
-      <z-place inside="Body" />
+   <class type="Contacts" base="UI.Templates.NavBarTabs" namespace="UI.Pages" viewmodel="ViewModel.Contacts">
+      <z-place inside="Body">
+         <TextInput Text="Contacts" />
+      </z-place>
    </class>
 </zbl>

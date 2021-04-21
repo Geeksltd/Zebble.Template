@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <zbl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
-   <class type="LandingPage" base="UI.Templates.Blank" namespace="UI.Pages" viewmodel="ViewModel.LandingPage">
+   <class type="LandingPage" base="UI.Templates.Blank" namespace="UI.Pages" viewmodel="ViewModel.LandingPage" Id="Landing">
       <z-place inside="Wrapper">
          <Middle>
-            <Button Text="Test Button" />
+            <Button Text="Log in" on-Tapped="Model.onLogInTapped()" />
             <Button Text="Disabled Button" Enabled="false" PseudoCssState="disabled" />
          </Middle>
       </z-place>
