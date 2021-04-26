@@ -6,7 +6,7 @@ using Zebble.Mvvm;
 
 namespace ViewModel
 {
-    public class WarningAlert : ModalScreen
+    public class SuccessAlert : ModalScreen
     {
         public Bindable<string> Message = new();
 

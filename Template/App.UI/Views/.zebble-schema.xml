@@ -72,9 +72,17 @@
       <xs:enumeration value="/Resources/Images/Icons/Shoes.png" />
       <xs:enumeration value="/Resources/Images/Icons/Spinner.png" />
       <xs:enumeration value="/Resources/Images/Logo.png" />
+      <xs:enumeration value="/Resources/Images/Icons/categories-icon-blue.png" />
+      <xs:enumeration value="/Resources/Images/Icons/categories-icon.png" />
+      <xs:enumeration value="/Resources/Images/Icons/contacts-icon-blue.png" />
+      <xs:enumeration value="/Resources/Images/Icons/contacts-icon.png" />
+      <xs:enumeration value="/Resources/Images/Icons/Home-blue.png" />
       <xs:enumeration value="/Resources/Images/Icons/Home.png" />
+      <xs:enumeration value="/Resources/Images/Icons/ios-arrow-back.png" />
       <xs:enumeration value="/Resources/Images/Icons/Menu.png" />
       <xs:enumeration value="/Resources/Images/Icons/not-found.png" />
+      <xs:enumeration value="/Resources/Images/Icons/settings-icon-blue.png" />
+      <xs:enumeration value="/Resources/Images/Icons/settings-icon.png" />
       <xs:enumeration value="/Resources/Images/Icons/Shoes.png" />
       <xs:enumeration value="/Resources/Images/Icons/Spinner.png" />
       <xs:enumeration value="/Resources/drawable/Featured_Graphic.png" />
@@ -157,6 +165,9 @@
       <xs:enumeration value="Pages.LandingPage" />
       <xs:enumeration value="Pages.Login" />
       <xs:enumeration value="Pages.Settings" />
+      <xs:enumeration value="Pages.BaseModal" />
+      <xs:enumeration value="Pages.SuccessAlert" />
+      <xs:enumeration value="Pages.WarningAlert" />
       <xs:enumeration value="@....." />
     </xs:restriction>
   </xs:simpleType>
@@ -165,9 +176,12 @@
   </xs:simpleType>
   <xs:simpleType name="CssStyleEnum">
     <xs:restriction base="xs:string">
+      <xs:enumeration value="register" />
       <xs:enumeration value="windows-only" />
       <xs:enumeration value="ios-only" />
       <xs:enumeration value="android-only" />
+      <xs:enumeration value="Search" />
+      <xs:enumeration value="Help" />
       <xs:enumeration value="@....." />
     </xs:restriction>
   </xs:simpleType>
@@ -216,6 +230,38 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="BackButton" nillable="true" type="BackButtonType" />
+  <xs:complexType name="MainImageType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ImageViewType">
+        <xs:anyAttribute processContents="skip" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MainImage" nillable="true" type="MainImageType" />
+  <xs:complexType name="BoldTextType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="TextViewType">
+        <xs:anyAttribute processContents="skip" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BoldText" nillable="true" type="BoldTextType" />
+  <xs:complexType name="InputType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="TextInputType">
+        <xs:anyAttribute processContents="skip" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Input" nillable="true" type="InputType" />
+  <xs:complexType name="MainLinkType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="LinkType">
+        <xs:anyAttribute processContents="skip" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MainLink" nillable="true" type="MainLinkType" />
   <xs:complexType name="UI__Templates__BlankType">
     <xs:complexContent mixed="false">
       <xs:extension base="Page-AbstractType">
@@ -241,6 +287,14 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="UI.Templates.NavBar" nillable="true" type="UI__Templates__NavBarType" />
+  <xs:complexType name="UI__Templates__LoginPageType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="UI__Templates__NavBarType">
+        <xs:anyAttribute processContents="skip" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UI.Templates.LoginPage" nillable="true" type="UI__Templates__LoginPageType" />
   <xs:complexType name="UI__Templates__NavBarTabsType">
     <xs:complexContent mixed="false">
       <xs:extension base="UI__Templates__NavBarType">
@@ -278,7 +332,7 @@
   <xs:element name="UI.Pages.LandingPage" nillable="true" type="UI__Pages__LandingPageType" />
   <xs:complexType name="UI__Pages__LoginType">
     <xs:complexContent mixed="false">
-      <xs:extension base="UI__Templates__NavBarTabsType">
+      <xs:extension base="UI__Templates__BlankType">
         <xs:attribute name="Model" type="xs:string" />
         <xs:anyAttribute processContents="skip" />
       </xs:extension>
@@ -294,6 +348,41 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="UI.Pages.Settings" nillable="true" type="UI__Pages__SettingsType" />
+  <xs:complexType name="UI__Pages__BaseModalType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="Page-AbstractType">
+        <xs:attribute name="Title" type="xs:string" />
+        <xs:attribute name="ModalPanelWrapper" type="xs:string" />
+        <xs:attribute name="Panel" type="xs:string" />
+        <xs:attribute name="Header" type="xs:string" />
+        <xs:attribute name="ModalTitle" type="xs:string" />
+        <xs:attribute name="Content" type="xs:string" />
+        <xs:attribute name="BottomButtons" type="xs:string" />
+        <xs:anyAttribute processContents="skip" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UI.Pages.BaseModal" nillable="true" type="UI__Pages__BaseModalType" />
+  <xs:complexType name="UI__Pages__SuccessAlertType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="UI__Pages__BaseModalType">
+        <xs:attribute name="Model" type="xs:string" />
+        <xs:attribute name="OkButton" type="xs:string" />
+        <xs:anyAttribute processContents="skip" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UI.Pages.SuccessAlert" nillable="true" type="UI__Pages__SuccessAlertType" />
+  <xs:complexType name="UI__Pages__WarningAlertType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="UI__Pages__BaseModalType">
+        <xs:attribute name="Model" type="xs:string" />
+        <xs:attribute name="OkButton" type="xs:string" />
+        <xs:anyAttribute processContents="skip" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UI.Pages.WarningAlert" nillable="true" type="UI__Pages__WarningAlertType" />
   <xs:complexType name="BoxShadowType">
     <xs:complexContent mixed="false">
       <xs:extension base="BoxShadowCanvasType">

@@ -13,6 +13,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Contacts.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)LandingPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Login.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modal\SuccessAlert.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Modal\WarningAlert.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Settings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StartUp.cs" />

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<zbl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
+   <class type="BaseModal" base="Page" namespace="UI.Pages">
+      <Stack Id="ModalPanelWrapper">
+         <Stack Id="Panel" ClipChildren="true">
+            <Row Id="Header" Ignored="true">
+               <TextView CssClass="title" Id="ModalTitle" />
+            </Row>
+            <Stack Id="Content" ClipChildren="false" />
+            <Row Id="BottomButtons" />
+         </Stack>
+      </Stack>
+   </class>
+</zbl>

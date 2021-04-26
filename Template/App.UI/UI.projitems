@@ -13,6 +13,11 @@
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\Splash.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\Icons\Icon.png" />
     <None Include="$(MSBuildThisFileDirectory)Styles\Components\_Button.scss" />
+    <None Include="$(MSBuildThisFileDirectory)Styles\Components\_ImageView.scss" />
+    <None Include="$(MSBuildThisFileDirectory)Styles\Components\_NavBar.scss" />
+    <None Include="$(MSBuildThisFileDirectory)Styles\Components\_PopUp.scss" />
+    <None Include="$(MSBuildThisFileDirectory)Styles\Components\_Tabs.scss" />
+    <None Include="$(MSBuildThisFileDirectory)Styles\Components\_Text.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\Pages\_Landing.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\PlatformSpecific.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\Common.scss" />
@@ -63,8 +68,10 @@
     <Compile Include="$(MSBuildThisFileDirectory).zebble-generated-css.cs" />
     <Compile Include="$(MSBuildThisFileDirectory).zebble-generated.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StartUp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Templates\LoginPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Templates\NavBar.zbl.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Templates\NavBarTabs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\Modal\BaseModal.zbl.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Widgets\Components.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Widgets\NavigationBar.zbl.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Widgets\Tab.zbl.cs" />

@@ -1,9 +1,16 @@
 <?xml version="1.0"?>
 <zbl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
-   <class type="Login" base="UI.Templates.NavBarTabs" namespace="UI.Pages" viewmodel="ViewModel.Login">
-      <z-place inside="Body">
-         <TextInput Text="Login" />
+   <class type="Login" base="UI.Templates.Blank" namespace="UI.Pages" viewmodel="ViewModel.Login">
+      <z-place inside="Wrapper">
+         <Middle>
+            <Input Placeholder="Email" TextMode="@TextMode.Email" Text="@{Model.Email}" AutoCorrection="@AutoCorrectionType.No" />
+            <Input Placeholder="Password" TextMode="@TextMode.Password" Text="@{Model.Password}" />
+            <Button Text="Log In" on-Tapped="Model.OnLoginTapped" />
+            <Center>
+               <Link Text="Contact us" on-Tapped="Model.OnContactUsTapped" />
+            </Center>
+         </Middle>
       </z-place>
    </class>
 </zbl>

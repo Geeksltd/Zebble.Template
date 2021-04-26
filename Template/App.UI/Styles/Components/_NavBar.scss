@@ -1,0 +1,91 @@
+﻿@import "../Shared/_Colors.scss";
+
+NavBar {
+    height: 100%;
+    width: 100%;
+
+    & > Stack {
+        height: calc("Container");
+    }
+
+    #BodyScrollerWrapper {
+        height: calc("Container");
+    }
+
+    #BodyScroller {
+        background: white;
+        height: 100%;
+        width: 100%;
+
+        & > #Body {
+            padding: 15px;
+        }
+    }
+
+    #Footer {
+        background-color: whitesmoke;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        Button, TextView {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+NavigationBar {
+    background-color: whitesmoke;
+
+    #NavBarContent {
+        height: 30px;
+        margin-top: 5px;
+
+        #Left, #Right {
+            height: 100%;
+            width: 50%;
+        }
+
+        #Right {
+            left: 50%;
+        }
+
+        #Menu {
+            background: url("Images/Icons/Menu.png");
+        }
+
+        & > #Title {
+            color: grey;
+            height: 100%;
+            font-size: 22px;
+            @extend .font-bold;
+            text-align: center;
+            width: 100%;
+        }
+
+        TextView {
+            color: white;
+        }
+    }
+}
+
+SearchAndHelpNavigation {
+    width: 70px;
+
+    .Search {
+        top: 2px;
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        margin-left: 30px;
+    }
+
+    .Help {
+        top: 2px;
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        margin-top: 4px;
+        margin-left: -3px;
+    }
+}

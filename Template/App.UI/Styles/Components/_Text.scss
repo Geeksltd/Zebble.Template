@@ -1,0 +1,14 @@
+﻿@import "../Shared/_Colors.scss";
+
+BoldText {
+    @extend .font-bold;
+}
+
+Input {
+    background-color: transparent;
+    PlaceholderColor: $clrGrey200;
+    @extend .form-field;
+    height:50px;
+    border-bottom-color:gray;
+    border-bottom:2px;
+}

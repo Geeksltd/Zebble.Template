@@ -11,7 +11,7 @@
          <BoldText Text="@{Model.Message}" />
       </z-place>
       <z-place inside="BottomButtons">
-         <Button Id="OkButton" CssClass="text_primary border_0" Text="OK" on-Tapped="Model.TapOk()" />
+         <Button Id="OkButton" CssClass="text_primary border_0" Text="OK" on-Tapped="Model.OnOkTapped()" />
       </z-place>
    </class>
 </zbl>

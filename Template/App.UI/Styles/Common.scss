@@ -1,11 +1,17 @@
 ﻿@import "Shared/_Colors.scss";
 @import "Components/_Button.scss";
+@import "Components/_ImageView.scss";
+@import "Components/_Text.scss";
 @import "Pages/_Landing.scss";
+@import "Components/_NavBar.scss";
 
-#Body{
-	height:100%;
+#Body {
+    height: 100%;
+}
+HTMLView { border-radius: 3px; box-shadow: 0 1px 3px 0px #e4e4e4; background-color: whitesmoke; text-align: center; height: calc("((NavBar)view.Page).BodyScrollerWrapper.Height, x=> x - 40");
+    &.register { height: calc("((NavBar)view.Page).BodyScrollerWrapper.Height, x=> x - 200"); }
 }
 
-#Wrapper{
-	padding:16px;
+#Wrapper {
+    padding: 16px;
 }
