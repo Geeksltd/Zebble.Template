@@ -64,6 +64,7 @@
       <xs:enumeration value="/Resources/Images/Icons/Home-blue.png" />
       <xs:enumeration value="/Resources/Images/Icons/Home.png" />
       <xs:enumeration value="/Resources/Images/Icons/Icon.png" />
+      <xs:enumeration value="/Resources/Images/Icons/info.png" />
       <xs:enumeration value="/Resources/Images/Icons/ios-arrow-back.png" />
       <xs:enumeration value="/Resources/Images/Icons/Menu.png" />
       <xs:enumeration value="/Resources/Images/Icons/not-found.png" />
@@ -78,6 +79,7 @@
       <xs:enumeration value="/Resources/Images/Icons/contacts-icon.png" />
       <xs:enumeration value="/Resources/Images/Icons/Home-blue.png" />
       <xs:enumeration value="/Resources/Images/Icons/Home.png" />
+      <xs:enumeration value="/Resources/Images/Icons/info.png" />
       <xs:enumeration value="/Resources/Images/Icons/ios-arrow-back.png" />
       <xs:enumeration value="/Resources/Images/Icons/Menu.png" />
       <xs:enumeration value="/Resources/Images/Icons/not-found.png" />
@@ -131,6 +133,7 @@
       <xs:enumeration value="/Resources/Images/Icons/contacts-icon.png" />
       <xs:enumeration value="/Resources/Images/Icons/Home-blue.png" />
       <xs:enumeration value="/Resources/Images/Icons/Home.png" />
+      <xs:enumeration value="/Resources/Images/Icons/info.png" />
       <xs:enumeration value="/Resources/Images/Icons/ios-arrow-back.png" />
       <xs:enumeration value="/Resources/Images/Icons/Menu.png" />
       <xs:enumeration value="/Resources/Images/Icons/not-found.png" />
@@ -145,6 +148,7 @@
       <xs:enumeration value="/Resources/Images/Icons/contacts-icon.png" />
       <xs:enumeration value="/Resources/Images/Icons/Home-blue.png" />
       <xs:enumeration value="/Resources/Images/Icons/Home.png" />
+      <xs:enumeration value="/Resources/Images/Icons/info.png" />
       <xs:enumeration value="/Resources/Images/Icons/ios-arrow-back.png" />
       <xs:enumeration value="/Resources/Images/Icons/Menu.png" />
       <xs:enumeration value="/Resources/Images/Icons/not-found.png" />
@@ -163,7 +167,7 @@
       <xs:enumeration value="Pages.Categories" />
       <xs:enumeration value="Pages.Contacts" />
       <xs:enumeration value="Pages.LandingPage" />
-      <xs:enumeration value="Pages.Login" />
+      <xs:enumeration value="Pages.Login.Login" />
       <xs:enumeration value="Pages.Settings" />
       <xs:enumeration value="Pages.BaseModal" />
       <xs:enumeration value="Pages.SuccessAlert" />
@@ -176,12 +180,11 @@
   </xs:simpleType>
   <xs:simpleType name="CssStyleEnum">
     <xs:restriction base="xs:string">
-      <xs:enumeration value="register" />
       <xs:enumeration value="windows-only" />
       <xs:enumeration value="ios-only" />
       <xs:enumeration value="android-only" />
-      <xs:enumeration value="Search" />
-      <xs:enumeration value="Help" />
+      <xs:enumeration value="title" />
+      <xs:enumeration value="popup" />
       <xs:enumeration value="@....." />
     </xs:restriction>
   </xs:simpleType>
@@ -330,15 +333,6 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="UI.Pages.LandingPage" nillable="true" type="UI__Pages__LandingPageType" />
-  <xs:complexType name="UI__Pages__LoginType">
-    <xs:complexContent mixed="false">
-      <xs:extension base="UI__Templates__BlankType">
-        <xs:attribute name="Model" type="xs:string" />
-        <xs:anyAttribute processContents="skip" />
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="UI.Pages.Login" nillable="true" type="UI__Pages__LoginType" />
   <xs:complexType name="UI__Pages__SettingsType">
     <xs:complexContent mixed="false">
       <xs:extension base="UI__Templates__NavBarTabsType">
@@ -383,6 +377,15 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="UI.Pages.WarningAlert" nillable="true" type="UI__Pages__WarningAlertType" />
+  <xs:complexType name="UI__Pages__Login__LoginType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="UI__Templates__LoginPageType">
+        <xs:attribute name="Model" type="xs:string" />
+        <xs:anyAttribute processContents="skip" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UI.Pages.Login.Login" nillable="true" type="UI__Pages__Login__LoginType" />
   <xs:complexType name="BoxShadowType">
     <xs:complexContent mixed="false">
       <xs:extension base="BoxShadowCanvasType">
@@ -1318,6 +1321,19 @@
       <xs:any minOccurs="0" maxOccurs="unbounded" />
     </xs:sequence>
   </xs:complexType>
+  <xs:simpleType name="Domain.Models.AuthenticationResponseStatusEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Successful" />
+      <xs:enumeration value="UserNotFound" />
+      <xs:enumeration value="InvalidUsernameOrPassword" />
+      <xs:enumeration value="ServerError" />
+      <xs:enumeration value="ApplicationError" />
+      <xs:enumeration value="@....." />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AuthenticationResponseStatus">
+    <xs:union memberTypes="Domain.Models.AuthenticationResponseStatusEnum StringPattern" />
+  </xs:simpleType>
   <xs:simpleType name="CornerPositionEnum">
     <xs:restriction base="xs:string">
       <xs:enumeration value="None" />

@@ -58,7 +58,6 @@ NavigationBar {
             color: grey;
             height: 100%;
             font-size: 22px;
-            @extend .font-bold;
             text-align: center;
             width: 100%;
         }
@@ -66,26 +65,5 @@ NavigationBar {
         TextView {
             color: white;
         }
-    }
-}
-
-SearchAndHelpNavigation {
-    width: 70px;
-
-    .Search {
-        top: 2px;
-        width: 20px;
-        height: 20px;
-        padding: 0;
-        margin-left: 30px;
-    }
-
-    .Help {
-        top: 2px;
-        width: 20px;
-        height: 20px;
-        padding: 0;
-        margin-top: 4px;
-        margin-left: -3px;
     }
 }

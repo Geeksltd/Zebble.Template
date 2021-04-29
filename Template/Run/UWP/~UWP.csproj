@@ -125,6 +125,12 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.12</Version>
     </PackageReference>
+    <PackageReference Include="Olive">
+      <Version>2.1.262</Version>
+    </PackageReference>
+    <PackageReference Include="Olive.ApiClient">
+      <Version>2.2.108</Version>
+    </PackageReference>
     <PackageReference Include="Zebble">
       <Version>4.5.513</Version>
     </PackageReference>

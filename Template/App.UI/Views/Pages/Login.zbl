@@ -1,15 +1,12 @@
 <?xml version="1.0"?>
 <zbl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
-   <class type="Login" base="UI.Templates.Blank" namespace="UI.Pages" viewmodel="ViewModel.Login">
-      <z-place inside="Wrapper">
+   <class type="Login" base="UI.Templates.LoginPage" namespace="UI.Pages.Login" viewmodel="ViewModel.Login">
+      <z-place inside="Body">
          <Middle>
             <Input Placeholder="Email" TextMode="@TextMode.Email" Text="@{Model.Email}" AutoCorrection="@AutoCorrectionType.No" />
             <Input Placeholder="Password" TextMode="@TextMode.Password" Text="@{Model.Password}" />
-            <Button Text="Log In" on-Tapped="Model.OnLoginTapped" />
-            <Center>
-               <Link Text="Contact us" on-Tapped="Model.OnContactUsTapped" />
-            </Center>
+            <Button Text="Log in" on-Tapped="Model.OnLoginTapped" />
          </Middle>
       </z-place>
    </class>

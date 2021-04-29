@@ -32,6 +32,8 @@ namespace ViewModel
                 return;
             }
 
+            Forward<Categories>();
+
         }
         public Task OnContactUsTapped()
         {

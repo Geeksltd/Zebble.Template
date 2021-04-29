@@ -218,6 +218,12 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Olive">
+      <Version>2.1.262</Version>
+    </PackageReference>
+    <PackageReference Include="Olive.ApiClient">
+      <Version>2.2.108</Version>
+    </PackageReference>
     <PackageReference Include="System.Net.Http">
       <Version>4.3.4</Version>
     </PackageReference>

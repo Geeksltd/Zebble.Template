@@ -11,12 +11,17 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Api\Api.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Api\Fake\BaseFakeApi.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Api\Fake\CoffeeDrinksApi.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Api\Interfaces\ICoffeeDrinksApi.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Api\Live\CoffeeDrinksApi.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Api\Fake\Implementation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Api\Interfaces\IAuthenticationApi.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Api\Interfaces\ICategoryApi.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Api\Interfaces\IContactApi.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Api\Live\CategoryApi.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Api\Live\ContactApi.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Category.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\CoffeeDrink.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Contact.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\AuthenticationResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\User.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\ContactsSource.cs" />
   </ItemGroup>
 </Project>

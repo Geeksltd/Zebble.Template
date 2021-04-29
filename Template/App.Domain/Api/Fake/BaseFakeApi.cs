@@ -6,30 +6,37 @@ using System.Threading.Tasks;
 using Domain.Models;
 using Olive;
 
-namespace Domain.Api.Fake
+namespace Domain
 {
-	class BaseFakeApi
-	{
-		static List<object> FakeDb = new List<object>();
+    class BaseFakeApi
+    {
+        static List<object> FakeDb = new List<object>();
 
-		static BaseFakeApi()
-		{
-			Add(new CoffeeDrink { Id = Guid.NewGuid(), Name = "Black Coffee", Price = 1.00, Photo = new byte[] { } });
-			Add(new CoffeeDrink { Id = Guid.NewGuid(), Name = "Moca", Price = 10.99, Photo = new byte[] { } });
-			Add(new CoffeeDrink { Id = Guid.NewGuid(), Name = "Moca", Price = 10.99, Photo = new byte[] { } });
-			Add(new CoffeeDrink { Id = Guid.NewGuid(), Name = "Moca", Price = 10.99, Photo = new byte[] { } });
-		}
+        static BaseFakeApi()
+        {
+            Add(new Category { Id = Guid.NewGuid(), Name = "Friend" });
+            Add(new Category { Id = Guid.NewGuid(), Name = "Family" });
+            Add(new Category { Id = Guid.NewGuid(), Name = "Client" });
+            Add(new Category { Id = Guid.NewGuid(), Name = "Supplier" });
 
-		protected static Task<T[]> Query<T>(Func<T, bool> criteria = null)
-			=> Return(FakeDb.OfType<T>().Where(v => criteria == null || criteria(v)).ToArray());
+            Add(new Contact { Id = Guid.NewGuid(), FirstName = "Joe", LastName = "Menon", Email = "menon@crm.co", PhoneNumber = "+447999147852" });
+            Add(new Contact { Id = Guid.NewGuid(), FirstName = "Adam", LastName = "Sharma", Email = "sharma@crm.co", PhoneNumber = "+447999147842" });
+            Add(new Contact { Id = Guid.NewGuid(), FirstName = "Kate", LastName = "Roy", Email = "roy@crm.co", PhoneNumber = "+447999167842" });
+            Add(new Contact { Id = Guid.NewGuid(), FirstName = "Jon", LastName = "Verma", Email = "verma@crm.co", PhoneNumber = "+447999144842" });
 
-		protected static Task<T> Fetch<T>(Func<T, bool> criteria = null)
-			=> Return(FakeDb.OfType<T>().FirstOrDefault(v => criteria == null || criteria(v)));
 
-		protected static T Add<T>(T item) => item.Set(x => FakeDb.Add(x));
+        }
 
-		public static Guid Id() => (FakeDb.Count + 100).ToGuid();
+        protected static Task<T[]> Query<T>(Func<T, bool> criteria = null)
+            => Return(FakeDb.OfType<T>().Where(v => criteria == null || criteria(v)).ToArray());
 
-		protected static Task<T> Return<T>(T value) => Task.FromResult(value);
-	}
+        protected static Task<T> Fetch<T>(Func<T, bool> criteria = null)
+            => Return(FakeDb.OfType<T>().FirstOrDefault(v => criteria == null || criteria(v)));
+
+        protected static T Add<T>(T item) => item.Set(x => FakeDb.Add(x));
+
+        public static Guid Id() => (FakeDb.Count + 100).ToGuid();
+
+        protected static Task<T> Return<T>(T value) => Task.FromResult(value);
+    }
 }

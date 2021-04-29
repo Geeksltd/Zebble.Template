@@ -1,0 +1,22 @@
+﻿@import "../Shared/_Colors.scss";
+
+BaseModal { padding-top: 20px;
+    #ModalPanelWrapper { 
+        padding: 15px;
+        top: calc('View.Root.Height, view.Height, (rh,h) => rh / 2 - h / 2');
+    }
+
+    #Panel { border-radius: 15px; background-color: white;
+        #Content { padding: 0 10px 10px 10px; }
+    }
+    #Intro { padding: 25px; text-align: center; }
+
+    #Header { background: white; padding: 10px; margin-bottom: 20px; border-top-left-radius: 15px; border-top-right-radius: 15px;
+
+        .title { padding: 5px; padding-left: 10px; color: black; text-align: center; margin-bottom: 0; }
+
+        CloseButton { }
+    }
+
+    #BottomButtons { border-top: 1px solid blue; }
+}

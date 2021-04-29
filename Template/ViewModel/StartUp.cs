@@ -4,14 +4,14 @@
 	using Zebble;
 	using Zebble.Mvvm;
 	using Olive;
-	using Domain.Api;
+    using Domain;
 
-	class StartUp
+    class StartUp
 	{
 		public static Task Run()
 		{
 			// Comment this line out to use the Live API
-			//Api.Fake();
+			Api.Fake();
 
 			ViewModel.Go<LandingPage>(PageTransition.Fade);
 

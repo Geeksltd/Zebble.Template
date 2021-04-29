@@ -2,15 +2,18 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Domain.Api
+namespace Domain
 {
-	class Api
-	{
-		//public static ICoffeeDrinksApi CoffeeDrinks { get; private set; } = new Live.CoffeeDrinksApi();
+    static class Api
+    {
+        public static ICategoryApi Category { get; private set; } = new CategoryApi();
+        public static IContactApi Contact { get; private set; } = new ContactApi();
 
-		//public static void Fake()
-		//{
-		//    CoffeeDrinks = new Fake.CoffeeDrinksApi();
-		//}
-	}
+
+        public static void Fake()
+        {
+            Category = new Fake.CategoryApi();
+            Contact = new Fake.ContactApi();
+        }
+    }
 }
