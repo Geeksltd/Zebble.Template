@@ -8,7 +8,7 @@
           viewmodel="ViewModel.WarningAlert">
       <z-place inside="Content">
          <MainImage Path="Images/Icons/Info.png" CssClass="popup" />
-         <BoldText Text="@{Model.Message}" />
+         <TextView Text="@{Model.Message}" />
       </z-place>
       <z-place inside="BottomButtons">
          <Button Id="OkButton" CssClass="text_primary border_0" Text="OK" on-Tapped="Model.OnOkTapped()" />

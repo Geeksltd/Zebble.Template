@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<zbl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
+   <class type="ContactInfo" base="UI.Templates.NavBarTabs" namespace="UI.Pages" viewmodel="ViewModel.ContactInfo">
+      <z-place inside="Body">
+         <TextInput Text="ContactInfo" />
+         <Button Text="Delete this contact" />
+      </z-place>
+   </class>
+</zbl>

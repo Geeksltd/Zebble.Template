@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <zbl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
-   <class type="Login" base="UI.Templates.LoginPage" namespace="UI.Pages.Login" viewmodel="ViewModel.Login">
+   <class type="Login" base="UI.Templates.LoginPage" namespace="UI.Pages.Login" viewmodel="ViewModel.Login" Title="Log In">
       <z-place inside="Body">
          <Middle>
             <Input Placeholder="Email" TextMode="@TextMode.Email" Text="@{Model.Email}" AutoCorrection="@AutoCorrectionType.No" />

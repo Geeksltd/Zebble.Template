@@ -1,9 +1,19 @@
 <?xml version="1.0"?>
 <zbl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
-   <class type="Categories" base="UI.Templates.NavBarTabs" namespace="UI.Pages" viewmodel="ViewModel.Categories">
+   <class type="Categories"
+          base="UI.Templates.NavBarTabs"
+          namespace="UI.Pages"
+          viewmodel="ViewModel.Categories"
+          Title="Categories">
       <z-place inside="Body">
-         <TextInput Text="Categories" />
+         <CollectionView of="ViewModel.Categories.Item, CategoryItem" Source="@Model.Items">
+            <class type="CategoryItem" base="Stack" viewmodel="ViewModel.Categories.Item">
+               <CollectionRow>
+                  <TextView Text="@{Model.Name}" on-Tapped="Model.OnCategoryTapped" />
+               </CollectionRow>
+            </class>
+         </CollectionView>
       </z-place>
    </class>
 </zbl>

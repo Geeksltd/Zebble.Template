@@ -15,5 +15,7 @@ namespace Zebble
     class BoldText : TextView { }
     class Input : TextInput { }
     class MainLink : Link { }
+    class PopupText : TextView { }
+    class CollectionRow : Row { }
 
 }

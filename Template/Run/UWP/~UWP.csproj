@@ -128,11 +128,8 @@
     <PackageReference Include="Olive">
       <Version>2.1.262</Version>
     </PackageReference>
-    <PackageReference Include="Olive.ApiClient">
-      <Version>2.2.108</Version>
-    </PackageReference>
     <PackageReference Include="Zebble">
-      <Version>4.5.513</Version>
+      <Version>4.5.519</Version>
     </PackageReference>
     <PackageReference Include="Zebble.CheckBox">
       <Version>1.22.125</Version>
@@ -156,7 +153,7 @@
       <Version>3.12.173</Version>
     </PackageReference>
     <PackageReference Include="Zebble.ListView">
-      <Version>4.10.197</Version>
+      <Version>4.10.198</Version>
     </PackageReference>
     <PackageReference Include="Zebble.OptionsList">
       <Version>3.15.146</Version>

@@ -2,7 +2,7 @@
 
 Button {
 	height: 40px;
-	border: 1px solid ;
+	border: none;
 	border-radius: 10px;
 	color: $clrBlack;
 	margin-bottom:10px;
@@ -15,4 +15,5 @@ Button:disabled {
 }
 
 Link { color: $clrBlack; text-align: center; margin-top: 15px; }
+
 

@@ -1,4 +1,5 @@
 ﻿using Domain;
+using Domain.Models;
 using Olive;
 using System;
 using System.Collections.Generic;
@@ -32,7 +33,13 @@ namespace ViewModel
                 return;
             }
 
-            Forward<Categories>();
+            var authResponse = await Api.Authentication.AuthenticateWithCredentials(Email, Password);
+            if (authResponse.Status == AuthenticationResponseStatus.Successful)
+                Forward<Categories>();
+            else if (authResponse.Status == AuthenticationResponseStatus.InvalidUsernameOrPassword)
+                ShowPopUp<WarningAlert>(x => x.Message.Value = "Email or password is not valid.");
+            else
+                ShowPopUp<WarningAlert>(x => x.Message.Value = "An error is occured.");
 
         }
         public Task OnContactUsTapped()

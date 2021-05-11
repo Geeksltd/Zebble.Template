@@ -1,9 +1,21 @@
 <?xml version="1.0"?>
 <zbl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
-   <class type="Contacts" base="UI.Templates.NavBarTabs" namespace="UI.Pages" viewmodel="ViewModel.Contacts">
+   <class type="Contacts"
+          base="UI.Templates.NavBarTabs"
+          namespace="UI.Pages"
+          viewmodel="ViewModel.Contacts"
+          Title="Contacts">
       <z-place inside="Body">
-         <TextInput Text="Contacts" />
+         <CollectionView of="ViewModel.Contacts.Item, ContactItem" Source="@Model.Items">
+            <class type="ContactItem" base="Stack" viewmodel="ViewModel.Contacts.Item">
+               <CollectionRow>
+                  <TextView Text="@{Model.FullName}" />
+                  <TextView Text="@{Model.Phone}" />
+                  <TextView Text="@{Model.Email}" />
+               </CollectionRow>
+            </class>
+         </CollectionView>
       </z-place>
    </class>
 </zbl>

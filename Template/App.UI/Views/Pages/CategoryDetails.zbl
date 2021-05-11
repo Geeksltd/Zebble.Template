@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<zbl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
+   <class type="CategoryDetails"
+          base="UI.Templates.NavBarTabs"
+          namespace="UI.Pages"
+          viewmodel="ViewModel.CategoryDetails"
+          Title="Category Detail">
+      <z-place inside="Body">
+         <TextInput Text="@{Model.Name}" />
+      </z-place>
+   </class>
+</zbl>

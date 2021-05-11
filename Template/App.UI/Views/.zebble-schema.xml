@@ -165,6 +165,8 @@
   <xs:simpleType name="ZNavTypeEnum">
     <xs:restriction base="xs:string">
       <xs:enumeration value="Pages.Categories" />
+      <xs:enumeration value="Pages.CategoryDetails" />
+      <xs:enumeration value="Pages.ContactInfo" />
       <xs:enumeration value="Pages.Contacts" />
       <xs:enumeration value="Pages.LandingPage" />
       <xs:enumeration value="Pages.Login.Login" />
@@ -185,6 +187,28 @@
       <xs:enumeration value="android-only" />
       <xs:enumeration value="title" />
       <xs:enumeration value="popup" />
+      <xs:enumeration value="Normal_Size" />
+      <xs:enumeration value="bg_primary" />
+      <xs:enumeration value="border_0" />
+      <xs:enumeration value="text_primary" />
+      <xs:enumeration value="text_center" />
+      <xs:enumeration value="text_right" />
+      <xs:enumeration value="text_left" />
+      <xs:enumeration value="text_bold" />
+      <xs:enumeration value="width_content" />
+      <xs:enumeration value="my-2" />
+      <xs:enumeration value="my-3" />
+      <xs:enumeration value="my-4" />
+      <xs:enumeration value="mx-2" />
+      <xs:enumeration value="mx-3" />
+      <xs:enumeration value="mx-4" />
+      <xs:enumeration value="mt-2" />
+      <xs:enumeration value="mt-3" />
+      <xs:enumeration value="mt-4" />
+      <xs:enumeration value="px-2" />
+      <xs:enumeration value="px-3" />
+      <xs:enumeration value="px-4" />
+      <xs:enumeration value="w-100" />
       <xs:enumeration value="@....." />
     </xs:restriction>
   </xs:simpleType>
@@ -265,6 +289,22 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="MainLink" nillable="true" type="MainLinkType" />
+  <xs:complexType name="PopupTextType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="TextViewType">
+        <xs:anyAttribute processContents="skip" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PopupText" nillable="true" type="PopupTextType" />
+  <xs:complexType name="CollectionRowType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="RowType">
+        <xs:anyAttribute processContents="skip" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CollectionRow" nillable="true" type="CollectionRowType" />
   <xs:complexType name="UI__Templates__BlankType">
     <xs:complexContent mixed="false">
       <xs:extension base="Page-AbstractType">
@@ -315,6 +355,24 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="UI.Pages.Categories" nillable="true" type="UI__Pages__CategoriesType" />
+  <xs:complexType name="UI__Pages__CategoryDetailsType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="UI__Templates__NavBarTabsType">
+        <xs:attribute name="Model" type="xs:string" />
+        <xs:anyAttribute processContents="skip" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UI.Pages.CategoryDetails" nillable="true" type="UI__Pages__CategoryDetailsType" />
+  <xs:complexType name="UI__Pages__ContactInfoType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="UI__Templates__NavBarTabsType">
+        <xs:attribute name="Model" type="xs:string" />
+        <xs:anyAttribute processContents="skip" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UI.Pages.ContactInfo" nillable="true" type="UI__Pages__ContactInfoType" />
   <xs:complexType name="UI__Pages__ContactsType">
     <xs:complexContent mixed="false">
       <xs:extension base="UI__Templates__NavBarTabsType">
