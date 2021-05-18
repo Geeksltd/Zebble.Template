@@ -13,5 +13,7 @@ namespace Domain
         public Task<Contact> GetContact(Guid id) => Get<Contact>($"{baseApi}/{id}").OrCompleted();
 
         public Task<Contact[]> GetContacts() => Get<Contact[]>(baseApi).OrEmpty();
+        public Task<bool> DeleteContact(Guid id) => Get<bool>($"{baseApi}/{id}").OrCompleted();
+
     }
 }

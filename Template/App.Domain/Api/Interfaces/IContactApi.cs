@@ -9,7 +9,8 @@ namespace Domain
     interface IContactApi
     {
         Task<Contact[]> GetContacts();
-
         Task<Contact> GetContact(Guid id);
+        Task<bool> DeleteContact(Guid id);
+
     }
 }

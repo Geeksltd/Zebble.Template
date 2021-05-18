@@ -1,0 +1,36 @@
+﻿@import "../_Colours.scss";
+
+ConfirmationModal {
+    #ModalPanelWrapper { padding: 15px; }
+
+    #Panel { border-radius: 15px; background-color: white; }
+
+    #Header { border-top-left-radius: 15px; border-top-right-radius: 15px; text-align: center;
+
+        ImageView { margin-top: 20px; width: calc('Content'); }
+    }
+
+    #Content { padding-right: 25px; padding-left: 25px; padding-top: 20px; padding-bottom: 20px;
+
+        TextView {
+            text-align: center;
+        }
+    }
+
+    #FirstButton { border: 1px 1px 0 0 solid gray; width: 50%;
+
+        Button {
+            color: blue;
+        }
+    }
+
+    #SecondButton {
+        border: 1px 0 0 0 solid gray;
+        width: 50%;
+        color:blue;
+
+        Button {
+            color: blue;
+        }
+    }
+}

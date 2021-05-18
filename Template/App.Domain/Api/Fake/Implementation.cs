@@ -21,6 +21,8 @@ namespace Domain.Fake
         public Task<Contact> GetContact(Guid id) => Fetch<Contact>(v => v.Id == id);
 
         public Task<Contact[]> GetContacts() => Query<Contact>();
+
+        public Task<bool> DeleteContact(Guid id) => Return(true);
     }
 
     class AuthenticationApi : BaseFakeApi, IAuthenticationApi

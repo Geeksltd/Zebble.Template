@@ -8,7 +8,7 @@
           Title="Contacts">
       <z-place inside="Body">
          <CollectionView of="ViewModel.Contacts.Item, ContactItem" Source="@Model.Items">
-            <class type="ContactItem" base="Stack" viewmodel="ViewModel.Contacts.Item">
+            <class type="ContactItem" base="Stack" viewmodel="ViewModel.Contacts.Item" on-Tapped="Model.OnContactTapped">
                <CollectionRow>
                   <TextView Text="@{Model.FullName}" />
                   <TextView Text="@{Model.Phone}" />

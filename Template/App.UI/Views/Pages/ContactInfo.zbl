@@ -4,7 +4,7 @@
    <class type="ContactInfo" base="UI.Templates.NavBarTabs" namespace="UI.Pages" viewmodel="ViewModel.ContactInfo">
       <z-place inside="Body">
          <TextInput Text="ContactInfo" />
-         <Button Text="Delete this contact" />
+         <Button Text="Delete this contact" on-Tapped="Model.OnDeleteContactTapped" />
       </z-place>
    </class>
 </zbl>

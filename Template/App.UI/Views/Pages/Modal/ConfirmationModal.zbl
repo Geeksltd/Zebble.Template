@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<zbl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
+   <class type="ConfirmationModal" base="Page" namespace="UI.Pages">
+      <Stack Id="ModalPanelWrapper">
+         <Stack Id="Panel" ClipChildren="true">
+            <Row Id="Header">
+               <MainImage Path="Images/Icons/info.png" CssClass="popup" />
+            </Row>
+            <Stack Id="Content" ClipChildren="false">
+               <TextView Id="ConfirmationMessage" />
+            </Stack>
+            <Row CssClass="Buttons">
+               <Stack Id="FirstButton" />
+               <Stack Id="SecondButton" />
+            </Row>
+         </Stack>
+      </Stack>
+   </class>
+</zbl>

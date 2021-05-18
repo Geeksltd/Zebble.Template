@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<zbl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
+   <class type="DeleteContactConfirmation"
+          Id="DeleteContactConfirmation"
+          base="UI.Pages.ConfirmationModal"
+          namespace="UI.Pages"
+          viewmodel="ViewModel.DeleteContactConfirmation"
+          Message="Are you sure you want to delete your account?">
+      <z-place inside="FirstButton">
+         <Button Id="CancelButton" Text="Cancel" on-Tapped="@Model.OnCancelTapped()" />
+      </z-place>
+      <z-place inside="SecondButton">
+         <Button Id="ConfirmButton" Text="Confirm" on-Tapped="@Model.OnConfirmTapped()" />
+      </z-place>
+   </class>
+</zbl>

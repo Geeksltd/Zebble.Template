@@ -14,6 +14,7 @@
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\Icons\Icon.png" />
     <None Include="$(MSBuildThisFileDirectory)Styles\Components\_BaseModal.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\Components\_Button.scss" />
+    <None Include="$(MSBuildThisFileDirectory)Styles\Components\ConfirmationModal.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\Components\_ImageView.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\Components\_NavBar.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\Components\_PopUp.scss" />
@@ -30,8 +31,10 @@
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\CategoryDetails.zbl" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\ContactInfo.zbl" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\Contacts.zbl" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Pages\DeleteContactConfirmation.zbl" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\Login.zbl" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\Modal\BaseModal.zbl" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Modal\ConfirmationModal.zbl" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\Modal\SuccessAlert.zbl" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\Modal\WarningAlert.zbl" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\Settings.zbl" />
@@ -73,6 +76,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Templates\NavBar.zbl.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Templates\NavBarTabs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\Modal\BaseModal.zbl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\Modal\ConfirmationModal.zbl.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Widgets\Components.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Widgets\NavigationBar.zbl.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Widgets\Tab.zbl.cs" />

@@ -16,6 +16,6 @@ namespace ViewModel
         public Bindable<DateTime> DateOfBirth => Source.Get(x => x.DateOfBirth.Value);
         public Bindable<string> Email => Source.Get(x => x.Email);
 
-        public void OnDeleteContactTapped() { } //=> ShowPopUp<Login>();
+        public void OnDeleteContactTapped() => ShowPopUp<DeleteContactConfirmation>(x => x.Source.Set(Source));
     }
 }
