@@ -3,7 +3,7 @@
      xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
    <class type="Settings" base="UI.Templates.NavBarTabs" namespace="UI.Pages" viewmodel="ViewModel.Settings">
       <z-place inside="Body">
-         <TextInput Text="Settings" />
+         <Button Text="Log out" on-Tapped="Model.OnLogOutTapped" />
       </z-place>
    </class>
 </zbl>

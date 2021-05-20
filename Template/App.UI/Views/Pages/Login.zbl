@@ -7,7 +7,7 @@
             <Input Placeholder="Email" TextMode="@TextMode.Email" Text="@{Model.Email}" AutoCorrection="@AutoCorrectionType.No" />
             <Input Placeholder="Password" TextMode="@TextMode.Password" Text="@{Model.Password}" />
             <Button Text="Log in" on-Tapped="Model.OnLoginTapped" />
-         </Middle>
+	     </Middle>
       </z-place>
    </class>
 </zbl>

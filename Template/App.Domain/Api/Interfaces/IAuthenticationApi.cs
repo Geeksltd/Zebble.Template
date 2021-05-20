@@ -9,5 +9,6 @@ namespace Domain
     interface IAuthenticationApi
     {
         Task<AuthenticationResponse> AuthenticateWithCredentials(string email, string password);
+        Task<User> GetCurrentUser();
     }
 }

@@ -18,6 +18,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Api\Live\AuthenticationApi.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Api\Live\CategoryApi.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Api\Live\ContactApi.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Current.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Category.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Contact.cs" />

@@ -16,6 +16,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)DeleteContactConfirmation.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)LandingPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Login.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LogoutConfirmation.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Modal\SuccessAlert.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Modal\WarningAlert.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Settings.cs" />

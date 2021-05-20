@@ -27,6 +27,8 @@ namespace Domain.Fake
 
     class AuthenticationApi : BaseFakeApi, IAuthenticationApi
     {
+        internal static User User;
+
         public Task<AuthenticationResponse> AuthenticateWithCredentials(string email, string password)
         {
             if (email == "bad@test.co") return null;
@@ -46,5 +48,7 @@ namespace Domain.Fake
                 Message = "",
             });
         }
+
+        public Task<User> GetCurrentUser() => Return(User);
     }
 }

@@ -15,5 +15,10 @@ namespace Domain
             return Post<AuthenticationResponse>($"{baseApi}/auth", new { email = email, password = password });
         }
 
+        public Task<User> GetCurrentUser()
+        {
+            return Get<User>($"{baseApi}");
+        }
+
     }
 }

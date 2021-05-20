@@ -5,7 +5,9 @@ using Zebble.Mvvm;
 
 namespace ViewModel
 {
-	public class Settings : FullScreen
-	{
-	}
+    public class Settings : FullScreen
+    {
+        public void OnLogOutTapped() => ShowPopUp<LogoutConfirmation>();
+
+    }
 }

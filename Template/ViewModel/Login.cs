@@ -14,6 +14,11 @@ namespace ViewModel
         public Bindable<string> Email = new();
         public Bindable<string> Password = new();
 
+        protected override async Task NavigationStartedAsync()
+        {
+            await base.NavigationStartedAsync();
+            ResetFeilds();
+        }
         public async Task OnLoginTapped()
         {
             if (Email.Value.IsEmpty())
@@ -50,6 +55,12 @@ namespace ViewModel
             return Task.CompletedTask;
 #endif
 
+        }
+
+        void ResetFeilds()
+        {
+            Email.Set(string.Empty);
+            Password.Set(string.Empty);
         }
     }
 }

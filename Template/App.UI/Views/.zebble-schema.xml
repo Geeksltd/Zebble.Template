@@ -171,6 +171,7 @@
       <xs:enumeration value="Pages.DeleteContactConfirmation" />
       <xs:enumeration value="Pages.LandingPage" />
       <xs:enumeration value="Pages.Login.Login" />
+      <xs:enumeration value="Pages.LogoutConfirmation" />
       <xs:enumeration value="Pages.Settings" />
       <xs:enumeration value="Pages.BaseModal" />
       <xs:enumeration value="Pages.ConfirmationModal" />
@@ -404,6 +405,17 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="UI.Pages.LandingPage" nillable="true" type="UI__Pages__LandingPageType" />
+  <xs:complexType name="UI__Pages__LogoutConfirmationType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="UI__Pages__ConfirmationModalType">
+        <xs:attribute name="Model" type="xs:string" />
+        <xs:attribute name="CancelButton" type="xs:string" />
+        <xs:attribute name="ConfirmButton" type="xs:string" />
+        <xs:anyAttribute processContents="skip" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UI.Pages.LogoutConfirmation" nillable="true" type="UI__Pages__LogoutConfirmationType" />
   <xs:complexType name="UI__Pages__SettingsType">
     <xs:complexContent mixed="false">
       <xs:extension base="UI__Templates__NavBarTabsType">
