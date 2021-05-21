@@ -19,10 +19,10 @@ namespace Domain
             Add(new Category { Id = Guid.NewGuid(), Name = "Client" });
             Add(new Category { Id = Guid.NewGuid(), Name = "Supplier" });
 
-            Add(new Contact { Id = Guid.NewGuid(), FirstName = "Joe", LastName = "Menon", Email = "menon@crm.co", PhoneNumber = "+447999147852" });
-            Add(new Contact { Id = Guid.NewGuid(), FirstName = "Adam", LastName = "Sharma", Email = "sharma@crm.co", PhoneNumber = "+447999147842" });
-            Add(new Contact { Id = Guid.NewGuid(), FirstName = "Kate", LastName = "Roy", Email = "roy@crm.co", PhoneNumber = "+447999167842" });
-            Add(new Contact { Id = Guid.NewGuid(), FirstName = "Jon", LastName = "Verma", Email = "verma@crm.co", PhoneNumber = "+447999144842" });
+            Add(new Contact { Id = Guid.NewGuid(), FirstName = "Joe", LastName = "Menon", Email = "menon@crm.co", PhoneNumber = "+447999147852", DateOfBirth = LocalTime.Now.AddYears(-10) });
+            Add(new Contact { Id = Guid.NewGuid(), FirstName = "Adam", LastName = "Sharma", Email = "sharma@crm.co", PhoneNumber = "+447999147842", DateOfBirth = LocalTime.Now.AddYears(-60) });
+            Add(new Contact { Id = Guid.NewGuid(), FirstName = "Kate", LastName = "Roy", Email = "roy@crm.co", PhoneNumber = "+447999167842", DateOfBirth = LocalTime.Now.AddYears(-30) });
+            Add(new Contact { Id = Guid.NewGuid(), FirstName = "Jon", LastName = "Verma", Email = "verma@crm.co", PhoneNumber = "+447999144842", DateOfBirth = LocalTime.Now.AddYears(-12) });
 
 
         }

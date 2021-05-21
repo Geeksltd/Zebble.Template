@@ -8,15 +8,15 @@
 
     class Program
     {
-        static Intention Doing = Intention.Development;
+        static Intention Doing = Intention.OneTest;
 
         public static async Task Main(string[] args)
         {
-            UIRuntime.Initialize<Program>("MyProjectName");
+            //UIRuntime.Initialize<Program>("MyProjectName");
 
             await ViewModel.StartUp.Run();
 
-            if (Doing == Intention.OneTest) await Test.Run<LoginTest>();
+            if (Doing == Intention.OneTest) await Test.Run<CategoriesTest>();
             if (Doing == Intention.AllTests) await Test.RunAll();
             if (Doing == Intention.Development) await DevContext.Reach();
 

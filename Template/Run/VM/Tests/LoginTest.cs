@@ -5,6 +5,7 @@ using System.Text;
 using Zebble.Mvvm;
 using System.Threading.Tasks;
 using ViewModel;
+using Microsoft.CodeAnalysis.VisualBasic.Syntax;
 
 namespace App.Tests
 {
@@ -12,15 +13,22 @@ namespace App.Tests
     {
         protected override async Task Execute()
         {
-            //On<LoginPage>().TapLogin();
-            //Expect("Please enter your email.");
-            //On<LoginPage>().Email.Set("jack.smith@geeks.ltd.uk");
-            //On<LoginPage>().TapLogin();
-            //Expect("Please enter your password.");
-            //On<LoginPage>().Password.Set("something wrong");
-            //On<LoginPage>().TapLogin();
-            //Expect("Invalid email or password.");
-            // ...
+            await On<LandingPage>().onLogInTapped();
+            await On<Login>().OnLoginTapped();
+            On<WarningAlert>().OnOkTapped();
+            On<Login>().Email.Set("test");
+            await On<Login>().OnLoginTapped();
+            On<WarningAlert>().OnOkTapped();
+            On<Login>().Email.Set("test@geeks.ltd.uk");
+            await On<Login>().OnLoginTapped();
+            On<WarningAlert>().OnOkTapped();
+            On<Login>().Email.Set("test@geeks.ltd.uk");
+            On<Login>().Password.Set("123@qwE");
+            await On<Login>().OnLoginTapped();
+            Expect("Categories");
+
+
+
         }
     }
 }
