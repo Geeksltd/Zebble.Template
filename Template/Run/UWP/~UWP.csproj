@@ -126,58 +126,58 @@
   <Import Project="..\..\ViewModel\ViewModel.projitems" Label="Shared" />
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>6.2.12</Version>
+      <Version>6.2.14</Version>
     </PackageReference>
     <PackageReference Include="Olive">
-      <Version>2.1.262</Version>
+      <Version>2.1.329</Version>
     </PackageReference>
     <PackageReference Include="Zebble">
-      <Version>4.5.519</Version>
+      <Version>4.5.662</Version>
     </PackageReference>
     <PackageReference Include="Zebble.CheckBox">
-      <Version>1.22.125</Version>
+      <Version>1.22.126</Version>
     </PackageReference>
     <PackageReference Include="Zebble.DateTimePicker">
-      <Version>4.6.293</Version>
+      <Version>4.6.294</Version>
     </PackageReference>
     <PackageReference Include="Zebble.FirebaseAuth">
       <Version>1.0.9</Version>
     </PackageReference>
     <PackageReference Include="Zebble.Grid">
-      <Version>3.12.160</Version>
+      <Version>3.12.162</Version>
     </PackageReference>
     <PackageReference Include="Zebble.IconButton">
-      <Version>3.20.282</Version>
+      <Version>3.20.283</Version>
     </PackageReference>
     <PackageReference Include="Zebble.Inspector">
-      <Version>2.7.162</Version>
+      <Version>2.7.164</Version>
     </PackageReference>
     <PackageReference Include="Zebble.ItemPicker">
-      <Version>3.12.173</Version>
+      <Version>3.12.175</Version>
     </PackageReference>
     <PackageReference Include="Zebble.ListView">
-      <Version>4.10.198</Version>
+      <Version>4.10.218</Version>
     </PackageReference>
     <PackageReference Include="Zebble.OptionsList">
-      <Version>3.15.146</Version>
+      <Version>3.15.149</Version>
     </PackageReference>
     <PackageReference Include="Zebble.SearchInput">
       <Version>3.18.281</Version>
     </PackageReference>
     <PackageReference Include="Zebble.Switch">
-      <Version>1.31.244</Version>
+      <Version>1.31.245</Version>
     </PackageReference>
     <PackageReference Include="Zebble.WebApi">
-      <Version>4.5.395</Version>
+      <Version>4.5.399</Version>
     </PackageReference>
     <PackageReference Include="Zebble.Testing">
-      <Version>1.2.112</Version>
+      <Version>1.2.116</Version>
     </PackageReference>
     <PackageReference Include="Zebble.BoxShadow">
-      <Version>1.2.151</Version>
+      <Version>1.2.157</Version>
     </PackageReference>
     <PackageReference Include="Zebble.Widgets">
-      <Version>1.1.120</Version>
+      <Version>2.1.126</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
