@@ -10,7 +10,7 @@ namespace Domain
     {
         private string baseApi = "https://test.co/api/v1/coffee-drinks";
 
-        public Task<Category[]> GetCategories() => Get<Category[]>(baseApi).OrEmpty();
+        public Task<Category[]> GetCategories() => Get<Category[]>(baseApi).OrEmpty().ToArray();
         public Task<Category> GetCategory(Guid id) => Get<Category>($"{baseApi}/{id}").OrCompleted();
     }
 }
